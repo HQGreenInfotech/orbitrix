@@ -10,7 +10,7 @@ function HeroImage() {
       transition={{ duration: 1 }}
       className="relative flex justify-center items-center"
     >
-      {/* Laptop */}
+      
 
       <motion.img
         animate={{
@@ -25,7 +25,7 @@ function HeroImage() {
         className="w-full max-w-6xl drop-shadow-2xl relative z-20"
       />
 
-      {/* Floating Cards */}
+    
 
       {heroCards.map((card) => (
         <FloatingCard

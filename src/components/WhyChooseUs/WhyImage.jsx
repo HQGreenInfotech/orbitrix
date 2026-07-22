@@ -10,11 +10,11 @@ function WhyImage() {
       viewport={{ once: true }}
       className="relative flex justify-center"
     >
-      {/* Background Glow */}
+      
 
       <div className="absolute -left-10 -top-10 w-60 h-60 bg-blue-400/20 blur-[100px] rounded-full"></div>
 
-      {/* Image */}
+    
 
       <motion.img
         src="/team.png"
@@ -40,11 +40,11 @@ function WhyImage() {
         "
       />
 
-      {/* Gradient Overlay */}
+   
 
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
 
-      {/* Projects Card */}
+      
 
       <motion.div
         whileHover={{ scale: 1.05 }}
@@ -80,7 +80,7 @@ function WhyImage() {
         </div>
       </motion.div>
 
-      {/* Clients Card */}
+    
 
       <motion.div
         whileHover={{ scale: 1.05 }}

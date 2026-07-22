@@ -24,7 +24,7 @@ function AboutCard({ feature, index }) {
         hover:border-blue-200
       "
     >
-      {/* Icon */}
+    
 
       <div
         className="
@@ -46,13 +46,12 @@ function AboutCard({ feature, index }) {
         <Icon className="text-3xl text-blue-600" />
       </div>
 
-      {/* Title */}
+      
 
       <h3 className="text-2xl font-bold text-slate-900 mb-3">
         {feature.title}
       </h3>
 
-      {/* Description */}
 
       <p className="text-slate-600 leading-8">
         {feature.description}

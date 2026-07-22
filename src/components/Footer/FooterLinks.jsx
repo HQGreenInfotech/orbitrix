@@ -4,13 +4,13 @@ import { FaArrowRight } from "react-icons/fa";
 function FooterLinks({ title, links }) {
   return (
     <div>
-      {/* Heading */}
+     
 
       <h3 className="text-xl font-bold text-slate-900 mb-8">
         {title}
       </h3>
 
-      {/* Links */}
+    
 
       <ul className="space-y-5">
         {links.map((link, index) => (

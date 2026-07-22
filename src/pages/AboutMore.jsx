@@ -26,14 +26,14 @@ const cards = [
 function AboutMore() {
   return (
     <section className="relative overflow-hidden bg-slate-50 py-40">
-      {/* Background Glow */}
+     
       <div className="absolute -top-20 -left-20 h-96 w-96 rounded-full bg-blue-200/30 blur-[140px]" />
 
       <div className="absolute -bottom-24 -right-24 h-[28rem] w-[28rem] rounded-full bg-cyan-200/30 blur-[160px]" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
-          {/* Left Content */}
+        
 
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -81,7 +81,7 @@ function AboutMore() {
               confidence in the digital era.
             </p>
 
-            {/* Statistics */}
+         
 
             <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-8">
               <div>
@@ -118,7 +118,7 @@ function AboutMore() {
             </div>
           </motion.div>
 
-          {/* Right Cards */}
+       
 
           <motion.div
             initial={{ opacity: 0, x: 60 }}

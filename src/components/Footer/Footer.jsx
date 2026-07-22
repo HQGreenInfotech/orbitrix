@@ -4,7 +4,7 @@ import FooterTopCTA from "./FooterTopCTA";
 function Footer() {
   return (
     <footer className="relative bg-slate-950 pt-28 pb-10 overflow-hidden">
-      {/* Background Glow */}
+     
       <div
         className="
           absolute
@@ -21,10 +21,9 @@ function Footer() {
       />
 
       <div className="relative max-w-7xl mx-auto px-6">
-        {/* CTA */}
+  
         <FooterTopCTA />
 
-        {/* Footer Card */}
         <div className="mt-16">
           <FooterCard />
         </div>

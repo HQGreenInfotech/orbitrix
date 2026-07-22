@@ -3,7 +3,7 @@ import { FaPaperPlane } from "react-icons/fa";
 function FooterNewsletter() {
   return (
     <div>
-      {/* Heading */}
+     
 
       <h3 className="text-2xl font-bold text-slate-900">
         Stay Updated
@@ -15,7 +15,7 @@ function FooterNewsletter() {
         workshops and exclusive offers from Orbitix Technology.
       </p>
 
-      {/* Newsletter Form */}
+    
 
       <form className="mt-8">
         <div
@@ -26,7 +26,7 @@ function FooterNewsletter() {
             gap-4
           "
         >
-          {/* Email Input */}
+         
 
           <input
             type="email"
@@ -47,7 +47,7 @@ function FooterNewsletter() {
             "
           />
 
-          {/* Button */}
+       
 
           <button
             type="submit"
@@ -77,7 +77,7 @@ function FooterNewsletter() {
         </div>
       </form>
 
-      {/* Bottom Text */}
+     
 
       <div
         className="

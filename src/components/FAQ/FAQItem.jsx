@@ -24,7 +24,7 @@ function FAQItem({
         duration-300
       "
     >
-      {/* Question */}
+      
 
       <button
         onClick={onClick}
@@ -53,7 +53,7 @@ function FAQItem({
           {faq.question}
         </h3>
 
-        {/* Icon */}
+       
 
         <motion.div
           animate={{
@@ -86,7 +86,7 @@ function FAQItem({
         </motion.div>
       </button>
 
-      {/* Answer */}
+    
 
       <AnimatePresence initial={false}>
         {isOpen && (

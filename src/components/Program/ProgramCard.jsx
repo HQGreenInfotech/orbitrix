@@ -24,7 +24,7 @@ function ProgramCard({ item, index }) {
         duration-300
       "
     >
-      {/* Month */}
+     
 
       <div
         className="
@@ -43,7 +43,7 @@ function ProgramCard({ item, index }) {
         {item.month}
       </div>
 
-      {/* Title */}
+    
 
       <h3 className="text-3xl font-black text-slate-900 mt-6">
         {item.title}

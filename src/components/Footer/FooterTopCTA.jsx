@@ -24,7 +24,7 @@ function FooterTopCTA() {
         shadow-2xl
       "
     >
-      {/* Decorative Circles */}
+     
 
       <div className="absolute -top-20 -right-20 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
 
@@ -32,7 +32,7 @@ function FooterTopCTA() {
 
       <div className="relative z-10 grid lg:grid-cols-2 gap-10 items-center">
 
-        {/* Left */}
+     
 
         <div>
           <div
@@ -85,7 +85,7 @@ function FooterTopCTA() {
           </p>
         </div>
 
-        {/* Right */}
+       
 
         <div className="flex flex-col sm:flex-row lg:justify-end gap-5">
 

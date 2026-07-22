@@ -7,7 +7,7 @@ function BackgroundEffects() {
 
       <div className="absolute left-1/2 top-1/2 w-72 h-72 bg-indigo-300 rounded-full blur-[120px] opacity-20"></div>
 
-      {/* Grid */}
+    
 
       <div
         className="absolute inset-0 opacity-10"

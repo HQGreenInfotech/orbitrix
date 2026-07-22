@@ -33,12 +33,12 @@ function FAQLeft() {
           shadow-2xl
         "
       >
-        {/* Background Blur */}
+    
         <div className="absolute -top-16 -right-16 w-52 h-52 bg-white/10 rounded-full blur-3xl"></div>
 
         <div className="absolute -bottom-20 -left-16 w-56 h-56 bg-cyan-300/20 rounded-full blur-3xl"></div>
 
-        {/* Small Badge */}
+  
         <span
           className="
             inline-block
@@ -55,7 +55,7 @@ function FAQLeft() {
           Need Help?
         </span>
 
-        {/* Heading */}
+       
         <h2
           className="
             text-3xl
@@ -79,9 +79,9 @@ function FAQLeft() {
           coding programs.
         </p>
 
-        {/* Contact List */}
+      
         <div className="space-y-5">
-          {/* Phone */}
+       
           <div
             className="
               flex
@@ -115,7 +115,7 @@ function FAQLeft() {
             </div>
           </div>
 
-          {/* Email */}
+       
           <div
             className="
               flex
@@ -151,7 +151,7 @@ function FAQLeft() {
             </div>
           </div>
 
-          {/* WhatsApp */}
+         
           <div
             className="
               flex
@@ -186,7 +186,7 @@ function FAQLeft() {
           </div>
         </div>
 
-        {/* CTA Button */}
+       
         <Link
           to="/contact"
           className="

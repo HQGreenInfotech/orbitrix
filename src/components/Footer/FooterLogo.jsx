@@ -3,7 +3,7 @@ import { socials } from "./footerData";
 function FooterLogo() {
   return (
     <div>
-      {/* Logo */}
+     
 
       <img
         src="/logo.png"
@@ -11,7 +11,7 @@ function FooterLogo() {
         className="w-56"
       />
 
-      {/* Description */}
+    
 
       <p
         className="
@@ -29,7 +29,7 @@ function FooterLogo() {
         career-oriented training.
       </p>
 
-      {/* Social Icons */}
+      
 
       <div className="flex gap-4 mt-10">
 

@@ -19,7 +19,7 @@ function Logo() {
           overflow-hidden
         "
       >
-        {/* Blue Glow */}
+      
         <div
           className="
             absolute
@@ -33,7 +33,7 @@ function Logo() {
           "
         />
 
-        {/* Cyan Glow */}
+       
         <div
           className="
             absolute

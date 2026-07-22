@@ -21,31 +21,31 @@ function FooterCard() {
         py-12
       "
     >
-      {/* Top Section */}
+      
 
       <div className="grid lg:grid-cols-5 gap-12">
 
-        {/* Logo */}
+      
 
         <div className="lg:col-span-2">
           <FooterLogo />
         </div>
 
-        {/* Quick Links */}
+      
 
         <FooterLinks
           title="Quick Links"
           links={quickLinks}
         />
 
-        {/* Services */}
+    
 
         <FooterLinks
           title="Services"
           links={services}
         />
 
-        {/* Programs */}
+    
 
         <FooterLinks
           title="Programs"
@@ -54,7 +54,7 @@ function FooterCard() {
 
       </div>
 
-      {/* Newsletter */}
+     
 
       <div
         className="
@@ -67,7 +67,7 @@ function FooterCard() {
         <FooterNewsletter />
       </div>
 
-      {/* Bottom */}
+  
 
       <div
         className="

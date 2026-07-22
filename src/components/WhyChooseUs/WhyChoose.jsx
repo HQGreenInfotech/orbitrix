@@ -6,7 +6,7 @@ function WhyChoose() {
   return (
     <section className="relative py-24 lg:py-32 bg-slate-50 overflow-hidden">
 
-      {/* Background Glow */}
+    
 
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-200/30 rounded-full blur-[140px]" />
 
@@ -14,7 +14,7 @@ function WhyChoose() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
 
-        {/* Heading */}
+      
 
         <div className="text-center max-w-4xl mx-auto mb-20">
 
@@ -38,15 +38,15 @@ function WhyChoose() {
 
         </div>
 
-        {/* Content */}
+       
 
         <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
 
-          {/* Left */}
+         
 
           <WhyImage />
 
-          {/* Right */}
+         
 
           <div className="space-y-6">
 

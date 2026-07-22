@@ -9,7 +9,7 @@ function ProgramHeader() {
       viewport={{ once: true }}
       className="text-center max-w-4xl mx-auto"
     >
-      {/* Small Badge */}
+      
 
       <span
         className="
@@ -30,7 +30,7 @@ function ProgramHeader() {
         🚀 The Program
       </span>
 
-      {/* Heading */}
+     
 
       <h2
         className="
@@ -64,7 +64,6 @@ function ProgramHeader() {
         From Beginner to Builder.
       </h2>
 
-      {/* Description */}
 
       <p
         className="

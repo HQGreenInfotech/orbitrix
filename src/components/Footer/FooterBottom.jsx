@@ -15,7 +15,7 @@ function FooterBottom() {
         gap-6
       "
     >
-      {/* Copyright */}
+     
 
       <p className="text-gray-600 text-center lg:text-left">
         © {year}{" "}
@@ -25,7 +25,7 @@ function FooterBottom() {
         . All Rights Reserved.
       </p>
 
-      {/* Footer Links */}
+     
 
       <div
         className="
@@ -58,7 +58,6 @@ function FooterBottom() {
         </NavLink>
       </div>
 
-      {/* Made With */}
 
       <div
         className="
