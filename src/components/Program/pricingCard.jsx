@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 
-function pricingCard({ plan, index }) {
+function PricingCard({ plan, index }) {
   const popular = plan.badge === "Most Popular";
 
   return (
@@ -114,4 +114,4 @@ function pricingCard({ plan, index }) {
   );
 }
 
-export default pricingCard;
+export default PricingCard;
