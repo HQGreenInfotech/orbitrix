@@ -31,11 +31,11 @@ function ContactInfo() {
                 <Icon />
               </div>
 
-              <div>
+              <div className="flex flex-col">
                 <h4 className="font-bold">
                   {item.title}
                 </h4>
-
+                <div>
                 {item.link ? (
                   <a
                     href={item.link}
@@ -48,6 +48,23 @@ function ContactInfo() {
                     {item.value}
                   </p>
                 )}
+
+                <br />
+                {item?.value2 && 
+                 item.link ? (
+                  <a
+                    href={item.link}
+                    className="text-gray-500 hover:text-blue-600"
+                  >
+                    {item?.value2}
+                  </a>
+                ) : (
+                  <p className="text-gray-500">
+                    {item?.value2}
+                  </p>
+                )}
+        
+                </div>
               </div>
             </div>
           );

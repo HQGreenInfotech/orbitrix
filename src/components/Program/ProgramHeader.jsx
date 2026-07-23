@@ -27,7 +27,7 @@ function ProgramHeader() {
           text-sm
         "
       >
-        🚀 The Program
+         The Program
       </span>
 
      

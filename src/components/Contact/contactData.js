@@ -20,9 +20,11 @@ export const contactInfo = [
   {
     icon: FaEnvelope,
     title: "Email",
-    value: "arunabhadey02@gmail.com",
+    value: "manager.orbitixtechnologies@gmail.com",
+    value2: "admin.orbitixtechnologies@gmail.com",
     link: "mailto:arunabhadey02@gmail.com",
   },
+  
   {
     icon: FaMapMarkerAlt,
     title: "Location",
@@ -54,6 +56,6 @@ export const socialLinks = [
   },
   {
     icon: FaWhatsapp,
-    url: "#",
+    url: "https://wa.me/918617679831",
   },
 ];
