@@ -15,7 +15,7 @@ function HeroContent() {
         <span className="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse"></span>
 
         <span className="text-sm font-semibold text-blue-700 tracking-wide">
-          Building Future with Technology
+          Building the Future with Technology
         </span>
       </div>
 

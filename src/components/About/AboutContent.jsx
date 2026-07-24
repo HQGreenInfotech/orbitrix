@@ -20,7 +20,7 @@ function AboutContent() {
       </h2>
 
       <p className="mt-8 text-gray-600 leading-8">
-        Orbitix Technology provides Website Development,
+        Orbitix Technologies provides Website Development,
         Software Development, AI Solutions, Robotics,
         Educational Coding, Mobile Apps and Digital Marketing
         under one roof.
