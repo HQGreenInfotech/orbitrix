@@ -46,13 +46,14 @@ function Logo() {
 
         <img
           // src="/logo.png"
-          src="/Logo2.png"
+          // src="/logo21.png"
           // src="/orbitix.png"
+          src="/logoOrbitix.png"
           alt="Orbitix Technology"
           className="
             relative
-            z-12
-            h-22
+            z-10
+            h-16
             w-auto
             object-contain
             transition-transform
