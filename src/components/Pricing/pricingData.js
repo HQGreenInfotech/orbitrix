@@ -87,6 +87,7 @@ export const pricingPlans = [
     ],
 
     button: "Enquiry",
+     link: "/contact",
   },
 
   

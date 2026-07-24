@@ -4,9 +4,11 @@ import {
   FaArrowRight,
   FaFire,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function PricingCard({ plan }) {
   const Icon = plan.icon;
+  const navigate = useNavigate()
 
 
   const colors = {
@@ -112,14 +114,32 @@ function PricingCard({ plan }) {
           ))}
         </div>
 
-        <motion.button
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-10 flex w-full items-center justify-center gap-3 rounded-xl bg-white py-4 font-bold text-blue-700 shadow-lg"
-        >
-          {plan.button}
-          <FaArrowRight />
-        </motion.button>
+       <motion.button
+  whileTap={{ scale: 0.95 }}
+  whileHover={{ scale: 1.03 }}
+  onClick={() => navigate("/contact")}
+  className={`
+    mt-10
+    flex
+    w-full
+    cursor-pointer
+    items-center
+    justify-center
+    gap-3
+    rounded-xl
+    bg-gradient-to-r
+    ${theme.button}
+    py-4
+    font-bold
+    text-white
+    shadow-lg
+    transition-all
+    duration-300
+  `}
+>
+  {plan.button}
+  <FaArrowRight />
+</motion.button>
 
         <div className="absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-white/10 blur-3xl"></div>
       </motion.div>
@@ -205,13 +225,31 @@ function PricingCard({ plan }) {
       </div>
 
       <motion.button
-        whileTap={{ scale: 0.95 }}
-        whileHover={{ scale: 1.03 }}
-        className={`mt-10 flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r ${theme.button} py-4 font-bold text-white shadow-lg`}
-      >
-        {plan.button}
-        <FaArrowRight />
-      </motion.button>
+  whileTap={{ scale: 0.95 }}
+  whileHover={{ scale: 1.03 }}
+  onClick={() => navigate("/contact")}
+  className={`
+    mt-10
+    flex
+    w-full
+    cursor-pointer
+    items-center
+    justify-center
+    gap-3
+    rounded-xl
+    bg-gradient-to-r
+    ${theme.button}
+    py-4
+    font-bold
+    text-white
+    shadow-lg
+    transition-all
+    duration-300
+  `}
+>
+  {plan.button}
+  <FaArrowRight />
+</motion.button>
 
       <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl"></div>
     </motion.div>
