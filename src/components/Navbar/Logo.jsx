@@ -46,8 +46,8 @@ function Logo() {
 
         <img
           // src="/logo.png"
-          // src="/Logo2.png"
-          src="/orbitix.png"
+          src="/Logo2.png"
+          // src="/orbitix.png"
           alt="Orbitix Technology"
           className="
             relative
