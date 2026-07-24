@@ -27,7 +27,7 @@ function Services() {
         >
           <span
             className="inline-block
-            px-5 py-2
+            px-8 py-3
             rounded-full
             bg-blue-100
             text-blue-600
