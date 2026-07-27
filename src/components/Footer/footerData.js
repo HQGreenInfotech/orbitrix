@@ -3,6 +3,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaGithub,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 export const quickLinks = [
@@ -102,4 +103,8 @@ export const socials = [
     icon: FaLinkedinIn,
     url: "https://www.linkedin.com/in/orbitix-technologies-29614b425",
   },
+  {
+      icon: FaWhatsapp,
+      url: "https://wa.me/918617679831",
+    },
 ];
