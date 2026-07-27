@@ -40,19 +40,15 @@ export const contactInfo = [
 export const socialLinks = [
   {
     icon: FaFacebook,
-    url: "#",
+    url: "https://www.facebook.com/share/18DTF6dQpS/?mibextid=wwXIfr",
   },
   {
     icon: FaInstagram,
-    url: "#",
+    url: "https://www.instagram.com/manager.orbitixtechnologies",
   },
   {
     icon: FaLinkedin,
-    url: "#",
-  },
-  {
-    icon: FaGithub,
-    url: "#",
+    url: "https://www.linkedin.com/in/orbitix-technologies-29614b425",
   },
   {
     icon: FaWhatsapp,

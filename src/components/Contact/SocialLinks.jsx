@@ -10,9 +10,24 @@ function SocialLinks() {
           <a
             key={index}
             href={item.url}
-            className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center hover:scale-110 duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              w-12
+              h-12
+              rounded-xl
+              bg-blue-600
+              text-white
+              flex
+              items-center
+              justify-center
+              hover:scale-110
+              hover:bg-blue-700
+              transition-all
+              duration-300
+            "
           >
-            <Icon />
+            <Icon size={20} />
           </a>
         );
       })}
