@@ -77,7 +77,7 @@ export const programs = [
 export const contactInfo = [
   {
     title: "Address",
-    value: "Bankura, West Bengal, India",
+    value: "Durgapur, West Bengal, India",
   },
   {
     title: "Phone",
@@ -92,18 +92,14 @@ export const contactInfo = [
 export const socials = [
   {
     icon: FaFacebookF,
-    url: "#",
+    url: "https://www.facebook.com/share/18DTF6dQpS/?mibextid=wwXIfr",
   },
   {
     icon: FaInstagram,
-    url: "#",
+    url: "https://www.instagram.com/manager.orbitixtechnologies",
   },
   {
     icon: FaLinkedinIn,
-    url: "#",
-  },
-  {
-    icon: FaGithub,
-    url: "#",
+    url: "https://www.linkedin.com/in/orbitix-technologies-29614b425",
   },
 ];

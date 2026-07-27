@@ -4,8 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 function FooterLinks({ title, links }) {
   return (
     <div>
-     
-
+  
       <h3 className="text-xl font-bold text-slate-900 mb-8">
         {title}
       </h3>

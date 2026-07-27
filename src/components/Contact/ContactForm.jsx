@@ -79,7 +79,7 @@ function ContactForm() {
       />
 
       <button
-        className="w-full py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700"
+        className="w-full py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 cursor-pointer"
       >
         Send Message
       </button>
