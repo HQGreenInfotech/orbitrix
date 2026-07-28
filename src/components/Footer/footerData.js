@@ -93,7 +93,7 @@ export const contactInfo = [
 export const socials = [
   {
     icon: FaFacebookF,
-    url: "https://www.facebook.com/share/18DTF6dQpS/?mibextid=wwXIfr",
+    url: "https://www.facebook.com/share/19C3phpsCn/?mibextid=wwXIfr",
   },
   {
     icon: FaInstagram,

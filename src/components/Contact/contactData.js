@@ -40,7 +40,7 @@ export const contactInfo = [
 export const socialLinks = [
   {
     icon: FaFacebook,
-    url: "https://www.facebook.com/share/18DTF6dQpS/?mibextid=wwXIfr",
+    url: "https://www.facebook.com/share/19C3phpsCn/?mibextid=wwXIfr",
   },
   {
     icon: FaInstagram,
