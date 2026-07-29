@@ -17,12 +17,13 @@ export const pricingPlans = [
     subtitle: "Special Launch Offer",
     price: "₹2499",
     oldPrice: "₹2999",
-    discount: "₹499 OFF",
+    discount: "₹500 OFF",
     icon: FaGlobe,
     popular: false,
     offer: true,
 
     features: [
+      "Installment Available",
       "Responsive Website",
       "Modern UI Design",
       "SEO Friendly",
