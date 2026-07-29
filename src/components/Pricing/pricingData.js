@@ -14,7 +14,7 @@ export const pricingPlans = [
   {
     id: 1,
     title: "Website Development",
-    subtitle: "Special Launch Offer and Installment available",
+    subtitle: "Special Launch Offer",
     price: "₹2499",
     oldPrice: "₹2999",
     discount: "₹500 OFF",
@@ -23,12 +23,12 @@ export const pricingPlans = [
     offer: true,
 
     features: [
-      "Installment Available",
       "Responsive Website",
       "Modern UI Design",
       "SEO Friendly",
       "Mobile Optimized",
       "Free Hosting Support",
+      "Up to 3 Installments"
     ],
 
     button: "Get Website",
