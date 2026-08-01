@@ -52,6 +52,6 @@ export const socialLinks = [
   },
   {
     icon: FaWhatsapp,
-    url: "https://wa.me/918617679831",
+    url: "https://wa.me/918078611491",
   },
 ];
