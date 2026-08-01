@@ -14,8 +14,8 @@ export const contactInfo = [
   {
     icon: FaPhoneAlt,
     title: "Call Us",
-    value: "+91 8617679831",
-    link: "tel:+918617679831",
+    value: "+91 8078611491",
+    link: "tel:+918078611491",
   },
   {
     icon: FaEnvelope,
