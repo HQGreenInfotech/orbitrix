@@ -22,7 +22,7 @@ export const contactInfo = [
     title: "Email",
     value: "manager.orbitixtechnologies@gmail.com",
     value2: "admin.orbitixtechnologies@gmail.com",
-    link: "mailto:arunabhadey02@gmail.com",
+    link: "mailto:orbitixtechnologies@gmail.com",
   },
   
   {
