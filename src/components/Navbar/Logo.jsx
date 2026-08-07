@@ -10,6 +10,7 @@ function Logo() {
       h-16
       w-auto
       object-contain
+      
     "
   />
 </Link>
