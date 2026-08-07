@@ -7,31 +7,31 @@ function ProgramHeader() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="text-center max-w-4xl mx-auto"
+      className="max-w-4xl mx-auto text-center"
     >
-      
-
+      {/* Badge */}
       <span
         className="
           inline-flex
           items-center
           gap-2
-          px-5
-          py-2
           rounded-full
-          bg-blue-100
-          text-blue-700
+          border
+          border-cyan-400/20
+          bg-cyan-500/10
+          px-6
+          py-3
+          text-sm
           font-semibold
           uppercase
           tracking-widest
-          text-sm
+          text-cyan-400
         "
       >
          The Program
       </span>
 
-     
-
+      {/* Heading */}
       <h2
         className="
           mt-8
@@ -39,7 +39,7 @@ function ProgramHeader() {
           lg:text-6xl
           font-black
           leading-tight
-          text-slate-900
+          text-white
         "
       >
         Three Months.
@@ -49,9 +49,9 @@ function ProgramHeader() {
         <span
           className="
             bg-gradient-to-r
-            from-blue-600
-            via-cyan-500
-            to-indigo-600
+            from-cyan-400
+            via-blue-400
+            to-violet-400
             bg-clip-text
             text-transparent
           "
@@ -64,21 +64,22 @@ function ProgramHeader() {
         From Beginner to Builder.
       </h2>
 
-
+      {/* Description */}
       <p
         className="
-          mt-8
-          text-lg
-          text-slate-600
-          leading-9
-          max-w-3xl
           mx-auto
+          mt-8
+          max-w-3xl
+          text-lg
+          leading-9
+          text-slate-300
         "
       >
-        Learn modern web development with live classes, real-world
-        projects, AI tools, portfolio building, and career mentorship.
-        Our structured roadmap is designed to make you industry-ready
-        in just three months.
+        Learn modern <span className="text-cyan-400 font-semibold">Full Stack Development</span>,
+        build real-world projects, master AI-powered development,
+        create an impressive portfolio, and prepare for technical
+        interviews with expert mentorship. Become industry-ready
+        in just <span className="font-semibold text-cyan-400">12 Weeks.</span>
       </p>
     </motion.div>
   );
