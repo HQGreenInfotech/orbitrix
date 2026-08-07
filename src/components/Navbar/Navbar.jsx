@@ -21,50 +21,62 @@ function Navbar() {
 
   return (
     <>
-    <header className="fixed top-0 left-0 w-full z-50 py-6">
-  <div
-    className="
-      max-w-[1450px]
-      mx-auto
-      h-[82px]
+      <nav
+        className={`
+          fixed
+          top-6
+          left-1/2
+          -translate-x-1/2
+          z-50
+          w-[95%]
+          max-w-7xl
+          transition-all
+          duration-300
+          ${
+            scrolled
+              ? "bg-[#081B4B]/90 backdrop-blur-xl shadow-2xl"
+              : "bg-[#081B4B]/70 backdrop-blur-xl"
+          }
+          border border-white/10
+          rounded-full
+        `}
+      >
+        <div className="flex items-center justify-between px-8 py-4">
+          <Logo />
 
-      rounded-full
+          <DesktopMenu />
 
-      bg-[#0A1738]/80
-      backdrop-blur-2xl
+          <button
+            className="
+              hidden
+              lg:flex
+              items-center
+              justify-center
+              h-12
+              px-8
+              rounded-full
+              bg-gradient-to-r
+              from-cyan-500
+              to-blue-600
+              text-white
+              font-semibold
+              cursor-pointer
+              transition-all
+              duration-300
+              hover:scale-105
+            "
+          >
+            Get Started
+          </button>
 
-      border border-white/10
-
-      shadow-[0_20px_60px_rgba(0,0,0,.35)]
-
-      flex
-      items-center
-      justify-between
-
-      px-10
-    "
-  >
-    <Logo />
-
-    <DesktopMenu />
-
-    <button
-      className="
-        h-14
-        px-8
-        rounded-full
-        bg-gradient-to-r
-        from-cyan-400
-        to-blue-600
-        text-white
-        font-semibold
-        shadow-xl
-      "
-    >
-      Get Started
-    </button>
-  </div>
-</header>
+          <button
+            className="lg:hidden text-white text-2xl cursor-pointer"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
+      </nav>
 
       <MobileMenu open={open} setOpen={setOpen} />
     </>

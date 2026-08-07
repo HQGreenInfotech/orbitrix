@@ -8,14 +8,13 @@ import EnrollCTA from "../components/EnrollCTA/EnrollCTA";
 import Contact from "../components/Contact/Contact";
 import FAQ from "../components/FAQ";
 import Program from "../components/Program";
-import BackgroundEffects from "../components/Hero/BackgroundEffects";
+// import ServiceBackground from "../components/Services/ServiceBackground";
 
 function Home() {
   return (
     <>
 
-    <main className="relative overflow-hidden bg-[#081B4B]">
-      <BackgroundEffects />
+    
       <Hero />
       <About /> 
       <Services />
@@ -26,7 +25,7 @@ function Home() {
       <EnrollCTA />
       <Contact />
 
-     </main>
+    
 
       
     </>

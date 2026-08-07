@@ -11,7 +11,7 @@ function Services() {
       className="
         relative
         overflow-hidden
-        bg-[#061B3A]
+        
       "
     >
       {/* Background */}

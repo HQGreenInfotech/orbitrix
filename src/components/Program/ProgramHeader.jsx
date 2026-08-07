@@ -7,7 +7,7 @@ function ProgramHeader() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="max-w-4xl mx-auto text-center"
+      className="max-w-4xl mx-auto text-center py-10"
     >
       {/* Badge */}
       <span

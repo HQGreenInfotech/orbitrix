@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 
 function Contact() {
   return (
-    <section className="relative overflow-hidden bg-[#061322] py-24">
+    <section className="relative overflow-hidden py-24">
       {/* Background Blur */}
       <div className="pointer-events-none absolute -top-40 -left-40 h-96 w-96 rounded-full bg-cyan-500/10 blur-[140px]" />
 

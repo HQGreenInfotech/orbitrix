@@ -9,8 +9,7 @@ function About() {
       className="
         relative
         overflow-hidden
-        bg-[#061B3A]
-        py-28
+        py-36
       "
     >
       {/* Background Blur */}
