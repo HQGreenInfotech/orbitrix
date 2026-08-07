@@ -111,7 +111,7 @@ function FAQLeft() {
             <div>
               <h4 className="font-semibold">Phone</h4>
 
-              <p className="text-blue-100 text-sm">+91 XXXXX XXXXX</p>
+              <p className="text-blue-100 text-sm">+91 8078611491</p>
             </div>
           </div>
 
@@ -146,7 +146,7 @@ function FAQLeft() {
               <h4 className="font-semibold">Email</h4>
 
               <p className="text-blue-100 text-sm">
-                orbitixtechnology@gmail.com
+                manager.orbitixtechnologies@gmail.com
               </p>
             </div>
           </div>

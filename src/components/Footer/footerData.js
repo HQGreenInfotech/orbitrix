@@ -82,7 +82,7 @@ export const contactInfo = [
   },
   {
     title: "Phone",
-    value: "+91 XXXXX XXXXX",
+    value: "+91 8078611491",
   },
   {
     title: "Email",

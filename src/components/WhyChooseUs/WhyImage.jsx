@@ -8,17 +8,27 @@ function WhyImage() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="relative flex justify-center overflow-hidden"
+      className="relative flex justify-center"
     >
-      {/* Background Blur */}
-      <div className="absolute -left-10 -top-10 w-60 h-60 rounded-full bg-blue-500/20 blur-[100px]" />
+      {/* Cyan Glow */}
+      <div
+        className="
+          absolute
+          -z-10
+          w-[520px]
+          h-[520px]
+          rounded-full
+          bg-cyan-500/20
+          blur-[160px]
+        "
+      />
 
       {/* Main Image */}
       <motion.img
         src="/team.png"
         alt="Orbitix Technology Team"
         loading="lazy"
-        animate={{ y: [0, -10, 0] }}
+        animate={{ y: [0, -12, 0] }}
         transition={{
           duration: 5,
           repeat: Infinity,
@@ -32,50 +42,61 @@ function WhyImage() {
           lg:h-[600px]
           object-cover
           rounded-3xl
-          shadow-2xl
-          transition-transform
-          duration-500
-          hover:scale-[1.02]
+          border
+          border-white/10
+          shadow-[0_30px_80px_rgba(0,0,0,.45)]
         "
       />
 
       {/* Overlay */}
-      <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-[#081B4B]/60 via-transparent to-transparent" />
 
       {/* Projects Card */}
       <motion.div
-        whileHover={{ scale: 1.05 }}
+        whileHover={{
+          scale: 1.05,
+          y: -6,
+        }}
         className="
           absolute
-          bottom-4
-          left-4
-          sm:bottom-8
-          sm:left-8
-          bg-white/90
-          backdrop-blur-xl
-          border
-          border-white/40
-          rounded-2xl
-          shadow-2xl
-          px-4
-          py-4
-          sm:px-6
-          sm:py-5
+          left-6
+          bottom-6
           flex
           items-center
-          gap-3
+          gap-4
+          rounded-2xl
+          border
+          border-white/10
+          bg-white/5
+          backdrop-blur-xl
+          px-6
+          py-5
+          shadow-xl
         "
       >
-        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-blue-600 flex items-center justify-center text-white">
-          <FolderKanban size={26} />
+        <div
+          className="
+            flex
+            h-14
+            w-14
+            items-center
+            justify-center
+            rounded-xl
+            bg-cyan-500/20
+          "
+        >
+          <FolderKanban
+            size={26}
+            className="text-cyan-400"
+          />
         </div>
 
         <div>
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
+          <h2 className="text-3xl font-black text-white">
             100+
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 font-medium">
+          <p className="text-slate-300">
             Projects Delivered
           </p>
         </div>
@@ -83,38 +104,50 @@ function WhyImage() {
 
       {/* Clients Card */}
       <motion.div
-        whileHover={{ scale: 1.05 }}
+        whileHover={{
+          scale: 1.05,
+          y: -6,
+        }}
         className="
           absolute
+          right-6
           top-6
-          right-4
-          sm:top-4
-          sm:right-2
-          bg-white/90
-          backdrop-blur-xl
-          border
-          border-white/40
-          rounded-2xl
-          shadow-2xl
-          px-4
-          py-4
-          sm:px-6
-          sm:py-5
           flex
           items-center
-          gap-3
+          gap-4
+          rounded-2xl
+          border
+          border-white/10
+          bg-white/5
+          backdrop-blur-xl
+          px-6
+          py-5
+          shadow-xl
         "
       >
-        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-cyan-600 flex items-center justify-center text-white">
-          <Users size={26} />
+        <div
+          className="
+            flex
+            h-14
+            w-14
+            items-center
+            justify-center
+            rounded-xl
+            bg-blue-500/20
+          "
+        >
+          <Users
+            size={26}
+            className="text-cyan-400"
+          />
         </div>
 
         <div>
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
+          <h2 className="text-3xl font-black text-white">
             50+
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 font-medium">
+          <p className="text-slate-300">
             Happy Clients
           </p>
         </div>
