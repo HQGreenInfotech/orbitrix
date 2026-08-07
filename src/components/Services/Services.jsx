@@ -8,17 +8,16 @@ import { services } from "./servicesData";
 function Services() {
   return (
     <section
-      id="services"
       className="
-          relative
-    overflow-hidden
-    py-32
-    text-white
+        relative
+        overflow-hidden
+        bg-[#061B3A]
       "
     >
+      {/* Background */}
       <ServiceBackground />
 
-      <div className="relative z-10 container mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Heading */}
 
@@ -31,26 +30,31 @@ function Services() {
         >
           <span
             className="
-              inline-block
-              px-7
-              py-3
+              inline-flex
+              items-center
               rounded-full
-              bg-blue-100
-              text-blue-600
+              border
+              border-cyan-400/20
+              bg-cyan-500/10
+              px-6
+              py-2
+              text-sm
               font-semibold
+              text-cyan-400
             "
           >
             OUR SERVICES
           </span>
 
-          <h2 className="text-4xl lg:text-6xl font-black mt-6 leading-tight">
+          <h2 className="mt-6 text-4xl lg:text-6xl font-black leading-tight text-white">
             Technology That
-            <span className="block bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600 bg-clip-text text-transparent">
+
+            <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent">
               Powers Innovation
             </span>
           </h2>
 
-          <p className="mt-8 text-lg text-white leading-8">
+          <p className="mt-8 text-lg leading-8 text-slate-300">
             From websites to AI, robotics, education,
             software development and digital marketing,
             Orbitix Technologies delivers complete
@@ -60,7 +64,7 @@ function Services() {
 
         {/* Service Cards */}
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-20">
+        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <ServiceCard
               key={service.id}

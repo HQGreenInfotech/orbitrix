@@ -6,17 +6,22 @@ import { features } from "./aboutData";
 function About() {
   return (
     <section
-      id="about"
       className="
         relative
-        py-32
+        overflow-hidden
+        bg-[#061B3A]
+        py-28
       "
     >
-      <div className="container mx-auto px-6">
-        {/* Top Section */}
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-          <AboutContent />
+      {/* Background Blur */}
+      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-cyan-500/10 blur-[140px]" />
+      <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-blue-600/10 blur-[160px]" />
 
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+
+        {/* Top Section */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <AboutContent />
           <AboutImage />
         </div>
 
@@ -30,6 +35,7 @@ function About() {
             />
           ))}
         </div>
+
       </div>
     </section>
   );

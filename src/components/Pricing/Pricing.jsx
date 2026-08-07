@@ -8,13 +8,20 @@ import PricingCard from "./PricingCard";
 function Pricing() {
   return (
     <section
-      id="pricing"
-      className="relative py-28 overflow-hidden"
+      className="
+        relative
+        overflow-hidden
+        bg-[#061B3A]
+        py-28
+      "
     >
-      <div className="container mx-auto px-6">
+      {/* Background Glow */}
+      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-cyan-500/10 blur-[140px]" />
+      <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-blue-600/10 blur-[160px]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Heading */}
-
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,15 +31,17 @@ function Pricing() {
         >
           <span
             className="
-              inline-block
-              px-6
-              py-2
+              inline-flex
+              items-center
               rounded-full
-              bg-cyan-500/10
               border
               border-cyan-400/20
-              text-cyan-400
+              bg-cyan-500/10
+              px-6
+              py-2
+              text-sm
               font-semibold
+              text-cyan-400
             "
           >
             OUR SPECIAL OFFERS
@@ -48,13 +57,12 @@ function Pricing() {
           <p className="mt-6 text-lg leading-8 text-slate-300">
             From websites and branding to AI solutions and digital marketing,
             Orbitix Technologies provides complete digital services designed
-            to help startups, businesses and entrepreneurs grow online.
+            to help startups, businesses, and entrepreneurs grow online.
           </p>
         </motion.div>
 
         {/* Pricing Cards */}
-
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 items-stretch">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4 items-stretch">
           {pricingPlans.map((plan) => (
             <PricingCard
               key={plan.id}
@@ -64,7 +72,6 @@ function Pricing() {
         </div>
 
         {/* CTA */}
-
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -97,6 +104,7 @@ function Pricing() {
             className="
               mt-8
               inline-flex
+              cursor-pointer
               items-center
               gap-3
               rounded-full
