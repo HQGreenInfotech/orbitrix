@@ -9,17 +9,27 @@ function AboutImage() {
       className="relative"
     >
       <img
-        src="/hero.png"
+        src="/image.png"
         alt="Orbitix Technology"
         className="rounded-3xl shadow-2xl"
       />
 
-      <div className="absolute bottom-8 left-8 bg-white rounded-3xl p-6 shadow-xl">
-        <h2 className="text-4xl font-bold text-blue-600">
+      <div className="absolute
+bottom-8
+left-8
+bg-white/10
+backdrop-blur-xl
+border
+border-white/20
+rounded-2xl
+p-6
+shadow-2xl">
+        <h2 className="text-4xl font-bold text-gray-900"> 
+          {/*  text-cyan-400 */}
           5+
         </h2>
 
-        <p>Years Experience</p>
+        <p className="text-slate-200">Years Experience</p>
       </div>
     </motion.div>
   );

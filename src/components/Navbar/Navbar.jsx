@@ -16,87 +16,102 @@ function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () =>
-      window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header
-      className={`
-        fixed
-        top-0
-        left-0
-        w-full
-        z-30
-        transition-all
-        duration-500
-        ${scrolled ? "pt-3" : "pt-0"}
-      `}
-    >
-      <div
+    <>
+      <header
         className={`
-          max-w-7xl
-          mx-auto
-          flex
-          items-center
-          justify-between
+          fixed
+          top-0
+          left-0
+          w-full
+          z-50
           transition-all
           duration-500
-
-          ${
-            scrolled
-              ? `
-                px-6
-                py-2.5
-                rounded-full
-                bg-white/20
-                backdrop-blur-2xl
-                border border-white/30
-                shadow-[0_10px_40px_rgba(0,0,0,0.15)]
-              `
-              : `
-                px-6
-                py-4
-              `
-          }
+          ${scrolled ? "py-3" : "py-5"}
         `}
       >
-        <Logo />
-
-        <DesktopMenu />
-
-        <button
-          className="
-            hidden
-            lg:block
-            px-5
-            py-2.5
-            text-sm
-            rounded-full
-            bg-gradient-to-r
-            from-blue-600
-            to-cyan-500
-            text-white
-            font-semibold
+        <div
+          className={`
+            max-w-[1400px]
+            mx-auto
+            flex
+            items-center
+            justify-between
             transition-all
-            duration-300
-            hover:scale-105
-            hover:shadow-xl
-          "
-        >
-          Get Started
-        </button>
+            duration-500
 
-        <button
-          className="lg:hidden text-2xl"
-          onClick={() => setOpen(!open)}
+            ${
+              scrolled
+                ? `
+                  px-7
+                  py-3
+                  rounded-full
+                  bg-[#0E235F]/70
+                  backdrop-blur-xl
+                  border
+                  border-white/10
+                  shadow-[0_15px_45px_rgba(0,0,0,.35)]
+                `
+                : `
+                  px-6
+                  py-2
+                `
+            }
+          `}
         >
-          {open ? <FaTimes /> : <FaBars />}
-        </button>
-      </div>
+          {/* Logo */}
+          <Logo />
+
+          {/* Desktop Navigation */}
+          <DesktopMenu />
+
+          {/* CTA */}
+          <button
+            className="
+              hidden
+              lg:flex
+              items-center
+              justify-center
+              px-6
+              py-3
+              rounded-full
+              bg-gradient-to-r
+              from-cyan-500
+              to-blue-600
+              text-white
+              font-semibold
+              transition-all
+              duration-300
+              hover:scale-105
+              hover:shadow-[0_10px_30px_rgba(34,211,238,.35)]
+            "
+          >
+            Get Started
+          </button>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="
+              lg:hidden
+              text-white
+              text-2xl
+              cursor-pointer
+              transition
+              duration-300
+              hover:text-cyan-400
+            "
+          >
+            {open ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
+      </header>
 
       <MobileMenu open={open} setOpen={setOpen} />
-    </header>
+    </>
   );
 }
 

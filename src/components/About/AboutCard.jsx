@@ -12,16 +12,16 @@ function AboutCard({ feature, index }) {
       whileHover={{ y: -8 }}
       className="
         group
-        bg-white
-        rounded-3xl
-        p-8
-        shadow-lg
-        border
-        border-gray-100
-        transition-all
-        duration-300
-        hover:shadow-2xl
-        hover:border-blue-200
+rounded-2xl
+bg-white/5
+backdrop-blur-xl
+border
+border-white/10
+p-8
+transition
+duration-300
+hover:bg-white/10
+hover:border-cyan-400/30
       "
     >
     
@@ -32,8 +32,7 @@ function AboutCard({ feature, index }) {
           h-16
           rounded-2xl
           bg-gradient-to-br
-          from-blue-100
-          to-cyan-100
+         bg-cyan-500/15
           flex
           items-center
           justify-center
@@ -43,17 +42,17 @@ function AboutCard({ feature, index }) {
           group-hover:scale-110
         "
       >
-        <Icon className="text-3xl text-blue-600" />
+        <Icon className="text-3xl text-cyan-400" />
       </div>
 
       
 
-      <h3 className="text-2xl font-bold text-slate-900 mb-3">
+      <h3 className="text-2xl font-bold text-white mb-3">
         {feature.title}
       </h3>
 
 
-      <p className="text-slate-600 leading-8">
+      <p className="text-slate-300 leading-8">
         {feature.description}
       </p>
     </motion.div>

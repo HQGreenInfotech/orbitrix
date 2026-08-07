@@ -8,18 +8,18 @@ function AboutContent() {
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <span className="text-blue-600 font-semibold">
+      <span className="text-cyan-400 font-semibold tracking-widest">
         ABOUT ORBITIX
       </span>
 
-      <h2 className="text-5xl font-bold mt-4 leading-tight">
+      <h2 className="text-5xl mt-5 font-bold leading-tight text-white">
         We Build
-        <span className="text-blue-600">
+        <span className="text-cyan-400">
           {" "}Modern Digital Solutions
         </span>
       </h2>
 
-      <p className="mt-8 text-gray-600 leading-8">
+      <p className="mt-8 text-slate-300 leading-8">
         Orbitix Technologies provides Website Development,
         Software Development, AI Solutions, Robotics,
         Educational Coding, Mobile Apps and Digital Marketing
@@ -29,22 +29,18 @@ function AboutContent() {
      <Link
   to="/about-more"
   className="
-    inline-flex
-    items-center
-    justify-center
-    mt-10
-    px-8
-    py-4
-    rounded-full
-    bg-blue-600
-    text-white
-    font-semibold
-    cursor-pointer
-    transition-all
-    duration-300
-    hover:bg-blue-700
-    hover:scale-105
-    hover:shadow-lg
+inline-flex
+items-center
+justify-center
+mt-10
+px-8
+py-4
+rounded-xl
+bg-cyan-500
+hover:bg-cyan-600
+text-white
+font-semibold
+transition
   "
 >
   Explore More

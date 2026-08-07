@@ -13,7 +13,7 @@ function HeroStats() {
     <div className="flex gap-10 mt-14">
       {stats.map((item) => (
         <div key={item.label}>
-          <h2 className="text-4xl font-bold text-blue-600">
+          <h2 className="text-4xl font-bold text-cyan-400">
             <CountUp
               end={item.end}
               duration={2.5}
@@ -23,7 +23,7 @@ function HeroStats() {
             {item.suffix}
           </h2>
 
-          <p className="text-gray-500 mt-2">
+          <p className="text-slate-300 mt-2">
             {item.label}
           </p>
         </div>

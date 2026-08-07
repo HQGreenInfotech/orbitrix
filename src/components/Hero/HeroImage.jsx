@@ -7,26 +7,57 @@ function HeroImage() {
     <motion.div
       initial={{ opacity: 0, x: 80 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-      className="relative flex justify-center items-center"
+      transition={{ duration: 0.8 }}
+      className="
+        relative
+        flex
+        items-center
+        justify-center
+        h-[650px]
+        w-full
+      "
     >
-      
+      {/* Background Glow */}
+      <div
+        className="
+          absolute
+          w-[520px]
+          h-[520px]
+          rounded-full
+          bg-cyan-400/10
+          blur-[140px]
+          z-0
+        "
+      />
 
+      {/* Laptop */}
       <motion.img
+        src="/laptop.png"
+        alt="Orbitix Technologies"
+
         animate={{
-          y: [0, -15, 0],
+          y: [0, -10, 0],
         }}
+
         transition={{
           duration: 6,
           repeat: Infinity,
+          ease: "easeInOut",
         }}
-        src="/laptop.png"
-        alt="Laptop"
-        className="w-full max-w-6xl drop-shadow-2xl relative z-20"
+
+        className="
+          relative
+          z-20
+          w-full
+          max-w-[620px]
+          object-contain
+          drop-shadow-[0_40px_100px_rgba(0,0,0,.45)]
+          select-none
+          pointer-events-none
+        "
       />
 
-    
-
+      {/* Floating Cards */}
       {heroCards.map((card) => (
         <FloatingCard
           key={card.id}

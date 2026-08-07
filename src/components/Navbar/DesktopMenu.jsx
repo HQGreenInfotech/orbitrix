@@ -17,12 +17,19 @@ function DesktopMenu() {
           key={item.name}
           to={item.path}
           className={({ isActive }) =>
-            `font-medium transition-colors duration-300 ${
-              isActive
-                ? "text-blue-600"
-                : "text-slate-700 hover:text-blue-600"
-            }`
-          }
+  `
+    font-medium
+    transition-all
+    duration-300
+
+    ${
+      isActive
+        ? "text-cyan-400"
+        : "text-slate-300 hover:text-white"
+    }
+  `
+}
+          
         >
           {item.name}
         </NavLink>
