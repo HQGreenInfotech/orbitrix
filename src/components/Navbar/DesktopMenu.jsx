@@ -11,23 +11,25 @@ const menuItems = [
 
 function DesktopMenu() {
   return (
-    <nav className="hidden lg:flex items-center gap-7">
+    <nav className="hidden lg:flex items-center gap-14">
       {menuItems.map((item) => (
         <NavLink
           key={item.name}
           to={item.path}
-          className={({ isActive }) =>
-  `
-    font-medium
-    transition-all
-    duration-300
+         className={({ isActive }) =>
+`
+relative
+font-semibold
+text-lg
+transition-all
+duration-300
 
-    ${
-      isActive
-        ? "text-cyan-400"
-        : "text-slate-300 hover:text-white"
-    }
-  `
+${
+isActive
+? "text-cyan-400"
+: "text-white/70 hover:text-white"
+}
+`
 }
           
         >

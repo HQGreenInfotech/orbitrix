@@ -1,16 +1,9 @@
-// src/components/Hero/heroData.js
-
 import {
-  FaReact,
-  FaNodeJs,
-  FaMobileAlt,
   FaGlobe,
   FaRobot,
+  FaMobileAlt,
+  FaNodeJs,
 } from "react-icons/fa";
-
-import {
-  SiMongodb,
-} from "react-icons/si";
 
 export const heroCards = [
   {
@@ -18,9 +11,9 @@ export const heroCards = [
     title: "Web Development",
     subtitle: "Modern Websites",
     icon: FaGlobe,
-    color: "text-blue-500",
+    color: "text-blue-400",
     bg: "bg-blue-500/20",
-    position: "top-10 -left-6",
+    position: "top-10 left-0",
   },
 
   {
@@ -30,7 +23,7 @@ export const heroCards = [
     icon: FaRobot,
     color: "text-violet-400",
     bg: "bg-violet-500/20",
-    position: "top-12 -right-6",
+    position: "top-10 right-0",
   },
 
   {
@@ -40,7 +33,7 @@ export const heroCards = [
     icon: FaMobileAlt,
     color: "text-orange-400",
     bg: "bg-orange-500/20",
-    position: "bottom-20 left-0",
+    position: "bottom-10 left-4",
   },
 
   {
@@ -50,21 +43,6 @@ export const heroCards = [
     icon: FaNodeJs,
     color: "text-green-400",
     bg: "bg-green-500/20",
-    position: "bottom-12 right-2",
-  },
-];
-
-export const heroStats = [
-  {
-    number: "100+",
-    label: "Projects",
-  },
-  {
-    number: "50+",
-    label: "Clients",
-  },
-  {
-    number: "99%",
-    label: "Success Rate",
+    position: "bottom-10 right-4",
   },
 ];

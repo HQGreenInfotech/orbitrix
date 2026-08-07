@@ -21,94 +21,50 @@ function Navbar() {
 
   return (
     <>
-      <header
-        className={`
-          fixed
-          top-0
-          left-0
-          w-full
-          z-50
-          transition-all
-          duration-500
-          ${scrolled ? "py-3" : "py-5"}
-        `}
-      >
-        <div
-          className={`
-            max-w-[1400px]
-            mx-auto
-            flex
-            items-center
-            justify-between
-            transition-all
-            duration-500
+    <header className="fixed top-0 left-0 w-full z-50 py-6">
+  <div
+    className="
+      max-w-[1450px]
+      mx-auto
+      h-[82px]
 
-            ${
-              scrolled
-                ? `
-                  px-7
-                  py-3
-                  rounded-full
-                  bg-[#0E235F]/70
-                  backdrop-blur-xl
-                  border
-                  border-white/10
-                  shadow-[0_15px_45px_rgba(0,0,0,.35)]
-                `
-                : `
-                  px-6
-                  py-2
-                `
-            }
-          `}
-        >
-          {/* Logo */}
-          <Logo />
+      rounded-full
 
-          {/* Desktop Navigation */}
-          <DesktopMenu />
+      bg-[#0A1738]/80
+      backdrop-blur-2xl
 
-          {/* CTA */}
-          <button
-            className="
-              hidden
-              lg:flex
-              items-center
-              justify-center
-              px-6
-              py-3
-              rounded-full
-              bg-gradient-to-r
-              from-cyan-500
-              to-blue-600
-              text-white
-              font-semibold
-              transition-all
-              duration-300
-              hover:scale-105
-              hover:shadow-[0_10px_30px_rgba(34,211,238,.35)]
-            "
-          >
-            Get Started
-          </button>
+      border border-white/10
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="
-              lg:hidden
-              text-white
-              text-2xl
-              cursor-pointer
-              transition
-              duration-300
-              hover:text-cyan-400
-            "
-          >
-            {open ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
-      </header>
+      shadow-[0_20px_60px_rgba(0,0,0,.35)]
+
+      flex
+      items-center
+      justify-between
+
+      px-10
+    "
+  >
+    <Logo />
+
+    <DesktopMenu />
+
+    <button
+      className="
+        h-14
+        px-8
+        rounded-full
+        bg-gradient-to-r
+        from-cyan-400
+        to-blue-600
+        text-white
+        font-semibold
+        shadow-xl
+      "
+    >
+      Get Started
+    </button>
+  </div>
+</header>
 
       <MobileMenu open={open} setOpen={setOpen} />
     </>
