@@ -6,7 +6,7 @@ function FooterLogo() {
      
 
       <img
-        src="/logo.png"
+        src="/orbitix.png"
         alt="Orbitix Technology"
         className="w-56"
       />
