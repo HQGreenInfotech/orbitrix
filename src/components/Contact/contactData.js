@@ -6,7 +6,6 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaGithub,
   FaWhatsapp,
 } from "react-icons/fa";
 
@@ -22,9 +21,7 @@ export const contactInfo = [
     title: "Email",
     value: "manager.orbitixtechnologies@gmail.com",
     value2: "admin.orbitixtechnologies@gmail.com",
-    link: "mailto:orbitixtechnologies@gmail.com",
   },
-  
   {
     icon: FaMapMarkerAlt,
     title: "Location",
@@ -39,18 +36,22 @@ export const contactInfo = [
 
 export const socialLinks = [
   {
+    name: "Facebook",
     icon: FaFacebook,
     url: "https://www.facebook.com/share/19C3phpsCn/?mibextid=wwXIfr",
   },
   {
+    name: "Instagram",
     icon: FaInstagram,
     url: "https://www.instagram.com/manager.orbitixtechnologies",
   },
   {
+    name: "LinkedIn",
     icon: FaLinkedin,
     url: "https://www.linkedin.com/in/orbitix-technologies-29614b425",
   },
   {
+    name: "WhatsApp",
     icon: FaWhatsapp,
     url: "https://wa.me/918078611491",
   },
