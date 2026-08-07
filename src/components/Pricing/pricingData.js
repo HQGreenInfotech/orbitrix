@@ -51,7 +51,8 @@ export const pricingPlans = [
       "6 Months Support",
     ],
 
-    button: "Claim Offer",
+    button: "Claim Offer ",
+    
   },
 
 

@@ -3,22 +3,36 @@ import { websiteFeatures } from "./servicesData";
 
 function WebsiteFeatures() {
   return (
-    <section className="mt-28">
+    <section className="relative mt-32">
+      {/* Heading */}
       <div className="text-center mb-16">
-        <span className="inline-block px-5 py-2 rounded-full bg-blue-100 text-blue-600 font-semibold uppercase">
+        <span
+          className="
+            inline-block
+            px-6
+            py-2
+            rounded-full
+            bg-cyan-500/10
+            border
+            border-cyan-400/20
+            text-cyan-300
+            font-semibold
+          "
+        >
           Website Package Includes
         </span>
 
-        <h2 className="mt-5 text-4xl lg:text-5xl font-black">
+        <h2 className="mt-5 text-4xl lg:text-5xl font-black text-white">
           Everything Included
         </h2>
 
-        <p className="mt-4 text-gray-600 max-w-3xl mx-auto leading-8">
+        <p className="mt-5 max-w-3xl mx-auto text-slate-300 leading-8">
           Every website comes with premium features designed to help your
           business establish a professional online presence.
         </p>
       </div>
 
+      {/* Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {websiteFeatures.map((item, index) => {
           const Icon = item.icon;
@@ -33,20 +47,24 @@ function WebsiteFeatures() {
                 delay: index * 0.08,
               }}
               viewport={{ once: true }}
+              whileHover={{
+                y: -10,
+                scale: 1.03,
+              }}
               className="
                 group
-                bg-white
                 rounded-3xl
+                bg-white/5
+                backdrop-blur-xl
                 border
-                border-slate-200
-                shadow-md
+                border-white/10
                 p-6
                 text-center
                 transition-all
                 duration-300
-                hover:-translate-y-2
-                hover:border-blue-500
-                hover:shadow-2xl
+                hover:bg-white/10
+                hover:border-cyan-400/30
+                hover:shadow-[0_20px_60px_rgba(0,0,0,.35)]
               "
             >
               <div
@@ -55,19 +73,20 @@ function WebsiteFeatures() {
                   h-16
                   mx-auto
                   rounded-2xl
-                  bg-blue-100
+                  bg-cyan-500/10
                   flex
                   items-center
                   justify-center
                   transition-all
                   duration-300
-                  group-hover:bg-blue-600
+                  group-hover:bg-cyan-500
+                  group-hover:scale-110
                 "
               >
-                <Icon className="text-3xl text-blue-600 group-hover:text-white" />
+                <Icon className="text-3xl text-cyan-400 group-hover:text-white" />
               </div>
 
-              <h3 className="mt-5 font-bold text-lg leading-7">
+              <h3 className="mt-5 font-bold text-lg leading-7 text-white">
                 {item.title}
               </h3>
             </motion.div>

@@ -10,9 +10,9 @@ function HeroContent() {
       transition={{ duration: .8 }}
     >
       <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-cyan-500/20 bg-white/5 backdrop-blur-xl">
-        <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+        <span className="w-2 h-2 rounded-full bg-gray-600"></span>
 
-        <p className="uppercase tracking-[4px] text-cyan-300 text-sm font-semibold">
+        <p className="uppercase tracking-[4px] text-white text-sm font-semibold">
           Building the Future with Technology
         </p>
       </div>

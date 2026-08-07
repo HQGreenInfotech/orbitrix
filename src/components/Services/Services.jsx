@@ -10,17 +10,15 @@ function Services() {
     <section
       id="services"
       className="
-        relative
-        overflow-hidden
-        py-28
-        bg-gradient-to-b
-        from-slate-50
-        to-white
+          relative
+    overflow-hidden
+    py-32
+    text-white
       "
     >
       <ServiceBackground />
 
-      <div className="relative container mx-auto px-6">
+      <div className="relative z-10 container mx-auto px-6">
 
         {/* Heading */}
 
@@ -52,7 +50,7 @@ function Services() {
             </span>
           </h2>
 
-          <p className="mt-8 text-lg text-gray-600 leading-8">
+          <p className="mt-8 text-lg text-white leading-8">
             From websites to AI, robotics, education,
             software development and digital marketing,
             Orbitix Technologies delivers complete

@@ -1,11 +1,11 @@
-import BackgroundEffects from "./BackgroundEffects";
+// import BackgroundEffects from "./BackgroundEffects";
 import HeroContent from "./HeroContent";
 import HeroImage from "./HeroImage";
 
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#081B4B]">
-      <BackgroundEffects />
+      {/* <BackgroundEffects /> */}
 
       <div
         className="
