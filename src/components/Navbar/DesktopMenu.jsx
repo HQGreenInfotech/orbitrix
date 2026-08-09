@@ -11,12 +11,18 @@ function DesktopMenu({ activeSection }) {
   const handleClick = (id) => {
     const section = document.getElementById(id);
 
-    if (!section) return;
+    // If section exists, scroll to it
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
 
-    section.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+      return;
+    }
+
+    // If section doesn't exist, navigate using normal link logic
+    window.location.href = `/${id === "home" ? "" : id}`;
   };
 
   return (

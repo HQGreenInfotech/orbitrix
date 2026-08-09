@@ -6,56 +6,22 @@ import Logo from "./Logo";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 
-const sections = [
-  "home",
-  "about",
-  "services",
-  "program",
-  "faq",
-  "contact",
-];
-
 function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
 
   const location = useLocation();
 
   // --------------------------------
-  // Scroll + Section Detection
+  // 1. Navbar background on scroll
   // --------------------------------
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 60);
-
-      const scrollPosition = window.scrollY + 150;
-
-      let currentSection = "home";
-
-      sections.forEach((id) => {
-        const section = document.getElementById(id);
-
-        if (!section) return;
-
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-
-        if (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionTop + sectionHeight
-        ) {
-          currentSection = id;
-        }
-      });
-
-      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Run once when page loads
-    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -63,24 +29,85 @@ function Navbar() {
   }, []);
 
   // --------------------------------
-  // React Router Page Detection
+  // 2. Detect active section on HOME
   // --------------------------------
   useEffect(() => {
-    const pathname = location.pathname;
-
-    const pageMap = {
-      "/": "home",
-      "/about": "about",
-      "/services": "services",
-      "/program": "program",
-      "/faq": "faq",
-      "/contact": "contact",
-    };
-
-    if (pageMap[pathname]) {
-      setActiveSection(pageMap[pathname]);
+    // Only observe sections on Home page
+    if (location.pathname !== "/") {
+      return;
     }
+
+    const sections = document.querySelectorAll("section[id]");
+
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort(
+            (a, b) =>
+              b.intersectionRatio - a.intersectionRatio
+          );
+
+        if (visibleSections.length > 0) {
+          setActiveSection(visibleSections[0].target.id);
+        }
+      },
+      {
+        root: null,
+
+        // Because your navbar is fixed
+        rootMargin: "-120px 0px -45% 0px",
+
+        threshold: [0.1, 0.25, 0.5, 0.75],
+      }
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
   }, [location.pathname]);
+
+  // --------------------------------
+  // 3. Active page for React Router
+  // --------------------------------
+
+  const getActiveSection = () => {
+    // Home
+    if (location.pathname === "/") {
+      return activeSection;
+    }
+
+    // Separate pages
+    if (location.pathname === "/about") {
+      return "about";
+    }
+
+    if (location.pathname === "/services") {
+      return "services";
+    }
+
+    if (location.pathname === "/program") {
+      return "program";
+    }
+
+    if (location.pathname === "/faq") {
+      return "faq";
+    }
+
+    if (location.pathname === "/contact") {
+      return "contact";
+    }
+
+    return "";
+  };
+
+  const currentActiveSection = getActiveSection();
 
   return (
     <>
@@ -129,7 +156,6 @@ function Navbar() {
             left-0
             right-0
             h-px
-
             bg-gradient-to-r
             from-transparent
             via-white/30
@@ -145,33 +171,13 @@ function Navbar() {
             bottom-0
             left-1/2
             -translate-x-1/2
-
             w-[40%]
             h-[2px]
-
             bg-gradient-to-r
             from-transparent
             via-cyan-400/70
             to-transparent
-
             blur-[1px]
-          "
-        />
-
-        {/* Bottom ambient glow */}
-        <div
-          className="
-            pointer-events-none
-            absolute
-            bottom-[-20px]
-            left-1/2
-            -translate-x-1/2
-
-            w-[45%]
-            h-12
-
-            bg-cyan-400/10
-            blur-3xl
           "
         />
 
@@ -180,34 +186,31 @@ function Navbar() {
           className="
             relative
             z-10
-
             flex
             items-center
             justify-between
             gap-6
-
             h-[76px]
-
             px-5
             sm:px-7
             lg:px-8
           "
         >
-          {/* Logo */}
           <Logo />
 
-          {/* Desktop Navigation */}
+          {/* Desktop */}
           <div className="hidden lg:flex items-center">
-            <DesktopMenu activeSection={activeSection} />
+            <DesktopMenu
+              activeSection={currentActiveSection}
+            />
           </div>
 
-          {/* Desktop CTA */}
+          {/* CTA */}
           <Link
             to="/contact"
             className="
               hidden
               lg:flex
-
               items-center
               justify-center
 
@@ -240,7 +243,7 @@ function Navbar() {
             Get Started
           </Link>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile button */}
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -248,7 +251,6 @@ function Navbar() {
             onClick={() => setOpen((prev) => !prev)}
             className="
               lg:hidden
-
               flex
               items-center
               justify-center
@@ -284,10 +286,10 @@ function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Navigation */}
       <MobileMenu
         open={open}
         setOpen={setOpen}
+        activeSection={currentActiveSection}
       />
     </>
   );
