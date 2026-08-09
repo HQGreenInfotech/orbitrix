@@ -4,62 +4,91 @@ function Logo() {
   return (
     <Link
       to="/"
+      aria-label="Orbitix Technologies"
       className="
+        group
         relative
         flex
         items-center
         justify-center
-        h-14
-        w-36
-        rounded-full
-        overflow-hidden
-        group
+
+        h-[72px]
+        w-[165px]
+
+        shrink-0
+        overflow-visible
       "
     >
-      {/* Logo glow */}
+      {/* Main cyan glow */}
       <span
         className="
+          pointer-events-none
           absolute
-          inset-0
-          rounded-full
-          bg-cyan-400/10
-          blur-xl
-          opacity-70
-          group-hover:opacity-100
-          transition-opacity
-          duration-500
-        "
-      />
+          left-1/2
+          top-1/2
+          -translate-x-1/2
+          -translate-y-1/2
 
-      {/* Small highlight */}
-      <span
-        className="
-          absolute
-          -top-5
-          -right-3
-          h-14
-          w-14
+          h-12
+          w-32
+
           rounded-full
           bg-cyan-400/10
           blur-2xl
+
+          transition-all
+          duration-500
+
+          group-hover:bg-cyan-400/20
+          group-hover:scale-110
         "
       />
 
+      {/* Bottom light reflection */}
+      <span
+        className="
+          pointer-events-none
+          absolute
+          bottom-1
+          left-1/2
+          -translate-x-1/2
+
+          h-[2px]
+          w-20
+
+          rounded-full
+
+          bg-gradient-to-r
+          from-transparent
+          via-cyan-400/60
+          to-transparent
+
+          opacity-70
+          blur-[1px]
+        "
+      />
+
+      {/* Logo */}
       <img
         src="/orbitix.png"
         alt="Orbitix Technologies"
         className="
           relative
           z-10
-          h-12
+
+          h-[70px]
           w-auto
-          max-w-[130px]
+          max-w-[145px]
+
           object-contain
-          drop-shadow-[0_0_12px_rgba(34,211,238,0.35)]
+
+          drop-shadow-[0_0_8px_rgba(34,211,238,0.45)]
+
           transition-all
           duration-500
+
           group-hover:scale-105
-          group-hover:drop-shadow-[0_0_18px_rgba(34,211,238,0.55)]
+          group-hover:drop-shadow-[0_0_16px_rgba(34,211,238,0.7)]
         "
       />
     </Link>
