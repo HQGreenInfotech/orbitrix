@@ -4,19 +4,15 @@ function FooterLogo() {
   return (
     <div>
      
-
       <img
         src="/orbitix.png"
         alt="Orbitix Technology"
         className="w-56"
       />
-
-    
-
       <p
         className="
           mt-8
-          text-gray-600
+          text-gray-300
           leading-8
           max-w-md
         "

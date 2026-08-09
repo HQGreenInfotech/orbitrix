@@ -17,12 +17,12 @@ function FooterBottom() {
     >
      
 
-      <p className="text-gray-600 text-center lg:text-left">
+      <p className=" text-center lg:text-left text-white">
         © {year}{" "}
         <span className="font-semibold text-slate-900">
           Orbitix Technology
         </span>
-        . All Rights Reserved.
+         All Rights Reserved.
       </p>
 
      
@@ -33,19 +33,19 @@ function FooterBottom() {
           flex-wrap
           justify-center
           gap-6
-          text-gray-600
+          text-white
         "
       >
         <NavLink
           to="/privacy-policy"
-          className="hover:text-blue-600 transition-colors duration-300"
+          className="hover:text-blue-600 transition-colors  duration-300"
         >
           Privacy Policy
         </NavLink>
 
         <NavLink
           to="/terms"
-          className="hover:text-blue-600 transition-colors duration-300"
+          className="hover:text-blue-600 transition-colors  duration-300"
         >
           Terms & Conditions
         </NavLink>
@@ -64,7 +64,7 @@ function FooterBottom() {
           flex
           items-center
           gap-2
-          text-gray-600
+          text-white
         "
       >
         <span>Made with</span>
