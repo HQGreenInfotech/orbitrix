@@ -10,23 +10,55 @@ export default function HeroImage() {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
       className="
-      relative
-      flex
-      justify-center
-      items-center
+        relative
+        flex
+        items-center
+        justify-center
+
+        w-full
+        min-h-[500px]
+
+        lg:min-h-[600px]
+
+        mt-10
+        lg:mt-0
       "
     >
+    
+      <div
+        className="
+          pointer-events-none
+          absolute
+          top-1/2
+          left-1/2
+          -translate-x-1/2
+          -translate-y-1/2
 
-      <CodeEditor />
+          w-[350px]
+          h-[350px]
 
-      {heroCards.map(card => (
+          sm:w-[450px]
+          sm:h-[450px]
+
+          rounded-full
+
+          bg-cyan-400/10
+          blur-[120px]
+        "
+      />
+
+  
+      <div className="relative z-10 w-full flex justify-center">
+        <CodeEditor />
+      </div>
+
+
+      {heroCards.map((card) => (
         <FloatingCard
           key={card.id}
           {...card}
-          className={card.position}
         />
       ))}
-
     </motion.div>
   );
 }

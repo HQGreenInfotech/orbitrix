@@ -16,9 +16,7 @@ function Hero() {
         lg:pt-40
       "
     >
-      {/* ========================= */}
-      {/* BACKGROUND GLOWS */}
-      {/* ========================= */}
+    
 
       <div
         className="
@@ -54,9 +52,7 @@ function Hero() {
         "
       />
 
-      {/* ========================= */}
-      {/* HERO CONTAINER */}
-      {/* ========================= */}
+    
 
       <div
         className="
@@ -88,9 +84,7 @@ function Hero() {
           "
         >
 
-          {/* ========================= */}
-          {/* LEFT CONTENT */}
-          {/* ========================= */}
+        
 
           <div
             className="
@@ -115,7 +109,7 @@ function Hero() {
               shadow-[0_25px_80px_rgba(0,0,0,0.18)]
             "
           >
-            {/* Top reflection */}
+        
             <div
               className="
                 pointer-events-none
@@ -133,7 +127,7 @@ function Hero() {
               "
             />
 
-            {/* Cyan glow */}
+         
             <div
               className="
                 pointer-events-none
@@ -165,9 +159,7 @@ function Hero() {
             </div>
           </div>
 
-          {/* ========================= */}
-          {/* RIGHT IMAGE */}
-          {/* ========================= */}
+         
 
           <div
             className="
@@ -199,7 +191,7 @@ function Hero() {
               lg:min-h-[540px]
             "
           >
-            {/* Top reflection */}
+          
             <div
               className="
                 pointer-events-none
@@ -217,7 +209,7 @@ function Hero() {
               "
             />
 
-            {/* Bottom cyan light */}
+        
             <div
               className="
                 pointer-events-none
@@ -239,7 +231,7 @@ function Hero() {
               "
             />
 
-            {/* Image glow */}
+       
             <div
               className="
                 pointer-events-none
@@ -274,7 +266,6 @@ function Hero() {
         </div>
       </div>
 
-      {/* Bottom fade */}
       <div
         className="
           pointer-events-none
