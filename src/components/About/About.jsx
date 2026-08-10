@@ -6,26 +6,109 @@ import { features } from "./aboutData";
 function About() {
   return (
     <section
+      id="about"
       className="
         relative
         overflow-hidden
-        py-36
+        py-24
+        lg:py-32
+       
       "
     >
-      {/* Background Blur */}
-      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-cyan-500/10 blur-[140px]" />
-      <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-blue-600/10 blur-[160px]" />
+      {/* Subtle liquid background - top left */}
+      <div
+        className="
+          absolute
+          -top-32
+          -left-32
+          w-[420px]
+          h-[420px]
+          rounded-full
+          bg-cyan-400/[0.04]
+          blur-[100px]
+          pointer-events-none
+        "
+      />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      {/* Subtle liquid background - right */}
+      <div
+        className="
+          absolute
+          top-[35%]
+          -right-40
+          w-[500px]
+          h-[500px]
+          rounded-full
+          bg-blue-500/[0.06]
+          blur-[120px]
+          pointer-events-none
+        "
+      />
+
+      {/* Small liquid highlight */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-1/3
+          w-[300px]
+          h-[180px]
+          rounded-full
+          bg-cyan-400/[0.025]
+          blur-[90px]
+          pointer-events-none
+        "
+      />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Top Section */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <AboutContent />
-          <AboutImage />
+        <div
+          className="
+            relative
+            grid
+            lg:grid-cols-2
+            gap-12
+            lg:gap-16
+            items-center
+          "
+        >
+          {/* Very subtle liquid surface behind content */}
+          <div
+            className="
+              absolute
+              -inset-6
+              rounded-[3rem]
+              bg-white/[0.012]
+              border
+              border-white/[0.04]
+              backdrop-blur-[2px]
+              pointer-events-none
+            "
+          />
+
+          <div className="relative z-10">
+            <AboutContent />
+          </div>
+
+          <div className="relative z-10">
+            <AboutImage />
+          </div>
         </div>
 
         {/* Feature Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-24">
+        <div
+          className="
+            relative
+            grid
+            md:grid-cols-2
+            lg:grid-cols-4
+            gap-6
+            lg:gap-8
+            mt-20
+            lg:mt-24
+          "
+        >
           {features.map((feature, index) => (
             <AboutCard
               key={index}

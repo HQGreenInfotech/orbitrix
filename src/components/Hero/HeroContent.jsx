@@ -5,42 +5,122 @@ import HeroStats from "./HeroStats";
 function HeroContent() {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -60 }}
+      initial={{ opacity: 0, x: -40 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: .8 }}
+      transition={{
+        duration: 0.8,
+        ease: "easeOut",
+      }}
     >
-      <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-cyan-500/20 bg-white/5 backdrop-blur-xl">
-        <span className="w-2 h-2 rounded-full bg-gray-600"></span>
+      {/* Label */}
 
-        <p className="uppercase tracking-[4px] text-white text-sm font-semibold">
+      <div
+        className="
+          inline-flex
+          items-center
+          gap-3
+
+          rounded-full
+
+          border
+          border-white/10
+
+          bg-white/[0.035]
+
+          px-5
+          py-2.5
+
+          backdrop-blur-xl
+        "
+      >
+        <span
+          className="
+            h-2
+            w-2
+            rounded-full
+            bg-cyan-400
+            shadow-[0_0_12px_rgba(34,211,238,0.7)]
+          "
+        />
+
+        <p
+          className="
+            text-xs
+            font-semibold
+            uppercase
+            tracking-[3px]
+            text-white
+          "
+        >
           Building the Future with Technology
         </p>
       </div>
 
-      <h1 className="mt-10 text-6xl lg:text-7xl font-black leading-[1.05] text-white">
-        Digital Solutions
+      {/* Heading */}
+
+      <h1
+        className="
+          mt-8
+
+          text-5xl
+          font-black
+          leading-[1.02]
+
+          text-white
+
+          sm:text-6xl
+          lg:text-7xl
+          xl:text-[82px]
+        "
+      >
+        Digital
         <br />
 
-        <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
+        Solutions
+        <br />
+
+        <span className="text-cyan-400">
           Built
         </span>{" "}
         for
         <br />
 
-        Modern Businesses
+        Modern
+        <br />
+
+        Businesses
       </h1>
 
-      <p className="mt-8 max-w-xl text-lg leading-9 text-slate-300">
-        Orbitix Technology helps startups, businesses and educational
-        institutions build modern websites, AI solutions, mobile apps and
-        digital experiences.
+      {/* Description */}
+
+      <p
+        className="
+          mt-8
+          max-w-xl
+
+          text-base
+          leading-8
+
+          text-white/65
+
+          sm:text-lg
+        "
+      >
+        Orbitix Technology helps startups, businesses and
+        educational institutions build modern websites,
+        AI solutions, mobile applications and digital
+        experiences.
       </p>
 
-      <div className="mt-10">
+      {/* Buttons */}
+
+      <div className="mt-9">
         <HeroButtons />
       </div>
 
-      <div className="mt-16">
+      {/* Stats */}
+
+      <div className="mt-12">
         <HeroStats />
       </div>
     </motion.div>

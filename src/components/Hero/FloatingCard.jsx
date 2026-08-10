@@ -11,7 +11,7 @@ function FloatingCard({
   return (
     <motion.div
       animate={{
-        y: [0, -10, 0],
+        y: [0, -8, 0],
         rotate: [0, 1, 0],
       }}
       transition={{
@@ -29,44 +29,65 @@ function FloatingCard({
         items-center
         gap-3
 
-        w-[210px]
-        sm:w-[230px]
+        w-[175px]
+        sm:w-[205px]
+        lg:w-[220px]
 
-        px-4
+        px-3
+        sm:px-4
         py-3
 
         rounded-2xl
 
-        bg-[#163B80]/45
+        /* Liquid glass */
+        bg-white/[0.055]
         backdrop-blur-2xl
 
         border
         border-white/[0.12]
 
-        shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+        shadow-[0_15px_50px_rgba(0,0,0,0.3)]
 
         overflow-hidden
 
         transition-all
         duration-500
 
-        hover:border-cyan-400/40
-        hover:bg-[#163B80]/60
-        hover:shadow-[0_20px_70px_rgba(34,211,238,0.18)]
+        hover:bg-white/[0.09]
+        hover:border-cyan-300/30
+        hover:-translate-y-1
+        hover:shadow-[0_20px_60px_rgba(34,211,238,0.15)]
       `}
     >
-     
+      {/* Glass reflection */}
+      <span
+        className="
+          pointer-events-none
+          absolute
+          top-0
+          left-5
+          right-5
+          h-px
+
+          bg-gradient-to-r
+          from-transparent
+          via-white/40
+          to-transparent
+        "
+      />
+
+      {/* Moving glass shine */}
       <span
         className="
           pointer-events-none
           absolute
           inset-y-0
-          left-[-100%]
+          left-[-120%]
           w-1/2
 
           bg-gradient-to-r
           from-transparent
-          via-white/10
+          via-white/15
           to-transparent
 
           skew-x-[-20deg]
@@ -78,17 +99,16 @@ function FloatingCard({
         "
       />
 
-     
+      {/* Bottom glow */}
       <span
         className="
           pointer-events-none
           absolute
-
-          -bottom-8
+          -bottom-6
           left-1/2
 
-          w-28
-          h-10
+          h-12
+          w-24
 
           -translate-x-1/2
 
@@ -99,32 +119,14 @@ function FloatingCard({
 
           opacity-0
 
-          transition-all
+          transition-opacity
           duration-500
 
           group-hover:opacity-100
         "
       />
 
-
-      <span
-        className="
-          pointer-events-none
-          absolute
-          top-0
-          left-5
-          right-5
-
-          h-px
-
-          bg-gradient-to-r
-          from-transparent
-          via-white/25
-          to-transparent
-        "
-      />
-
-     
+      {/* Icon */}
       <div
         className={`
           relative
@@ -134,8 +136,10 @@ function FloatingCard({
           items-center
           justify-center
 
-          w-11
-          h-11
+          w-9
+          h-9
+          sm:w-10
+          sm:h-10
 
           shrink-0
 
@@ -156,17 +160,19 @@ function FloatingCard({
       >
         <Icon
           className={`
-            text-lg
+            text-base
+            sm:text-lg
+
             ${color}
 
-            transition-all
+            transition-transform
             duration-500
 
             group-hover:scale-110
           `}
         />
 
-       
+        {/* Icon glow */}
         <span
           className="
             pointer-events-none
@@ -188,15 +194,19 @@ function FloatingCard({
         />
       </div>
 
-      <div className="relative z-10 min-w-0 leading-tight">
+      {/* Text */}
+      <div className="relative z-10 min-w-0">
         <h4
           className="
             truncate
 
             text-white
-            text-base
-            sm:text-lg
+
+            text-sm
+            sm:text-base
+
             font-semibold
+            leading-tight
 
             transition-colors
             duration-300
@@ -209,25 +219,28 @@ function FloatingCard({
 
         <p
           className="
+            mt-1
+
             truncate
 
-            text-slate-300
-            text-xs
-            sm:text-sm
+            text-white/60
 
-            mt-1
+            text-[11px]
+            sm:text-xs
+
+            leading-tight
 
             transition-colors
             duration-300
 
-            group-hover:text-slate-200
+            group-hover:text-white/80
           "
         >
           {subtitle}
         </p>
       </div>
 
-     
+      {/* Bottom reflection */}
       <span
         className="
           pointer-events-none
@@ -235,8 +248,8 @@ function FloatingCard({
           bottom-0
           left-1/2
 
-          h-[1px]
-          w-16
+          h-px
+          w-14
 
           -translate-x-1/2
 
@@ -244,8 +257,6 @@ function FloatingCard({
           from-transparent
           via-cyan-400/50
           to-transparent
-
-          opacity-60
         "
       />
     </motion.div>

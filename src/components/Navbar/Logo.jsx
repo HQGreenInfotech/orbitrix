@@ -12,14 +12,14 @@ function Logo() {
         items-center
         justify-center
 
-        h-[72px]
-        w-[165px]
+        h-[82px]
+        w-[190px]
 
         shrink-0
         overflow-visible
       "
     >
-      {/* Main cyan glow */}
+      {/* Very subtle glow */}
       <span
         className="
           pointer-events-none
@@ -29,66 +29,43 @@ function Logo() {
           -translate-x-1/2
           -translate-y-1/2
 
-          h-12
-          w-32
+          h-16
+          w-40
 
           rounded-full
           bg-cyan-400/10
-          blur-2xl
+          blur-3xl
 
+          opacity-70
           transition-all
           duration-500
 
-          group-hover:bg-cyan-400/20
+          group-hover:opacity-100
           group-hover:scale-110
-        "
-      />
-
-      {/* Bottom light reflection */}
-      <span
-        className="
-          pointer-events-none
-          absolute
-          bottom-1
-          left-1/2
-          -translate-x-1/2
-
-          h-[2px]
-          w-20
-
-          rounded-full
-
-          bg-gradient-to-r
-          from-transparent
-          via-cyan-400/60
-          to-transparent
-
-          opacity-70
-          blur-[1px]
         "
       />
 
       {/* Logo */}
       <img
-        src="/orbitix.png"
+        src="/orbitix1.png"
         alt="Orbitix Technologies"
         className="
           relative
           z-10
 
-          h-[70px]
+          h-[82px]
           w-auto
-          max-w-[145px]
+          max-w-[175px]
 
           object-contain
 
-          drop-shadow-[0_0_8px_rgba(34,211,238,0.45)]
+          drop-shadow-[0_0_10px_rgba(34,211,238,0.35)]
 
           transition-all
           duration-500
 
           group-hover:scale-105
-          group-hover:drop-shadow-[0_0_16px_rgba(34,211,238,0.7)]
+          group-hover:drop-shadow-[0_0_18px_rgba(34,211,238,0.55)]
         "
       />
     </Link>

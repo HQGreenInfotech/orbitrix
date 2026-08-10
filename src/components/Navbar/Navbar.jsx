@@ -32,7 +32,6 @@ function Navbar() {
   // 2. Detect active section on HOME
   // --------------------------------
   useEffect(() => {
-    // Only observe sections on Home page
     if (location.pathname !== "/") {
       return;
     }
@@ -51,15 +50,14 @@ function Navbar() {
           );
 
         if (visibleSections.length > 0) {
-          setActiveSection(visibleSections[0].target.id);
+          setActiveSection(
+            visibleSections[0].target.id
+          );
         }
       },
       {
         root: null,
-
-        // Because your navbar is fixed
         rootMargin: "-120px 0px -45% 0px",
-
         threshold: [0.1, 0.25, 0.5, 0.75],
       }
     );
@@ -76,14 +74,11 @@ function Navbar() {
   // --------------------------------
   // 3. Active page for React Router
   // --------------------------------
-
   const getActiveSection = () => {
-    // Home
     if (location.pathname === "/") {
       return activeSection;
     }
 
-    // Separate pages
     if (location.pathname === "/about") {
       return "about";
     }
@@ -111,10 +106,13 @@ function Navbar() {
 
   return (
     <>
+      {/* ================================
+          NAVBAR
+      ================================= */}
       <nav
         className={`
           fixed
-          top-4
+          top-5
           left-1/2
           -translate-x-1/2
           z-50
@@ -125,9 +123,12 @@ function Navbar() {
           rounded-[28px]
 
           border
-          border-white/10
+          border-white/[0.10]
 
-          overflow-hidden
+          bg-[#081B4B]/50
+          backdrop-blur-2xl
+
+          shadow-[0_15px_50px_rgba(0,0,0,0.25)]
 
           transition-all
           duration-500
@@ -135,122 +136,152 @@ function Navbar() {
           ${
             scrolled
               ? `
-                bg-white/[0.045]
-                backdrop-blur-2xl
-                shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+                bg-[#07183F]/75
+                shadow-[0_20px_65px_rgba(0,0,0,0.35)]
               `
               : `
-                bg-white/[0.025]
-                backdrop-blur-xl
-                shadow-[0_10px_40px_rgba(0,0,0,0.15)]
+                bg-[#081B4B]/50
               `
           }
         `}
       >
-        {/* Top glass reflection */}
+        {/* ================================
+            GLASS TOP REFLECTION
+        ================================= */}
         <div
           className="
             pointer-events-none
             absolute
+            inset-x-8
             top-0
-            left-0
-            right-0
             h-px
-            bg-gradient-to-r
-            from-transparent
-            via-white/30
-            to-transparent
+            bg-white/20
           "
         />
 
-        {/* Bottom cyan highlight */}
-        <div
-          className="
-            pointer-events-none
-            absolute
-            bottom-0
-            left-1/2
-            -translate-x-1/2
-            w-[40%]
-            h-[2px]
-            bg-gradient-to-r
-            from-transparent
-            via-cyan-400/70
-            to-transparent
-            blur-[1px]
-          "
-        />
-
-        {/* Navbar content */}
+        {/* ================================
+            NAVBAR CONTENT
+        ================================= */}
         <div
           className="
             relative
-            z-10
             flex
             items-center
             justify-between
             gap-6
-            h-[76px]
-            px-5
-            sm:px-7
-            lg:px-8
+
+            h-[72px]
+
+            px-4
+            sm:px-6
+            lg:px-7
           "
         >
-          <Logo />
+          {/* ================================
+              LOGO
+          ================================= */}
+          <div
+            className="
+              relative
+              flex
+              items-center
+              justify-center
 
-          {/* Desktop */}
+              w-[92px]
+              h-[52px]
+
+              rounded-2xl
+
+              bg-white/[0.025]
+
+              border
+              border-white/[0.06]
+
+              transition-all
+              duration-300
+
+              hover:bg-white/[0.05]
+              hover:border-cyan-400/20
+            "
+          >
+            <Logo />
+          </div>
+
+          {/* ================================
+              DESKTOP MENU
+          ================================= */}
           <div className="hidden lg:flex items-center">
             <DesktopMenu
               activeSection={currentActiveSection}
             />
           </div>
 
-          {/* CTA */}
+          {/* ================================
+              GET STARTED
+          ================================= */}
           <Link
             to="/contact"
             className="
               hidden
               lg:flex
+
               items-center
               justify-center
+              gap-2
 
-              h-12
-              px-8
+              h-11
+              px-7
 
-              rounded-full
+              rounded-2xl
 
-              bg-gradient-to-r
-              from-cyan-500
-              to-blue-600
+              bg-blue-400
 
-              text-white
+              text-[#06183F]
+
               font-semibold
 
-              border
-              border-white/10
-
-              shadow-[0_8px_25px_rgba(6,182,212,0.25)]
+              shadow-[0_8px_30px_rgba(34,211,238,0.20)]
 
               transition-all
               duration-300
 
+              hover:bg-cyan-300
               hover:-translate-y-0.5
-              hover:scale-105
 
-              hover:shadow-[0_10px_35px_rgba(6,182,212,0.45)]
+              hover:shadow-[0_12px_35px_rgba(34,211,238,0.30)]
+
+              active:translate-y-0
             "
           >
-            Get Started
+            <span>Get Started</span>
+
+            <span
+              className="
+                text-lg
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
+              "
+            >
+              ↗
+            </span>
           </Link>
 
-          {/* Mobile button */}
+          {/* ================================
+              MOBILE MENU BUTTON
+          ================================= */}
           <button
             type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={
+              open ? "Close menu" : "Open menu"
+            }
             aria-expanded={open}
-            onClick={() => setOpen((prev) => !prev)}
+            onClick={() =>
+              setOpen((prev) => !prev)
+            }
             className="
               lg:hidden
+
               flex
               items-center
               justify-center
@@ -258,16 +289,16 @@ function Navbar() {
               w-11
               h-11
 
-              rounded-full
+              rounded-2xl
 
-              bg-white/[0.06]
+              bg-white/[0.05]
               backdrop-blur-md
 
               border
-              border-white/10
+              border-white/[0.10]
 
               text-white
-              text-xl
+              text-lg
 
               cursor-pointer
 
@@ -286,6 +317,9 @@ function Navbar() {
         </div>
       </nav>
 
+      {/* ================================
+          MOBILE MENU
+      ================================= */}
       <MobileMenu
         open={open}
         setOpen={setOpen}

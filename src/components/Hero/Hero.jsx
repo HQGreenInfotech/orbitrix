@@ -9,29 +9,24 @@ function Hero() {
         relative
         min-h-screen
         overflow-hidden
-
-        /* Space for fixed navbar */
-        pt-32
-        sm:pt-36
-        lg:pt-40
+        pt-28
+        sm:pt-32
+        lg:pt-36
       "
     >
-    
+      {/* Background Glow */}
 
       <div
         className="
           pointer-events-none
           absolute
-          left-[-180px]
+          -left-40
           top-[25%]
-
-          h-[420px]
-          w-[420px]
-
+          h-[380px]
+          w-[380px]
           rounded-full
-          bg-cyan-400/[0.07]
-
-          blur-[120px]
+          bg-cyan-400/[0.045]
+          blur-[130px]
         "
       />
 
@@ -39,118 +34,112 @@ function Hero() {
         className="
           pointer-events-none
           absolute
-          right-[-180px]
-          top-[30%]
-
-          h-[500px]
-          w-[500px]
-
+          -right-40
+          top-[20%]
+          h-[420px]
+          w-[420px]
           rounded-full
-          bg-blue-600/[0.10]
-
+          bg-blue-500/[0.04]
           blur-[140px]
         "
       />
 
-    
+      {/* Main Container */}
 
       <div
         className="
           relative
           z-10
-
           mx-auto
-          max-w-[1400px]
-
-          px-5
+          w-full
+          max-w-[1280px]
+          px-4
+          sm:px-6
+          lg:px-8
+          xl:px-10
           pb-20
-
-          sm:px-8
-          lg:px-10
         "
       >
         <div
           className="
             grid
             w-full
-
             items-center
-
-            gap-12
-
-            lg:grid-cols-[1fr_0.9fr]
-            lg:gap-16
-            xl:gap-20
+            gap-8
+            lg:grid-cols-2
+            lg:gap-10
+            xl:gap-12
           "
         >
-
-        
+          {/* LEFT PANEL */}
 
           <div
             className="
               group
               relative
-
+              w-full
               overflow-hidden
 
               rounded-[32px]
 
               border
-              border-white/[0.08]
+              border-white/[0.09]
 
               bg-white/[0.025]
 
               p-6
               sm:p-8
-              lg:p-10
+              lg:p-9
+              xl:p-10
 
-              backdrop-blur-xl
+              backdrop-blur-2xl
 
-              shadow-[0_25px_80px_rgba(0,0,0,0.18)]
+              shadow-[0_30px_90px_rgba(0,0,0,0.25)]
+
+              transition-all
+              duration-500
+
+              hover:border-cyan-300/[0.15]
             "
           >
-        
+            {/* Top reflection */}
+
             <div
               className="
                 pointer-events-none
                 absolute
-                left-6
-                right-6
+                inset-x-8
                 top-0
-
                 h-px
-
                 bg-gradient-to-r
                 from-transparent
-                via-white/40
+                via-white/30
                 to-transparent
               "
             />
 
-         
+            {/* Internal glow */}
+
             <div
               className="
                 pointer-events-none
                 absolute
+                -left-28
+                top-1/3
 
-                -left-20
-                top-1/2
-
-                h-40
-                w-40
-
-                -translate-y-1/2
+                h-64
+                w-64
 
                 rounded-full
 
-                bg-cyan-400/[0.06]
+                bg-cyan-400/[0.035]
 
-                blur-3xl
+                blur-[100px]
 
-                transition-all
+                transition-transform
                 duration-700
 
-                group-hover:bg-cyan-400/[0.10]
+                group-hover:scale-125
               "
             />
 
@@ -159,15 +148,15 @@ function Hero() {
             </div>
           </div>
 
-         
+          {/* RIGHT PANEL */}
 
           <div
             className="
               group
               relative
-
               flex
-              min-h-[380px]
+              w-full
+              min-w-0
 
               items-center
               justify-center
@@ -177,21 +166,26 @@ function Hero() {
               rounded-[36px]
 
               border
-              border-white/[0.08]
+              border-white/[0.09]
 
-              bg-white/[0.02]
+              bg-white/[0.018]
 
-              p-6
+              p-4
+              sm:p-5
+              lg:p-6
 
-              backdrop-blur-xl
+              backdrop-blur-2xl
 
-              shadow-[0_30px_100px_rgba(0,0,0,0.20)]
+              shadow-[0_35px_100px_rgba(0,0,0,0.28)]
 
-              sm:min-h-[460px]
-              lg:min-h-[540px]
+              transition-all
+              duration-500
+
+              hover:border-cyan-300/[0.14]
             "
           >
-          
+            {/* Top reflection */}
+
             <div
               className="
                 pointer-events-none
@@ -199,39 +193,16 @@ function Hero() {
                 left-8
                 right-8
                 top-0
-
                 h-px
-
                 bg-gradient-to-r
                 from-transparent
-                via-white/40
+                via-white/25
                 to-transparent
               "
             />
 
-        
-            <div
-              className="
-                pointer-events-none
-                absolute
-                bottom-0
-                left-1/2
+            {/* Center glow */}
 
-                h-[2px]
-                w-[55%]
-
-                -translate-x-1/2
-
-                bg-gradient-to-r
-                from-transparent
-                via-cyan-400/60
-                to-transparent
-
-                blur-[1px]
-              "
-            />
-
-       
             <div
               className="
                 pointer-events-none
@@ -239,32 +210,33 @@ function Hero() {
                 left-1/2
                 top-1/2
 
-                h-[280px]
-                w-[280px]
+                h-[260px]
+                w-[260px]
 
                 -translate-x-1/2
                 -translate-y-1/2
 
                 rounded-full
 
-                bg-cyan-400/[0.07]
+                bg-cyan-400/[0.035]
 
-                blur-[90px]
+                blur-[100px]
 
                 transition-all
                 duration-700
 
                 group-hover:scale-125
-                group-hover:bg-cyan-400/[0.11]
               "
             />
 
-            <div className="relative z-10 w-full">
+            <div className="relative z-10 w-full min-w-0">
               <HeroImage />
             </div>
           </div>
         </div>
       </div>
+
+      {/* Bottom Fade */}
 
       <div
         className="
@@ -273,11 +245,9 @@ function Hero() {
           bottom-0
           left-0
           right-0
-
-          h-32
-
+          h-24
           bg-gradient-to-t
-          from-[#081B4B]
+          from-[#071838]
           to-transparent
         "
       />

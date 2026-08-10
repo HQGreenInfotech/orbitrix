@@ -6,7 +6,7 @@ function Program() {
   return (
     <section className="relative overflow-hidden py-28">
       {/* Background */}
-      <div className="absolute inset-0 -z-20 bg-[#081B4B]" />
+      <div className="absolute inset-0 -z-20 " />
 
       {/* Grid Pattern */}
       <div

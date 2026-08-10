@@ -11,7 +11,7 @@ function DesktopMenu({ activeSection }) {
   const handleClick = (id) => {
     const section = document.getElementById(id);
 
-    // If section exists, scroll to it
+    // Home page section
     if (section) {
       section.scrollIntoView({
         behavior: "smooth",
@@ -21,12 +21,23 @@ function DesktopMenu({ activeSection }) {
       return;
     }
 
-    // If section doesn't exist, navigate using normal link logic
+    // Separate page
     window.location.href = `/${id === "home" ? "" : id}`;
   };
 
   return (
-    <nav className="flex items-center gap-8">
+    <nav
+      className="
+        flex
+        items-center
+        gap-1
+        rounded-2xl
+        bg-white/[0.025]
+        border
+        border-white/[0.05]
+        p-1
+      "
+    >
       {menuItems.map((item) => {
         const isActive = activeSection === item.id;
 
@@ -38,78 +49,68 @@ function DesktopMenu({ activeSection }) {
             className={`
               group
               relative
+
               flex
               items-center
               justify-center
-              py-2
 
-              text-base
-              xl:text-lg
-              font-semibold
+              px-4
+              xl:px-5
+              py-2.5
+
+              rounded-xl
+
+              text-sm
+              xl:text-base
+              font-medium
+
+              cursor-pointer
 
               transition-all
               duration-300
 
-              cursor-pointer
-
               ${
                 isActive
-                  ? "text-cyan-400"
-                  : "text-white/70 hover:text-white"
+                  ? `
+                    bg-cyan-400/[0.10]
+                    text-cyan-300
+                    border
+                    border-cyan-400/[0.12]
+                  `
+                  : `
+                    text-white/65
+                    border
+                    border-transparent
+
+                    hover:bg-white/[0.04]
+                    hover:text-white
+                  `
               }
             `}
           >
-            {item.name}
+            <span>{item.name}</span>
 
-            {/* Active underline */}
+            {/* Active indicator */}
             <span
               className={`
                 absolute
-                -bottom-1
+                bottom-1
                 left-1/2
                 -translate-x-1/2
 
                 h-[2px]
+
                 rounded-full
 
-                bg-gradient-to-r
-                from-cyan-400
-                to-blue-500
+                bg-cyan-400
 
                 transition-all
                 duration-300
 
                 ${
                   isActive
-                    ? "w-6 opacity-100"
-                    : "w-0 opacity-0 group-hover:w-5 group-hover:opacity-100"
-                }
-              `}
-            />
-
-            {/* Glow */}
-            <span
-              className={`
-                pointer-events-none
-                absolute
-                -bottom-1
-                left-1/2
-                -translate-x-1/2
-
-                h-2
-                w-8
-
-                rounded-full
-                bg-cyan-400/30
-                blur-md
-
-                transition-opacity
-                duration-300
-
-                ${
-                  isActive
-                    ? "opacity-100"
-                    : "opacity-0 group-hover:opacity-70"
+                    ? "w-5 opacity-100"
+                    : "w-0 opacity-0 group-hover:w-3 group-hover:opacity-60"
                 }
               `}
             />

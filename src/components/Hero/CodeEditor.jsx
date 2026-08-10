@@ -1,153 +1,216 @@
 import { motion } from "framer-motion";
 
 const code = [
-  "const services = [",
-  "  'Website Development',",
-  "  'Mobile Apps',",
-  "  'UI/UX Design',",
-  "  'Artificial Intelligence',",
-  "  'Digital Marketing',",
-  "];",
-  "",
-  "services.map(createSolution);",
+  {
+    type: "code",
+    parts: [
+      { text: "const", color: "text-cyan-400" },
+      { text: " services ", color: "text-white" },
+      { text: "= [", color: "text-white" },
+    ],
+  },
+  {
+    type: "code",
+    parts: [
+      { text: "  'Website Development'", color: "text-emerald-400" },
+      { text: ",", color: "text-orange-400" },
+    ],
+  },
+  {
+    type: "code",
+    parts: [
+      { text: "  'Mobile Apps'", color: "text-emerald-400" },
+      { text: ",", color: "text-orange-400" },
+    ],
+  },
+  {
+    type: "code",
+    parts: [
+      { text: "  'UI/UX Design'", color: "text-emerald-400" },
+      { text: ",", color: "text-orange-400" },
+    ],
+  },
+  {
+    type: "code",
+    parts: [
+      { text: "  'Artificial Intelligence'", color: "text-emerald-400" },
+      { text: ",", color: "text-orange-400" },
+    ],
+  },
+  {
+    type: "code",
+    parts: [
+      { text: "  'Digital Marketing'", color: "text-emerald-400" },
+      { text: ",", color: "text-orange-400" },
+    ],
+  },
+  {
+    type: "code",
+    parts: [
+      { text: "];", color: "text-orange-400" },
+    ],
+  },
+  {
+    type: "empty",
+  },
+  {
+    type: "code",
+    parts: [
+      { text: "services", color: "text-white" },
+      { text: ".map", color: "text-cyan-400" },
+      { text: "(createSolution)", color: "text-white" },
+      { text: ";", color: "text-orange-400" },
+    ],
+  },
 ];
 
 export default function CodeEditor() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
+      initial={{ opacity: 0, y: 30, scale: 0.97 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{
+        duration: 0.9,
+        ease: "easeOut",
+      }}
       className="
         group
         relative
         w-full
-        max-w-[650px]
-
-        rounded-3xl
+        max-w-[700px]
 
         overflow-hidden
+        rounded-[28px]
 
         border
-        border-white/10
+        border-white/[0.14]
 
-        bg-[#09152F]/80
+        bg-[#06142f]/90
         backdrop-blur-2xl
 
-        shadow-[0_40px_120px_rgba(0,0,0,0.45)]
+        shadow-[0_35px_100px_rgba(0,0,0,0.45)]
 
         transition-all
         duration-500
 
-        hover:border-cyan-400/20
-        hover:shadow-[0_40px_120px_rgba(6,182,212,0.12)]
+        hover:border-cyan-400/30
+        hover:shadow-[0_35px_110px_rgba(6,182,212,0.15)]
       "
     >
-     
+      {/* ================================================= */}
+      {/* TOP GLOW */}
+      {/* ================================================= */}
+
       <div
         className="
           pointer-events-none
           absolute
-          -top-20
+          -top-24
           left-1/2
 
-          h-40
-          w-72
+          h-48
+          w-80
 
           -translate-x-1/2
 
           rounded-full
+          bg-cyan-400/[0.08]
 
-          bg-cyan-400/10
-
-          blur-3xl
-
-          opacity-60
+          blur-[70px]
 
           transition-all
           duration-700
 
-          group-hover:bg-cyan-400/20
-          group-hover:opacity-100
+          group-hover:bg-cyan-400/[0.14]
         "
       />
 
-  
+      {/* ================================================= */}
+      {/* TOP BORDER LIGHT */}
+      {/* ================================================= */}
+
       <div
         className="
           pointer-events-none
           absolute
           top-0
-          left-0
-          right-0
+          left-8
+          right-8
 
           h-px
 
-          bg-gradient-to-r
-          from-transparent
-          via-white/30
-          to-transparent
+          bg-white/20
         "
       />
 
-    
+      {/* ================================================= */}
+      {/* HEADER */}
+      {/* ================================================= */}
+
       <div
         className="
           relative
           z-10
 
           flex
+          h-16
+
           items-center
           justify-between
 
-          h-14
-
-          px-5
-
           border-b
-          border-white/10
+          border-white/[0.10]
 
           bg-white/[0.025]
+
+          px-5
+          sm:px-6
+
           backdrop-blur-xl
         "
       >
-    
-        <div className="flex items-center gap-2">
+        {/* Traffic lights */}
+
+        <div className="flex items-center gap-2.5">
           <span
             className="
-              h-3
-              w-3
+              h-3.5
+              w-3.5
               rounded-full
+
               bg-red-400
 
-              shadow-[0_0_10px_rgba(248,113,113,0.35)]
+              shadow-[0_0_12px_rgba(248,113,113,0.45)]
             "
           />
 
           <span
             className="
-              h-3
-              w-3
+              h-3.5
+              w-3.5
               rounded-full
+
               bg-yellow-400
 
-              shadow-[0_0_10px_rgba(250,204,21,0.35)]
+              shadow-[0_0_12px_rgba(250,204,21,0.45)]
             "
           />
 
           <span
             className="
-              h-3
-              w-3
+              h-3.5
+              w-3.5
               rounded-full
+
               bg-green-400
 
-              shadow-[0_0_10px_rgba(74,222,128,0.35)]
+              shadow-[0_0_12px_rgba(74,222,128,0.45)]
             "
           />
         </div>
 
-      
+        {/* File name */}
+
         <div
           className="
             absolute
@@ -155,17 +218,19 @@ export default function CodeEditor() {
             -translate-x-1/2
 
             text-sm
-            font-medium
+            sm:text-base
 
-            text-slate-400
-
+            font-semibold
             tracking-wide
+
+            text-slate-300
           "
         >
           videoCoding.jsx
         </div>
 
-     
+        {/* Live */}
+
         <div
           className="
             flex
@@ -173,93 +238,137 @@ export default function CodeEditor() {
             gap-2
 
             text-xs
-            text-slate-500
+            sm:text-sm
+
+            font-medium
+            text-slate-400
           "
         >
           <span
             className="
-              h-1.5
-              w-1.5
+              h-2
+              w-2
+
               rounded-full
 
               bg-cyan-400
 
-              shadow-[0_0_8px_rgba(34,211,238,0.8)]
+              shadow-[0_0_12px_rgba(34,211,238,0.9)]
+
+              animate-pulse
             "
           />
 
-          Live
+          <span>Live</span>
         </div>
       </div>
 
-    
+      {/* ================================================= */}
+      {/* CODE AREA */}
+      {/* ================================================= */}
+
       <div
         className="
           relative
           z-10
 
-          p-7
-          sm:p-8
+          overflow-x-auto
+
+          px-5
+          py-7
+
+          sm:px-7
+          sm:py-8
 
           font-mono
           text-[14px]
           sm:text-[15px]
+          lg:text-[16px]
 
-          leading-8
-
-          overflow-x-auto
+          leading-[2.8]
         "
       >
-      
-        <div className="flex">
+        <div className="flex min-w-max">
+          {/* Line numbers */}
+
           <div
             className="
               mr-6
+              sm:mr-8
+
               select-none
 
               text-right
 
-              text-slate-600
+              text-[13px]
+              sm:text-sm
 
-              text-sm
-              leading-8
+              leading-[2.8]
+
+              text-slate-600
             "
           >
-            {code.map((_, i) => (
-              <div key={i}>
-                {String(i + 1).padStart(2, "0")}
+            {code.map((_, index) => (
+              <div key={index}>
+                {String(index + 1).padStart(2, "0")}
               </div>
             ))}
           </div>
 
-       
-          <div className="min-w-max">
-            {code.map((line, i) => (
-              <motion.div
-                key={i}
-                initial={{
-                  opacity: 0,
-                  x: -10,
-                }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                }}
-                transition={{
-                  delay: i * 0.12,
-                  duration: 0.4,
-                }}
-                className="
-                  whitespace-pre
+          {/* Code */}
 
-                  text-slate-300
-                "
-              >
-                {line}
-              </motion.div>
-            ))}
+          <div className="flex-1">
+            {code.map((line, index) => {
+              if (line.type === "empty") {
+                return (
+                  <div
+                    key={index}
+                    className="h-5"
+                  />
+                );
+              }
 
-         
+              return (
+                <motion.div
+                  key={index}
+                  initial={{
+                    opacity: 0,
+                    x: -12,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  transition={{
+                    delay: index * 0.12,
+                    duration: 0.45,
+                    ease: "easeOut",
+                  }}
+                  className="
+                    whitespace-pre
+                    transition-all
+                    duration-300
+                  "
+                >
+                  {line.parts.map((part, partIndex) => (
+                    <span
+                      key={partIndex}
+                      className={`
+                        ${part.color}
+
+                        transition-all
+                        duration-300
+                      `}
+                    >
+                      {part.text}
+                    </span>
+                  ))}
+                </motion.div>
+              );
+            })}
+
+            {/* Cursor */}
+
             <motion.span
               animate={{
                 opacity: [1, 0, 1],
@@ -272,7 +381,7 @@ export default function CodeEditor() {
                 ml-1
                 text-cyan-400
 
-                drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]
+                drop-shadow-[0_0_8px_rgba(34,211,238,0.9)]
               "
             >
               |
@@ -281,7 +390,10 @@ export default function CodeEditor() {
         </div>
       </div>
 
-     
+      {/* ================================================= */}
+      {/* BOTTOM LIGHT */}
+      {/* ================================================= */}
+
       <div
         className="
           pointer-events-none
@@ -290,17 +402,43 @@ export default function CodeEditor() {
           bottom-0
           left-1/2
 
-          h-[2px]
+          h-px
           w-[45%]
 
           -translate-x-1/2
 
-          bg-gradient-to-r
-          from-transparent
-          via-cyan-400/60
-          to-transparent
+          bg-cyan-400/50
 
-          blur-[1px]
+          blur-[2px]
+
+          transition-all
+          duration-500
+
+          group-hover:w-[65%]
+          group-hover:bg-cyan-400/80
+        "
+      />
+
+      {/* ================================================= */}
+      {/* CORNER GLOW */}
+      {/* ================================================= */}
+
+      <div
+        className="
+          pointer-events-none
+
+          absolute
+          bottom-[-100px]
+          right-[-100px]
+
+          h-64
+          w-64
+
+          rounded-full
+
+          bg-blue-500/[0.08]
+
+          blur-[90px]
         "
       />
     </motion.div>
