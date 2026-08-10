@@ -11,102 +11,120 @@ function About() {
         relative
         overflow-hidden
         py-24
+        sm:py-28
         lg:py-32
-       
       "
     >
-      {/* Subtle liquid background - top left */}
+    
       <div
         className="
-          absolute
-          -top-32
-          -left-32
-          w-[420px]
-          h-[420px]
-          rounded-full
-          bg-cyan-400/[0.04]
-          blur-[100px]
           pointer-events-none
+          absolute
+          -left-40
+          top-20
+
+          h-[400px]
+          w-[400px]
+
+          rounded-full
+
+          bg-cyan-400/[0.035]
+
+          blur-[130px]
         "
       />
 
-      {/* Subtle liquid background - right */}
       <div
         className="
+          pointer-events-none
           absolute
-          top-[35%]
           -right-40
-          w-[500px]
-          h-[500px]
+          top-[35%]
+
+          h-[450px]
+          w-[450px]
+
           rounded-full
-          bg-blue-500/[0.06]
-          blur-[120px]
-          pointer-events-none
+
+          bg-blue-500/[0.04]
+
+          blur-[140px]
         "
       />
 
-      {/* Small liquid highlight */}
       <div
         className="
+          pointer-events-none
           absolute
           bottom-0
           left-1/3
-          w-[300px]
-          h-[180px]
+
+          h-[250px]
+          w-[350px]
+
           rounded-full
+
           bg-cyan-400/[0.025]
-          blur-[90px]
-          pointer-events-none
+
+          blur-[120px]
         "
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div
+        className="
+          relative
+          z-10
 
-        {/* Top Section */}
+          mx-auto
+          w-full
+          max-w-[1280px]
+
+          px-4
+          sm:px-6
+          lg:px-8
+          xl:px-10
+        "
+      >
+      
         <div
           className="
-            relative
             grid
-            lg:grid-cols-2
-            gap-12
-            lg:gap-16
             items-center
+
+            gap-10
+
+            lg:grid-cols-2
+            lg:gap-12
+            xl:gap-16
           "
         >
-          {/* Very subtle liquid surface behind content */}
-          <div
-            className="
-              absolute
-              -inset-6
-              rounded-[3rem]
-              bg-white/[0.012]
-              border
-              border-white/[0.04]
-              backdrop-blur-[2px]
-              pointer-events-none
-            "
-          />
+     
 
-          <div className="relative z-10">
+          <div className="relative min-w-0">
             <AboutContent />
           </div>
 
-          <div className="relative z-10">
+     
+
+          <div className="relative min-w-0">
             <AboutImage />
           </div>
         </div>
 
-        {/* Feature Cards */}
+        
         <div
           className="
-            relative
+            mt-16
             grid
-            md:grid-cols-2
-            lg:grid-cols-4
-            gap-6
-            lg:gap-8
-            mt-20
+
+            gap-5
+
+            sm:mt-20
+            sm:grid-cols-2
+
             lg:mt-24
+            lg:grid-cols-4
+            lg:gap-6
           "
         >
           {features.map((feature, index) => (
@@ -117,8 +135,24 @@ function About() {
             />
           ))}
         </div>
-
       </div>
+
+   
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          bottom-0
+          left-0
+          right-0
+          h-24
+
+          bg-gradient-to-t
+          from-[#071838]
+          to-transparent
+        "
+      />
     </section>
   );
 }

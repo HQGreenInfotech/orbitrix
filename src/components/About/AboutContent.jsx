@@ -1,176 +1,202 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
-function AboutContent() {
+function AboutCard({ feature, index }) {
+  const Icon = feature.icon;
+
   return (
     <motion.div
-      initial={{ x: -80, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
+      initial={{
+        opacity: 0,
+        y: 40,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      transition={{
+        delay: index * 0.1,
+        duration: 0.6,
+        ease: "easeOut",
+      }}
+      whileHover={{
+        y: -8,
+      }}
+      className="
+        group
+        relative
+
+        overflow-hidden
+
+        rounded-[26px]
+
+        border
+        border-white/10
+
+        bg-white/[0.035]
+
+        p-6
+
+        backdrop-blur-2xl
+
+        shadow-[0_20px_60px_rgba(0,0,0,0.18)]
+
+        transition-all
+        duration-500
+
+        hover:border-cyan-400/25
+        hover:bg-white/[0.055]
+
+        hover:shadow-[0_25px_70px_rgba(34,211,238,0.12)]
+      "
     >
-      <span
+     
+
+      <div
         className="
-          inline-flex
-          items-center
-          gap-2
+          pointer-events-none
+          absolute
+          -right-10
+          -top-10
+
+          h-28
+          w-28
+
           rounded-full
-          border
-          border-cyan-400/20
-          bg-white/[0.04]
-          px-4
-          py-2
-          text-sm
-          font-semibold
-          tracking-[0.2em]
-          text-cyan-400
-          backdrop-blur-xl
-        "
-      >
-        ABOUT ORBITIX
-      </span>
 
-      <h2 className="mt-5 text-5xl font-bold leading-tight text-white">
-        We Build{" "}
-        <span className="text-cyan-400">
-          Modern Digital Solutions
-        </span>
-      </h2>
+          bg-cyan-400/[0.05]
 
-      <p className="mt-8 leading-8 text-slate-300">
-        Orbitix Technologies provides Website Development,
-        Software Development, AI Solutions, Robotics,
-        Educational Coding, Mobile Apps and Digital Marketing
-        under one roof.
-      </p>
-
-      {/* Premium button */}
-      <Link
-        to="/about-more"
-        className="
-          group
-          relative
-          inline-flex
-          items-center
-          justify-center
-          gap-3
-
-          mt-10
-          px-7
-          py-4
-
-          rounded-2xl
-          overflow-hidden
-
-          border
-          border-cyan-400/30
-
-          bg-white/[0.06]
-          backdrop-blur-xl
-
-          text-white
-          font-semibold
-
-          shadow-[0_10px_35px_rgba(6,182,212,0.12)]
+          blur-3xl
 
           transition-all
           duration-500
 
-          hover:-translate-y-1
-          hover:border-cyan-300/60
-          hover:bg-cyan-400/10
-          hover:shadow-[0_15px_45px_rgba(6,182,212,0.30)]
+          group-hover:scale-150
+        "
+      />
+
+      
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-5
+          right-5
+          top-0
+
+          h-px
+
+          bg-gradient-to-r
+          from-transparent
+          via-white/25
+          to-transparent
+        "
+      />
+
+    
+
+      <motion.div
+        whileHover={{
+          rotate: 8,
+          scale: 1.08,
+        }}
+        className="
+          relative
+          z-10
+
+          flex
+          h-12
+          w-12
+
+          items-center
+          justify-center
+
+          rounded-2xl
+
+          border
+          border-cyan-400/15
+
+          bg-cyan-400/[0.08]
+
+          text-cyan-400
+
+          transition-all
+          duration-300
+
+          group-hover:bg-cyan-400/[0.14]
         "
       >
-        {/* Moving shine */}
-        <span
-          className="
-            absolute
-            inset-0
-            -translate-x-full
-            bg-gradient-to-r
-            from-transparent
-            via-cyan-400/20
-            to-transparent
+        <Icon className="text-2xl" />
+      </motion.div>
 
-            transition-transform
-            duration-700
+   
 
-            group-hover:translate-x-full
-          "
-        />
+      <h3
+        className="
+          relative
+          z-10
 
-        {/* Top reflection */}
-        <span
-          className="
-            absolute
-            top-0
-            left-4
-            right-4
-            h-px
-            bg-gradient-to-r
-            from-transparent
-            via-white/50
-            to-transparent
-          "
-        />
+          mt-5
 
-        {/* Glow */}
-        <span
-          className="
-            pointer-events-none
-            absolute
-            -inset-2
-            rounded-2xl
-            bg-cyan-400/10
-            blur-xl
+          text-xl
+          font-bold
 
-            opacity-0
-            transition-opacity
-            duration-500
+          text-white
+        "
+      >
+        {feature.title}
+      </h3>
 
-            group-hover:opacity-100
-          "
-        />
+    
 
-        <span className="relative z-10">
-          Explore More
-        </span>
+      <p
+        className="
+          relative
+          z-10
 
-        {/* Arrow */}
-        <span
-          className="
-            relative
-            z-10
+          mt-3
 
-            flex
-            h-8
-            w-8
-            items-center
-            justify-center
+          text-sm
+          leading-7
 
-            rounded-full
+          text-white/60
 
-            bg-gradient-to-r
-            from-cyan-400
-            to-blue-500
+          transition-colors
+          duration-300
 
-            text-white
+          group-hover:text-white/75
+        "
+      >
+        {feature.description}
+      </p>
 
-            shadow-[0_4px_15px_rgba(6,182,212,0.35)]
+     
 
-            transition-all
-            duration-500
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
 
-            group-hover:translate-x-1
-            group-hover:scale-110
-          "
-        >
-          →
-        </span>
-      </Link>
+          h-[2px]
+          w-0
+
+          bg-gradient-to-r
+          from-cyan-400
+          to-blue-500
+
+          transition-all
+          duration-500
+
+          group-hover:w-full
+        "
+      />
     </motion.div>
   );
 }
 
-export default AboutContent;
+export default AboutCard;
