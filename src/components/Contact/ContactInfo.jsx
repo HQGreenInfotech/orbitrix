@@ -16,18 +16,21 @@ function ContactInfo() {
         border
         border-white/10
         bg-white/5
-        backdrop-blur-xl
         p-8
+        shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+        backdrop-blur-xl
         lg:p-10
-        shadow-[0_20px_60px_rgba(0,0,0,.35)]
       "
     >
       {/* Background Glow */}
-      <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-cyan-500/10 blur-[140px]" />
-      <div className="absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-blue-600/10 blur-[150px]" />
+
+      <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-cyan-500/10 blur-[120px]" />
+
+      <div className="pointer-events-none absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-blue-600/10 blur-[140px]" />
 
       <div className="relative z-10">
         {/* Badge */}
+
         <span
           className="
             inline-flex
@@ -49,22 +52,25 @@ function ContactInfo() {
         </span>
 
         {/* Heading */}
-        <h2 className="mt-6 text-4xl lg:text-5xl font-black leading-tight text-white">
+
+        <h2 className="mt-6 text-4xl font-black leading-tight text-white lg:text-5xl">
           Let's Build
+
           <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Something Amazing
           </span>
         </h2>
 
         {/* Description */}
+
         <p className="mt-6 leading-8 text-slate-300">
-          Whether you're looking for website development,
-          software solutions, AI integration, robotics,
-          or educational programs, we're here to help you
-          transform your ideas into reality.
+          Whether you're looking for website development, software solutions,
+          AI integration, robotics, or educational programs, we're here to
+          help you transform your ideas into reality.
         </p>
 
         {/* Contact Cards */}
+
         <div className="mt-10 space-y-5">
           {contactInfo.map((item) => {
             const Icon = item.icon;
@@ -85,13 +91,17 @@ function ContactInfo() {
                   duration-300
                   hover:border-cyan-400/30
                   hover:bg-white/10
+                  hover:-translate-y-1
                 "
               >
+                {/* Icon */}
+
                 <div
                   className="
                     flex
                     h-14
                     w-14
+                    shrink-0
                     items-center
                     justify-center
                     rounded-xl
@@ -108,7 +118,9 @@ function ContactInfo() {
                   <Icon />
                 </div>
 
-                <div>
+                {/* Content */}
+
+                <div className="min-w-0">
                   <h4 className="font-bold text-white">
                     {item.title}
                   </h4>
@@ -117,10 +129,10 @@ function ContactInfo() {
                     {item.link ? (
                       <a
                         href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="
                           block
+                          break-all
+                          text-sm
                           text-slate-300
                           transition-colors
                           hover:text-cyan-400
@@ -129,31 +141,26 @@ function ContactInfo() {
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-slate-300">
+                      <p className="text-sm text-slate-300">
                         {item.value}
                       </p>
                     )}
 
-                    {item.value2 &&
-                      (item.link ? (
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="
-                            block
-                            text-slate-300
-                            transition-colors
-                            hover:text-cyan-400
-                          "
-                        >
-                          {item.value2}
-                        </a>
-                      ) : (
-                        <p className="text-slate-300">
-                          {item.value2}
-                        </p>
-                      ))}
+                    {item.value2 && (
+                      <a
+                        href={item.link2}
+                        className="
+                          block
+                          break-all
+                          text-sm
+                          text-slate-300
+                          transition-colors
+                          hover:text-cyan-400
+                        "
+                      >
+                        {item.value2}
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -162,6 +169,7 @@ function ContactInfo() {
         </div>
 
         {/* Social Links */}
+
         <div className="mt-10">
           <SocialLinks />
         </div>

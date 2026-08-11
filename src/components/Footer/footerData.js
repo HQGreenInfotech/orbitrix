@@ -24,7 +24,7 @@ export const contactInfo = [
   {
     icon: FaMapMarkerAlt,
     title: "Location",
-    value: "Durgapur, West Bengal",
+    value:"Udaipur, Rajasthan, India"
   },
   {
     icon: FaClock,

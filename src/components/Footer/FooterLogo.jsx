@@ -2,70 +2,97 @@ import { socials } from "./footerData";
 
 function FooterLogo() {
   return (
-    <div>
-     
-      <img
-        src="/orbitix.png"
-        alt="Orbitix Technology"
-        className="w-56"
-      />
-      <p
+    <div className="relative">
+      {/* Subtle background glow */}
+      <div
         className="
-          mt-8
-          text-gray-300
-          leading-8
-          max-w-md
+          pointer-events-none
+          absolute
+          -left-20
+          -top-20
+          h-56
+          w-56
+          rounded-full
+          bg-cyan-500/[0.06]
+          blur-[100px]
         "
-      >
-        Orbitix Technology empowers students,
-        startups and businesses through
-        modern software development,
-        AI solutions, robotics,
-        digital marketing and
-        career-oriented training.
-      </p>
+      />
 
-      
+      <div className="relative z-10">
+        {/* Logo */}
+        <img
+          src="/orbitix.png"
+          alt="Orbitix Technology"
+          className="
+            h-auto
+            w-44
+            object-contain
+            sm:w-48
+          "
+        />
 
-      <div className="flex gap-4 mt-10">
+        {/* Description */}
+        <p
+          className="
+            mt-7
+            max-w-sm
+            text-sm
+            leading-8
+            text-slate-300
+          "
+        >
+          Orbitix Technology empowers students, startups and businesses
+          through modern software development, AI solutions, robotics,
+          digital marketing and career-oriented training.
+        </p>
 
-        {socials.map((item, index) => {
+        {/* Social Links */}
+        <div className="mt-8 flex flex-wrap gap-4">
+          {socials.map((item) => {
+            const Icon = item.icon;
 
-          const Icon = item.icon;
-
-          return (
-
-            <a
-              key={index}
-              href={item.url}
-              target="_blank"
-              rel="noreferrer"
-              className="
-                w-12
-                h-12
-                rounded-full
-                bg-slate-100
-                text-slate-700
-                flex
-                items-center
-                justify-center
-                shadow-md
-                transition-all
-                duration-300
-                hover:bg-blue-600
-                hover:text-white
-                hover:-translate-y-2
-              "
-            >
-              <Icon size={18} />
-            </a>
-
-          );
-
-        })}
-
+            return (
+              <a
+                key={item.name}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.name}
+                className="
+                  group
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-white/10
+                  bg-slate-100
+                  text-slate-700
+                  shadow-lg
+                  transition-all
+                  duration-300
+                  hover:-translate-y-2
+                  hover:border-cyan-400/40
+                  hover:bg-cyan-400
+                  hover:text-white
+                  hover:shadow-[0_10px_30px_rgba(34,211,238,0.25)]
+                "
+              >
+                <Icon
+                  size={18}
+                  className="
+                    transition-transform
+                    duration-300
+                    group-hover:scale-110
+                  "
+                />
+              </a>
+            );
+          })}
+        </div>
       </div>
-
     </div>
   );
 }

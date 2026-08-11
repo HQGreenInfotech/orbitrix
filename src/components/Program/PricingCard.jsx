@@ -6,146 +6,156 @@ function PricingCard({ plan, index }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 60 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{
+        opacity: 0,
+        y: 50,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
       transition={{
-        duration: 0.6,
-        delay: index * 0.15,
+        duration: 0.7,
+        delay: index * 0.12,
       }}
       viewport={{ once: true }}
       whileHover={{
-        y: -12,
-        scale: 1.03,
+        y: -10,
       }}
       className={`
+        group
         relative
-        overflow-hidden
-        rounded-3xl
-        p-8
         flex
         flex-col
+        overflow-hidden
+        rounded-[30px]
         border
+        p-7
+        backdrop-blur-2xl
         transition-all
         duration-500
+        sm:p-9
 
         ${
           popular
             ? `
-              bg-gradient-to-br
-              from-cyan-500
-              via-blue-600
-              to-indigo-700
-              text-white
-              border-cyan-300/30
-              shadow-[0_20px_60px_rgba(34,211,238,.35)]
+              border-cyan-400/30
+              bg-cyan-400/[0.045]
+              shadow-[0_25px_90px_rgba(34,211,238,0.10)]
             `
             : `
-              bg-white/5
-              backdrop-blur-xl
-              border-white/10
-              text-white
-              shadow-[0_20px_60px_rgba(0,0,0,.35)]
-              hover:border-cyan-400/30
-              hover:bg-white/10
+              border-white/[0.09]
+              bg-white/[0.035]
+              shadow-[0_25px_80px_rgba(0,0,0,0.25)]
+              hover:border-cyan-400/25
+              hover:bg-white/[0.05]
             `
         }
       `}
     >
-      {/* Background Glow */}
+      {/* Reflection */}
       <div
         className="
+          pointer-events-none
           absolute
-          -bottom-24
-          -right-24
-          w-60
-          h-60
-          rounded-full
-          bg-cyan-400/10
-          blur-3xl
+          left-8
+          right-8
+          top-0
+          h-px
+          bg-white/20
         "
       />
 
-      {/* Badge */}
+      {/* Popular badge */}
       {popular && (
-        <span
+        <div
           className="
             absolute
-            top-5
             right-5
-            px-4
-            py-2
+            top-5
             rounded-full
-            bg-white/20
-            backdrop-blur
-            text-sm
-            font-bold
+            border
+            border-cyan-400/20
+            bg-cyan-400/[0.08]
+            px-3
+            py-1.5
+            text-xs
+            font-semibold
+            text-cyan-300
           "
         >
-          ⭐ Most Popular
-        </span>
+          MOST POPULAR
+        </div>
       )}
 
       {/* Title */}
       <p
-        className={`uppercase tracking-[3px] text-sm font-semibold ${
-          popular ? "text-cyan-100" : "text-cyan-400"
-        }`}
+        className="
+          text-xs
+          font-semibold
+          tracking-[0.2em]
+          text-cyan-400
+        "
       >
         {plan.title}
       </p>
 
       {/* Subtitle */}
-      <h3 className="mt-4 text-3xl font-black">
+      <h3
+        className="
+          mt-4
+          text-2xl
+          font-bold
+          text-white
+          sm:text-3xl
+        "
+      >
         {plan.subtitle}
       </h3>
 
       {/* Price */}
       <div className="mt-8">
-        <h2 className="text-5xl font-black">
-          {plan.price}
-        </h2>
-
-        <p
-          className={`mt-2 ${
-            popular
-              ? "text-white/80"
-              : "text-slate-400"
-          }`}
+        <span
+          className="
+            text-4xl
+            font-black
+            text-white
+            sm:text-5xl
+          "
         >
-          / {plan.duration}
+          {plan.price}
+        </span>
+
+        <p className="mt-2 text-sm text-slate-400">
+          {plan.duration}
         </p>
       </div>
 
       {/* Divider */}
-      <div
-        className={`my-8 h-px ${
-          popular
-            ? "bg-white/20"
-            : "bg-white/10"
-        }`}
-      />
+      <div className="my-8 h-px bg-white/[0.08]" />
 
       {/* Features */}
-      <ul className="space-y-4 flex-1">
+      <ul className="flex-1 space-y-4">
         {plan.features.map((feature, i) => (
           <li
             key={i}
-            className="flex items-center gap-3"
+            className="flex items-start gap-3"
           >
             <FaCheckCircle
-              className={
-                popular
-                  ? "text-yellow-300"
-                  : "text-cyan-400"
-              }
+              className="
+                mt-1
+                shrink-0
+                text-sm
+                text-cyan-400
+              "
             />
 
             <span
-              className={
-                popular
-                  ? "text-white"
-                  : "text-slate-300"
-              }
+              className="
+                text-sm
+                leading-6
+                text-slate-300
+              "
             >
               {feature}
             </span>
@@ -155,36 +165,41 @@ function PricingCard({ plan, index }) {
 
       {/* Button */}
       <button
-        className={`
+        className="
+          group/button
           mt-10
+          flex
           w-full
           cursor-pointer
-          rounded-xl
+          items-center
+          justify-center
+          gap-3
+          rounded-2xl
+          border
+          border-cyan-400/25
+          bg-cyan-400/[0.07]
+          px-5
           py-4
-          font-bold
+          font-semibold
+          text-white
           transition-all
           duration-300
-
-          ${
-            popular
-              ? `
-                bg-white
-                text-blue-700
-                hover:bg-slate-100
-                hover:scale-105
-              `
-              : `
-                bg-gradient-to-r
-                from-cyan-500
-                to-blue-600
-                text-white
-                hover:scale-105
-                hover:shadow-[0_15px_35px_rgba(34,211,238,.35)]
-              `
-          }
-        `}
+          hover:-translate-y-0.5
+          hover:border-cyan-400/50
+          hover:bg-cyan-400/[0.12]
+        "
       >
         {plan.button}
+
+        <span
+          className="
+            transition-transform
+            duration-300
+            group-hover/button:translate-x-1
+          "
+        >
+          ↗
+        </span>
       </button>
     </motion.div>
   );

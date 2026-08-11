@@ -94,7 +94,8 @@ function FooterContact() {
           />
 
           <span className="text-white/80">
-            Durgapur, West Bengal
+          
+         Udaipur, Rajasthan, India
           </span>
         </div>
 

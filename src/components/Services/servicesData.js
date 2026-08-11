@@ -22,8 +22,8 @@ export const services = [
     title: "Website Development",
     description:
       "We build fast, secure, SEO-friendly, and responsive websites using React, Node.js, and MongoDB.",
-    color: "text-blue-600",
-    bg: "bg-blue-100",
+    color: "text-cyan-400",
+    bg: "bg-cyan-400/10",
   },
 
   {
@@ -32,8 +32,8 @@ export const services = [
     title: "Game Development",
     description:
       "Design and develop engaging 2D, 3D, mobile, and web-based games.",
-    color: "text-orange-500",
-    bg: "bg-orange-100",
+    color: "text-orange-300",
+    bg: "bg-orange-400/10",
   },
 
   {
@@ -42,8 +42,8 @@ export const services = [
     title: "Educational Coding",
     description:
       "Project-based coding classes, AI learning, web development and programming.",
-    color: "text-green-600",
-    bg: "bg-green-100",
+    color: "text-emerald-300",
+    bg: "bg-emerald-400/10",
   },
 
   {
@@ -52,8 +52,8 @@ export const services = [
     title: "Software Development",
     description:
       "ERP, CRM, CMS, SaaS platforms, APIs and enterprise applications.",
-    color: "text-purple-600",
-    bg: "bg-purple-100",
+    color: "text-violet-300",
+    bg: "bg-violet-400/10",
   },
 
   {
@@ -62,8 +62,8 @@ export const services = [
     title: "Robotics & Embedded Systems",
     description:
       "IoT solutions, Arduino, Raspberry Pi, automation and innovation labs.",
-    color: "text-cyan-600",
-    bg: "bg-cyan-100",
+    color: "text-cyan-300",
+    bg: "bg-cyan-400/10",
   },
 
   {
@@ -72,12 +72,10 @@ export const services = [
     title: "Digital Marketing",
     description:
       "SEO, Social Media Marketing, Google Ads and branding solutions.",
-    color: "text-pink-600",
-    bg: "bg-pink-100",
+    color: "text-pink-300",
+    bg: "bg-pink-400/10",
   },
 ];
-
-/* ---------------- Website Package Features ---------------- */
 
 export const websiteFeatures = [
   {
@@ -115,7 +113,6 @@ export const websiteFeatures = [
     icon: FaEdit,
     title: "Easy to Manage & Update",
   },
-  
   {
     id: 8,
     icon: FaPalette,

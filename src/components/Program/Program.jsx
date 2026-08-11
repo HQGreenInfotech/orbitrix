@@ -1,44 +1,86 @@
 import ProgramHeader from "./ProgramHeader";
 import ProgramTimeline from "./ProgramTimeline";
 import PricingSection from "./PricingSection";
+import ProgramCTA from "./ProgramCTA";
 
 function Program() {
   return (
-    <section className="relative overflow-hidden py-28">
-      {/* Background */}
-      <div className="absolute inset-0 -z-20 " />
-
-      {/* Grid Pattern */}
+    <section
+      id="program"
+      className="
+        relative
+        overflow-hidden
+        bg-[#071838]
+        py-24
+        sm:py-28
+        lg:py-32
+      "
+    >
+      {/* Subtle background light */}
       <div
-        className="absolute inset-0 -z-10 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px, rgba(255,255,255,.6) 1px, transparent 0)",
-          backgroundSize: "32px 32px",
-        }}
+        className="
+          pointer-events-none
+          absolute
+          -left-48
+          top-20
+          h-[500px]
+          w-[500px]
+          rounded-full
+          bg-cyan-400/[0.035]
+          blur-[140px]
+        "
       />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#081B4B]/95 via-[#102B72]/90 to-[#081B4B]/95" />
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -right-48
+          top-[45%]
+          h-[500px]
+          w-[500px]
+          rounded-full
+          bg-blue-500/[0.035]
+          blur-[150px]
+        "
+      />
 
-      {/* Glow Effects */}
-      <div className="absolute -left-60 top-32 w-[600px] h-[600px] rounded-full bg-cyan-500/15 blur-[180px]" />
-
-      <div className="absolute -right-52 top-20 w-[500px] h-[500px] rounded-full bg-violet-500/15 blur-[180px]" />
-
-      <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[650px] h-[250px] rounded-full bg-cyan-500/10 blur-[170px]" />
+      {/* Very subtle grid */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          opacity-[0.025]
+          bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)]
+          bg-[size:80px_80px]
+        "
+      />
 
       {/* Content */}
-      <div className="container relative mx-auto px-6">
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          max-w-[1400px]
+          px-5
+          sm:px-8
+          lg:px-10
+          xl:px-12
+        "
+      >
         <ProgramHeader />
 
-        <div className="mt-24">
+        <div className="mt-20 lg:mt-28">
           <ProgramTimeline />
         </div>
 
-        <div className="mt-28">
+        <div className="mt-24 lg:mt-32">
           <PricingSection />
         </div>
+
+        <ProgramCTA />
       </div>
     </section>
   );

@@ -4,14 +4,32 @@ import FAQRight from "./FAQRight";
 
 function FAQ() {
   return (
-    <section className="relative overflow-hidden py-28">
+    <section
+      id="faq"
+      className="
+        relative
+        overflow-hidden
+        bg-[#081B4B]
+        py-24
+        sm:py-28
+        lg:py-32
+      "
+    >
+      {/* =====================================
+          BACKGROUND
+      ====================================== */}
 
       {/* Base Background */}
-      <div className="absolute inset-0 -z-20 bg-[#081B4B]" />
+      <div className="absolute inset-0 bg-[#081B4B]" />
 
       {/* Grid Pattern */}
       <div
-        className="absolute inset-0 -z-10 opacity-[0.03]"
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          opacity-[0.03]
+        "
         style={{
           backgroundImage:
             "radial-gradient(circle at 1px 1px, rgba(255,255,255,.6) 1px, transparent 0)",
@@ -19,17 +37,28 @@ function FAQ() {
         }}
       />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#081B4B]/95 via-[#102B72]/90 to-[#081B4B]/95" />
+      {/* Gradient */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          bg-gradient-to-r
+          from-[#081B4B]/95
+          via-[#102B72]/90
+          to-[#081B4B]/95
+        "
+      />
 
       {/* Left Glow */}
       <div
         className="
+          pointer-events-none
           absolute
           -left-64
           top-20
-          w-[650px]
           h-[650px]
+          w-[650px]
           rounded-full
           bg-cyan-500/15
           blur-[180px]
@@ -39,11 +68,12 @@ function FAQ() {
       {/* Right Glow */}
       <div
         className="
+          pointer-events-none
           absolute
           -right-56
           bottom-0
-          w-[520px]
           h-[520px]
+          w-[520px]
           rounded-full
           bg-blue-500/15
           blur-[180px]
@@ -53,20 +83,24 @@ function FAQ() {
       {/* Bottom Glow */}
       <div
         className="
+          pointer-events-none
           absolute
-          left-1/2
           bottom-0
-          -translate-x-1/2
-          w-[700px]
+          left-1/2
           h-[300px]
+          w-[700px]
+          -translate-x-1/2
           rounded-full
           bg-cyan-500/10
           blur-[180px]
         "
       />
 
-      <Container>
+      {/* =====================================
+          CONTENT
+      ====================================== */}
 
+      <Container>
         <SectionTitle
           badge="Frequently Asked Questions"
           title="Everything You Need To Know"
@@ -74,20 +108,28 @@ function FAQ() {
           center
         />
 
-        <div className="grid lg:grid-cols-5 gap-12 mt-20">
-
+        {/* FAQ Layout */}
+        <div
+          className="
+            mt-16
+            grid
+            gap-10
+            lg:mt-20
+            lg:grid-cols-5
+            lg:gap-12
+          "
+        >
+          {/* Left */}
           <div className="lg:col-span-2">
             <FAQLeft />
           </div>
 
+          {/* Right */}
           <div className="lg:col-span-3">
             <FAQRight />
           </div>
-
         </div>
-
       </Container>
-
     </section>
   );
 }

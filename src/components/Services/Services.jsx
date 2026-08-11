@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import ServiceCard from "./ServiceCard";
 import ServiceBackground from "./ServiceBackground";
 import WebsiteFeatures from "./WebsiteFeatures";
+import ServicesCTA from "./ServicesCTA";
+import Pricing from "../Pricing/index"
+
 import { services } from "./servicesData";
 
 function Services() {
@@ -12,81 +15,104 @@ function Services() {
       className="
         relative
         overflow-hidden
-        bg-[#071943]
-        py-28
-        lg:py-36
+        bg-[#071838]
+        py-24
+        sm:py-28
+        lg:py-32
       "
     >
       {/* Background */}
       <ServiceBackground />
 
-      {/* Content */}
+      {/* Main container */}
       <div
         className="
           relative
           z-10
-          max-w-7xl
           mx-auto
-          px-6
-          lg:px-8
+          max-w-[1400px]
+          px-5
+          sm:px-8
+          lg:px-10
+          xl:px-12
         "
       >
-        {/* Heading */}
+        {/* ================================
+            HEADING
+        ================================= */}
+
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
           transition={{
-            duration: 0.8,
-            ease: "easeOut",
+            duration: 0.7,
           }}
           viewport={{
             once: true,
-            amount: 0.2,
           }}
-          className="max-w-3xl mx-auto text-center"
+          className="max-w-3xl"
         >
           {/* Label */}
-          <span
+          <div
             className="
               inline-flex
               items-center
+              gap-3
               rounded-full
               border
               border-cyan-400/20
-              bg-cyan-400/[0.06]
-              px-6
+              bg-white/[0.035]
+              px-4
               py-2
-              text-sm
-              font-semibold
-              tracking-[0.18em]
-              text-cyan-400
-              backdrop-blur-sm
+              backdrop-blur-xl
             "
           >
-            OUR SERVICES
-          </span>
+            <span
+              className="
+                h-1.5
+                w-1.5
+                rounded-full
+                bg-cyan-400
+                shadow-[0_0_10px_rgba(34,211,238,0.8)]
+              "
+            />
+
+            <span
+              className="
+                text-xs
+                font-semibold
+                tracking-[0.2em]
+                text-cyan-300
+              "
+            >
+              OUR SERVICES
+            </span>
+          </div>
 
           {/* Heading */}
           <h2
             className="
               mt-7
+              max-w-3xl
               text-4xl
-              sm:text-5xl
-              lg:text-6xl
               font-black
               leading-[1.05]
               tracking-tight
               text-white
+              sm:text-5xl
+              lg:text-6xl
             "
           >
-            Technology That
-            <span
-              className="
-                block
-                text-cyan-400
-              "
-            >
-              Powers Innovation
+            Digital solutions
+
+            <span className="block text-cyan-400">
+              built for growth.
             </span>
           </h2>
 
@@ -94,39 +120,32 @@ function Services() {
           <p
             className="
               mt-7
+              max-w-2xl
               text-base
-              lg:text-lg
               leading-8
               text-slate-300
-              max-w-2xl
-              mx-auto
+              lg:text-lg
             "
           >
-            From websites to AI, robotics, education,
-            software development and digital marketing,
-            Orbitix Technologies delivers complete
-            digital transformation under one roof.
+            From websites and software to AI, robotics,
+            education and digital marketing, Orbitix
+            Technologies builds practical digital solutions
+            for modern businesses.
           </p>
         </motion.div>
 
-        {/* Service Cards */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.15,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.1,
-          }}
+        {/* ================================
+            SERVICE CARDS
+        ================================= */}
+
+        <div
           className="
-            mt-20
+            mt-16
             grid
-            gap-6
+            gap-5
             md:grid-cols-2
             lg:grid-cols-3
+            lg:gap-6
           "
         >
           {services.map((service, index) => (
@@ -136,12 +155,29 @@ function Services() {
               index={index}
             />
           ))}
-        </motion.div>
+        </div>
 
-        {/* Website Features */}
-        <div className="mt-24">
+        {/* ================================
+            WEBSITE PACKAGE
+        ================================= */}
+
+        <div className="mt-24 lg:mt-32">
           <WebsiteFeatures />
         </div>
+
+        {/* ================================
+            PRICING / SPECIAL OFFERS
+        ================================= */}
+
+        <div className="mt-24 lg:mt-32">
+          <Pricing />
+        </div>
+
+        {/* ================================
+            PROJECT CTA
+        ================================= */}
+
+        <ServicesCTA />
       </div>
     </section>
   );

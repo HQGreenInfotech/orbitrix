@@ -15,17 +15,11 @@ function FooterBottom() {
         gap-6
       "
     >
-     
-
       <p className=" text-center lg:text-left text-white">
         © {year}{" "}
-        <span className="font-semibold text-slate-900">
-          Orbitix Technology
-        </span>
-         All Rights Reserved.
+        <span className="font-semibold text-slate-900">Orbitix Technology</span>
+        All Rights Reserved.
       </p>
-
-     
 
       <div
         className="
@@ -58,7 +52,6 @@ function FooterBottom() {
         </NavLink>
       </div>
 
-
       <div
         className="
           flex
@@ -69,8 +62,7 @@ function FooterBottom() {
       >
         <span>Made with</span>
 
-
-        <span>care in Durgapur, West Bengal</span>
+        <span>care in Udaipur, Rajasthan</span>
       </div>
     </div>
   );

@@ -4,63 +4,122 @@ import { roadmap } from "./programData";
 
 function ProgramTimeline() {
   return (
-    <section className="relative mt-28">
-
-      {/* Section Heading */}
+    <section>
+      {/* Heading */}
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{
+          opacity: 0,
+          y: 30,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="text-center mb-20"
+        className="mx-auto mb-14 max-w-3xl text-center lg:mb-16"
       >
         <span
           className="
-            inline-block
-            px-6
-            py-2
+            inline-flex
             rounded-full
-            bg-cyan-500/10
             border
             border-cyan-400/20
-            text-cyan-400
+            bg-cyan-400/[0.06]
+            px-4
+            py-2
+            text-xs
             font-semibold
-            uppercase
-            tracking-widest
-            text-sm
+            tracking-[0.18em]
+            text-cyan-400
           "
         >
-          Learning Roadmap
+          LEARNING ROADMAP
         </span>
 
-        <h2 className="mt-6 text-4xl lg:text-5xl font-black text-white">
-          Your
-          <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent">
-            {" "}3-Month Journey
+        <h2
+          className="
+            mt-6
+            text-3xl
+            font-black
+            text-white
+            sm:text-4xl
+            lg:text-5xl
+          "
+        >
+          Your{" "}
+          <span className="text-cyan-400">
+            3-Month Journey
           </span>
         </h2>
 
-        <p className="mt-6 max-w-3xl mx-auto text-slate-300 leading-8">
-          Every month is carefully designed to help you progress from
-          beginner to professional through practical learning,
-          real-world projects, and career preparation.
+        <p
+          className="
+            mx-auto
+            mt-5
+            max-w-2xl
+            leading-7
+            text-slate-300
+          "
+        >
+          A practical learning path designed to move you
+          from fundamentals to real-world development and
+          career preparation.
         </p>
       </motion.div>
 
-      {/* Timeline Line (Desktop) */}
-      <div className="hidden lg:block absolute top-[310px] left-0 w-full h-[2px] bg-gradient-to-r from-cyan-500/20 via-cyan-400/50 to-cyan-500/20" />
-
       {/* Cards */}
-      <div className="relative grid gap-8 lg:grid-cols-3">
+      <div
+        className="
+          relative
+          grid
+          gap-6
+          lg:grid-cols-3
+        "
+      >
+        {/* Timeline */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-[16.66%]
+            right-[16.66%]
+            top-[-12px]
+            hidden
+            h-px
+            bg-cyan-400/20
+            lg:block
+          "
+        />
+
         {roadmap.map((item, index) => (
-          <ProgramCard
-            key={item.month}
-            item={item}
-            index={index}
-          />
+          <div key={item.month} className="relative">
+            {/* Timeline dot */}
+            <div
+              className="
+                absolute
+                left-1/2
+                top-[-18px]
+                z-20
+                hidden
+                h-3
+                w-3
+                -translate-x-1/2
+                rounded-full
+                border
+                border-cyan-300/50
+                bg-[#071838]
+                lg:block
+              "
+            />
+
+            <ProgramCard
+              item={item}
+              index={index}
+            />
+          </div>
         ))}
       </div>
-
     </section>
   );
 }

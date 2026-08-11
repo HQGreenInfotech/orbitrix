@@ -1,71 +1,62 @@
 export const faqs = [
   {
     id: 1,
-    question: "What services does Orbitix Technologies offer?",
+    question: "What services does Orbitix Technologies provide?",
     answer:
-      "Orbitix Technologies provides Website Development, Software Development, Mobile App Development, AI Solutions, Robotics & IoT, Educational Coding Programs, UI/UX Design, Digital Marketing, Branding, and complete business automation solutions.",
+      "Orbitix Technologies provides website development, software development, mobile app development, AI solutions, digital marketing, branding, logo design, robotics, and educational programs.",
   },
-
   {
     id: 2,
-    question: "What types of websites do you develop?",
+    question: "How much does a website cost?",
     answer:
-      "We create business websites, eCommerce stores, portfolio websites, school and college websites, NGO websites, landing pages, booking systems, and fully customized web applications tailored to your business needs.",
+      "Our website development packages start from ₹2999. The final price depends on the design, features, number of pages, integrations, and project requirements.",
   },
-
   {
     id: 3,
-    question: "Do you develop custom software for businesses?",
+    question: "How long does it take to build a website?",
     answer:
-      "Yes. We build custom ERP, CRM, inventory management systems, dashboards, POS software, SaaS platforms, and other business applications designed to improve productivity and efficiency.",
+      "A standard business website can usually be completed within a few days to a few weeks depending on the project scope and required features.",
   },
-
   {
     id: 4,
-    question: "Do you provide AI-powered solutions?",
+    question: "Do you provide custom software development?",
     answer:
-      "Absolutely. We develop AI chatbots, business automation tools, OpenAI & Gemini integrations, AI assistants, workflow automation, and intelligent applications for modern businesses.",
+      "Yes. We develop custom ERP systems, CRM systems, inventory management systems, POS software, dashboards, and other business applications according to your requirements.",
   },
-
   {
     id: 5,
-    question: "Can you develop Android and iOS mobile applications?",
+    question: "Do you develop mobile applications?",
     answer:
-      "Yes. We build high-performance cross-platform mobile applications using React Native and Flutter, delivering a native-like experience for both Android and iOS users.",
+      "Yes. We build Android and iOS applications using modern technologies such as React Native and Firebase.",
   },
-
   {
     id: 6,
-    question: "Do you offer coding classes and training programs?",
+    question: "Do you provide AI solutions?",
     answer:
-      "Yes. Our industry-focused coding programs cover HTML, CSS, JavaScript, React, Node.js, MongoDB, AI tools, and full-stack development through live classes, real-world projects, and career guidance.",
+      "Yes. We develop AI chatbots, WhatsApp bots, OpenAI integrations, automation systems, and AI-powered website assistants.",
   },
-
   {
     id: 7,
-    question: "How much does website development cost?",
+    question: "Do you provide digital marketing services?",
     answer:
-      "Our website packages start from ₹2,999. The final cost depends on your project requirements, features, design complexity, and business goals. We also provide custom quotations for enterprise solutions.",
+      "Yes. Our digital marketing services include Facebook marketing, Instagram marketing, Google Business Profile optimization, SEO, and monthly performance reporting.",
   },
-
   {
     id: 8,
-    question: "Do you provide maintenance and technical support?",
+    question: "Do you provide support after project completion?",
     answer:
-      "Yes. We offer website maintenance, software updates, security monitoring, bug fixes, performance optimization, and dedicated technical support after project delivery.",
+      "Yes. Support options depend on the selected service package. We can provide maintenance, updates, troubleshooting, and additional development when required.",
   },
-
   {
     id: 9,
-    question: "How long does it take to complete a project?",
+    question: "Do you offer payment installments?",
     answer:
-      "Project timelines vary depending on complexity. Most business websites are completed within 7–15 days, while larger software and mobile application projects are delivered according to the agreed development roadmap.",
+      "Yes. Selected services may be available with installment options. Please contact us to discuss the payment structure for your project.",
   },
-
   {
     id: 10,
-    question: "How can I get started with Orbitix Technologies?",
+    question: "How can I start a project with Orbitix Technologies?",
     answer:
-      "Simply contact us through our website, WhatsApp, email, or phone. We'll schedule a free consultation to understand your requirements and recommend the best solution for your business.",
+      "You can contact us through the contact page, WhatsApp, phone, or email. Tell us about your requirements and our team will discuss the project, timeline, and pricing with you.",
   },
 ];

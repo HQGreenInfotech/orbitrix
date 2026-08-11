@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import FAQItem from "./FAQItem";
 import { faqs } from "./faqData";
 
@@ -7,7 +6,9 @@ function FAQRight() {
   const [activeFAQ, setActiveFAQ] = useState(0);
 
   const handleToggle = (id) => {
-    setActiveFAQ(activeFAQ === id ? null : id);
+    setActiveFAQ((previousId) =>
+      previousId === id ? null : id
+    );
   };
 
   return (

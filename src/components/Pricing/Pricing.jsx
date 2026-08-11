@@ -7,127 +7,221 @@ import PricingCard from "./PricingCard";
 
 function Pricing() {
   return (
-    <section
-      className="
-        relative
-        overflow-hidden
-        bg-[#061B3A]
-        py-28
-      "
-    >
-      {/* Background Glow */}
-      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-cyan-500/10 blur-[140px]" />
-      <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-blue-600/10 blur-[160px]" />
+    <div className="relative">
+      {/* =========================
+          HEADER
+      ========================== */}
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto text-center mb-20"
-        >
-          <span
-            className="
-              inline-flex
-              items-center
-              rounded-full
-              border
-              border-cyan-400/20
-              bg-cyan-500/10
-              px-6
-              py-2
-              text-sm
-              font-semibold
-              text-cyan-400
-            "
-          >
-            OUR SPECIAL OFFERS
-          </span>
-
-          <h2 className="mt-6 text-4xl md:text-5xl font-black text-white">
-            Choose the Perfect Service
-            <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent">
-              for Your Business Growth
-            </span>
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-slate-300">
-            From websites and branding to AI solutions and digital marketing,
-            Orbitix Technologies provides complete digital services designed
-            to help startups, businesses, and entrepreneurs grow online.
-          </p>
-        </motion.div>
-
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4 items-stretch">
-          {pricingPlans.map((plan) => (
-            <PricingCard
-              key={plan.id}
-              plan={plan}
-            />
-          ))}
-        </div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="mx-auto max-w-3xl text-center"
+      >
+        <span
           className="
-            mt-24
-            rounded-3xl
+            inline-flex
+            items-center
+            rounded-full
             border
             border-cyan-400/20
-            bg-white/5
+            bg-cyan-400/[0.05]
+            px-5
+            py-2
+            text-xs
+            font-semibold
+            tracking-[0.2em]
+            text-cyan-400
             backdrop-blur-xl
-            p-12
-            text-center
-            shadow-[0_20px_60px_rgba(0,0,0,.35)]
           "
         >
-          <h3 className="text-3xl font-black text-white">
-            Need a Custom Solution?
-          </h3>
+          SPECIAL OFFERS
+        </span>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-            Looking for a custom website, software, mobile application,
-            AI solution or digital marketing strategy? Let's discuss your
-            project and build something amazing together.
-          </p>
+        <h2
+          className="
+            mt-6
+            text-4xl
+            font-black
+            leading-tight
+            text-white
+            sm:text-5xl
+          "
+        >
+          Simple pricing.
+
+          <span className="block text-cyan-400">
+            Practical solutions.
+          </span>
+        </h2>
+
+        <p
+          className="
+            mx-auto
+            mt-6
+            max-w-2xl
+            text-base
+            leading-8
+            text-slate-300
+            lg:text-lg
+          "
+        >
+          Choose a ready-made solution or talk to us
+          about a custom digital product for your business.
+        </p>
+      </motion.div>
+
+      {/* =========================
+          PRICING CARDS
+      ========================== */}
+
+      <div
+        className="
+          mt-14
+          grid
+          grid-cols-1
+          gap-5
+          md:grid-cols-2
+          xl:grid-cols-4
+        "
+      >
+        {pricingPlans.map((plan) => (
+          <PricingCard
+            key={plan.id}
+            plan={plan}
+          />
+        ))}
+      </div>
+
+      {/* =========================
+          CUSTOM CTA
+      ========================== */}
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="
+          relative
+          mt-16
+          overflow-hidden
+          rounded-[32px]
+          border
+          border-white/[0.09]
+          bg-white/[0.025]
+          p-8
+          backdrop-blur-2xl
+          sm:p-10
+          lg:p-12
+        "
+      >
+        {/* Reflection */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-10
+            right-10
+            top-0
+            h-px
+            bg-gradient-to-r
+            from-transparent
+            via-white/25
+            to-transparent
+          "
+        />
+
+        <div
+          className="
+            relative
+            z-10
+            flex
+            flex-col
+            gap-7
+            lg:flex-row
+            lg:items-center
+            lg:justify-between
+          "
+        >
+          <div className="max-w-2xl">
+            <span
+              className="
+                text-xs
+                font-semibold
+                uppercase
+                tracking-[0.2em]
+                text-cyan-400
+              "
+            >
+              Need something custom?
+            </span>
+
+            <h3
+              className="
+                mt-3
+                text-2xl
+                font-bold
+                text-white
+                sm:text-3xl
+              "
+            >
+              Let's build the right solution.
+            </h3>
+
+            <p
+              className="
+                mt-3
+                leading-7
+                text-slate-300
+              "
+            >
+              Custom website, software, mobile application,
+              AI solution or marketing strategy — tell us
+              what you need.
+            </p>
+          </div>
 
           <Link
             to="/contact"
             className="
-              mt-8
+              group
               inline-flex
-              cursor-pointer
+              shrink-0
               items-center
+              justify-center
               gap-3
-              rounded-full
-              bg-gradient-to-r
-              from-cyan-500
-              to-blue-600
-              px-8
+              rounded-2xl
+              border
+              border-cyan-400/30
+              bg-cyan-400/[0.07]
+              px-6
               py-4
-              font-bold
+              font-semibold
               text-white
+              backdrop-blur-xl
               transition-all
               duration-300
-              hover:scale-105
-              hover:shadow-[0_15px_40px_rgba(34,211,238,.35)]
+              hover:-translate-y-1
+              hover:border-cyan-400/60
+              hover:bg-cyan-400/[0.12]
             "
           >
-            Request Free Quote
-            <FaArrowRight />
-          </Link>
-        </motion.div>
+            Request a Quote
 
-      </div>
-    </section>
+            <FaArrowRight
+              className="
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
+              "
+            />
+          </Link>
+        </div>
+      </motion.div>
+    </div>
   );
 }
 

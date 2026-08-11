@@ -1,198 +1,295 @@
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 function ServiceCard({ service, index }) {
   const Icon = service.icon;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 80 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      animate={{ y: [0, -4, 0] }}
+    <motion.article
+      initial={{
+        opacity: 0,
+        y: 40,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
       transition={{
-        opacity: { duration: 0.6, delay: index * 0.15 },
-        y: {
-          duration: 4,
-          repeat: Infinity,
-          repeatType: "reverse",
-          delay: index * 0.2,
-        },
+        duration: 0.7,
+        delay: index * 0.08,
+        ease: "easeOut",
       }}
-      viewport={{ once: true }}
+      viewport={{
+        once: true,
+        amount: 0.15,
+      }}
       whileHover={{
-        y: -16,
-        scale: 1.03,
-        rotateX: 6,
-        rotateY: -6,
-      }}
-      style={{
-        transformStyle: "preserve-3d",
+        y: -8,
       }}
       className="
         group
         relative
+        min-h-[360px]
         overflow-hidden
-        rounded-3xl
-        bg-white/5
-        backdrop-blur-xl
+        rounded-[30px]
+
         border
-        border-white/10
-        shadow-[0_20px_60px_rgba(0,0,0,.35)]
-        p-8
+        border-white/[0.09]
+
+        bg-white/[0.035]
+
+        p-7
+        sm:p-8
+
+        backdrop-blur-xl
+
+        shadow-[0_20px_70px_rgba(0,0,0,0.22)]
+
         transition-all
         duration-500
-        hover:bg-white/10
+
         hover:border-cyan-400/30
+        hover:bg-white/[0.055]
+        hover:shadow-[0_25px_80px_rgba(0,0,0,0.32)]
       "
     >
-      {/* Hover Overlay */}
+      {/* Top reflection */}
       <div
         className="
+          pointer-events-none
           absolute
-          inset-0
-          opacity-0
-          transition-opacity
-          duration-500
-          group-hover:opacity-100
-          bg-gradient-to-br
-          from-blue-500/10
-          via-cyan-500/10
-          to-purple-500/10
+          left-6
+          right-6
+          top-0
+          h-px
+          bg-gradient-to-r
+          from-transparent
+          via-white/25
+          to-transparent
         "
       />
 
-      {/* Glow */}
+      {/* Small corner accent */}
       <div
         className="
+          pointer-events-none
           absolute
-          inset-0
-          rounded-3xl
-          opacity-0
-          group-hover:opacity-100
-          transition-all
-          duration-700
-          bg-gradient-to-r
-          from-cyan-400/20
-          via-blue-500/10
-          to-violet-400/20
-          blur-xl
-          -z-10
+          right-0
+          top-0
+          h-24
+          w-24
+          rounded-bl-[70px]
+          border-b
+          border-l
+          border-cyan-400/[0.08]
         "
       />
 
       {/* Icon */}
       <motion.div
         whileHover={{
-          rotate: 18,
-          scale: 1.15,
-          y: -4,
+          scale: 1.08,
+          rotate: 4,
         }}
         transition={{
           type: "spring",
           stiffness: 250,
+          damping: 15,
         }}
-        className={`
+        className="
           relative
-          w-20
-          h-20
-          rounded-3xl
-          ${service.bg}
+          z-10
           flex
+          h-14
+          w-14
           items-center
           justify-center
-          mb-8
-          shadow-lg
-        `}
+
+          rounded-2xl
+
+          border
+          border-cyan-400/20
+
+          bg-cyan-400/[0.08]
+
+          shadow-[0_10px_30px_rgba(34,211,238,0.08)]
+
+          transition-all
+          duration-300
+
+          group-hover:border-cyan-400/40
+          group-hover:bg-cyan-400/[0.12]
+        "
       >
         <Icon
-          className={`text-4xl ${service.color}`}
+          className={`
+            text-2xl
+            ${service.color}
+            transition-all
+            duration-300
+            group-hover:text-cyan-300
+          `}
         />
       </motion.div>
 
-      {/* Title */}
-      <motion.h3
-        whileHover={{ x: 4 }}
-        transition={{ duration: 0.25 }}
-        className="
-          text-2xl
-          font-bold
-          text-white
-          mb-5
-          transition-colors
-          duration-300
-          group-hover:text-cyan-300
-        "
-      >
-        {service.title}
-      </motion.h3>
-
-      {/* Description */}
-      <motion.p
-        whileHover={{ x: 2 }}
-        transition={{ duration: 0.25 }}
-        className="
-          text-slate-300
-          leading-8
-          mb-8
-          transition-colors
-          duration-300
-          group-hover:text-slate-200
-        "
-      >
-        {service.description}
-      </motion.p>
-
-      {/* Button */}
-      <motion.button
-        whileHover={{ x: 6 }}
-        transition={{
-          type: "spring",
-          stiffness: 250,
-        }}
-        className="
-          flex
-          items-center
-          gap-3
-          text-cyan-400
-          font-semibold
-          transition-all
-          duration-300
-          group-hover:text-white
-        "
-      >
-        Learn More
-
-        <motion.span
-          whileHover={{ x: 4 }}
-        >
-          <FaArrowRight />
-        </motion.span>
-      </motion.button>
-
-      {/* Floating Orb */}
-      <motion.div
-        animate={{
-          scale: [1, 1.15, 1],
-          rotate: [0, 15, 0],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+      {/* Service number */}
+      <span
         className="
           absolute
-          -bottom-20
-          -right-20
-          w-44
-          h-44
-          rounded-full
-          bg-gradient-to-br
-          from-blue-500/10
-          to-cyan-400/10
+          right-7
+          top-7
+
+          font-mono
+          text-xs
+          tracking-[0.2em]
+
+          text-white/20
+
+          transition-colors
+          duration-300
+
+          group-hover:text-cyan-400/50
+        "
+      >
+        {String(index + 1).padStart(2, "0")}
+      </span>
+
+      {/* Content */}
+      <div className="relative z-10 mt-8">
+        <h3
+          className="
+            text-2xl
+            font-bold
+            leading-tight
+            text-white
+
+            transition-colors
+            duration-300
+
+            group-hover:text-cyan-100
+          "
+        >
+          {service.title}
+        </h3>
+
+        <div
+          className="
+            mt-4
+            h-px
+            w-12
+
+            bg-cyan-400/50
+
+            transition-all
+            duration-500
+
+            group-hover:w-20
+            group-hover:bg-cyan-400
+          "
+        />
+
+        <p
+          className="
+            mt-5
+            max-w-md
+
+            text-sm
+            leading-7
+
+            text-slate-300
+
+            transition-colors
+            duration-300
+
+            group-hover:text-slate-200
+          "
+        >
+          {service.description}
+        </p>
+      </div>
+
+      {/* Bottom action */}
+      <div
+        className="
+          absolute
+          bottom-7
+          left-7
+          right-7
+
+          flex
+          items-center
+          justify-between
+        "
+      >
+        <span
+          className="
+            text-sm
+            font-semibold
+            text-white/50
+
+            transition-colors
+            duration-300
+
+            group-hover:text-cyan-300
+          "
+        >
+          Explore service
+        </span>
+
+        <span
+          className="
+            flex
+            h-10
+            w-10
+            items-center
+            justify-center
+
+            rounded-full
+
+            border
+            border-white/10
+
+            bg-white/[0.04]
+
+            text-white/60
+
+            transition-all
+            duration-300
+
+            group-hover:border-cyan-400/40
+            group-hover:bg-cyan-400/10
+            group-hover:text-cyan-300
+            group-hover:rotate-45
+          "
+        >
+          <FaArrowUpRightFromSquare className="text-sm" />
+        </span>
+      </div>
+
+      {/* Bottom cyan reflection */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          bottom-0
+          left-1/2
+
+          h-[2px]
+          w-0
+
+          -translate-x-1/2
+
+          bg-cyan-400
+
+          shadow-[0_0_18px_rgba(34,211,238,0.45)]
+
+          transition-all
+          duration-500
+
+          group-hover:w-24
         "
       />
-    </motion.div>
+    </motion.article>
   );
 }
 
