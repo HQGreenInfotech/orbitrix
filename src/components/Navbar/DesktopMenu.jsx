@@ -1,3 +1,5 @@
+import { useLocation, useNavigate } from "react-router-dom";
+
 const menuItems = [
   { name: "Home", id: "home" },
   { name: "About", id: "about" },
@@ -8,10 +10,22 @@ const menuItems = [
 ];
 
 function DesktopMenu({ activeSection }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleClick = (id) => {
+  // Services should ALWAYS open the Services page
+  if (id === "services") {
+    navigate("/services");
+    return;
+  }
+
+  // ==============================
+  // HOME PAGE SECTIONS
+  // ==============================
+  if (location.pathname === "/") {
     const section = document.getElementById(id);
 
-    // Home page section
     if (section) {
       section.scrollIntoView({
         behavior: "smooth",
@@ -21,9 +35,53 @@ function DesktopMenu({ activeSection }) {
       return;
     }
 
-    // Separate page
-    window.location.href = `/${id === "home" ? "" : id}`;
+    if (id === "home") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+      return;
+    }
+  }
+
+  // ==============================
+  // SEPARATE PAGES
+  // ==============================
+  const routes = {
+    home: "/",
+    about: "/about",
+    services: "/services",
+    program: "/program",
+    faq: "/faq",
+    contact: "/contact",
   };
+
+  navigate(routes[id]);
+};
+
+  // ==============================
+  // ACTIVE NAVBAR ITEM
+  // ==============================
+  // let currentActive;
+
+  // if (location.pathname === "/") {
+  //   // Home page → use section detection
+  //   currentActive = activeSection;
+  // } else {
+  //   // Other pages → use URL
+  //   currentActive = location.pathname.substring(1);
+  // }
+let currentActive;
+
+if (location.pathname === "/") {
+  currentActive = activeSection;
+} else {
+  currentActive = location.pathname.substring(1);
+}
+
+console.log("Current pathname:", location.pathname);
+console.log("Current active:", currentActive);
 
   return (
     <nav
@@ -32,14 +90,14 @@ function DesktopMenu({ activeSection }) {
         items-center
         gap-1
         rounded-2xl
-        bg-white/[0.025]
         border
         border-white/[0.05]
+        bg-white/[0.025]
         p-1
       "
     >
       {menuItems.map((item) => {
-        const isActive = activeSection === item.id;
+        const isActive = currentActive === item.id;
 
         return (
           <button
@@ -49,39 +107,32 @@ function DesktopMenu({ activeSection }) {
             className={`
               group
               relative
-
               flex
               items-center
               justify-center
-
-              px-4
-              xl:px-5
-              py-2.5
-
               rounded-xl
-
+              px-4
+              py-2.5
               text-sm
+              xl:px-5
               xl:text-base
               font-medium
-
               cursor-pointer
-
               transition-all
               duration-300
 
               ${
                 isActive
                   ? `
-                    bg-cyan-400/[0.10]
-                    text-cyan-300
                     border
                     border-cyan-400/[0.12]
+                    bg-cyan-400/[0.10]
+                    text-cyan-300
                   `
                   : `
-                    text-white/65
                     border
                     border-transparent
-
+                    text-white/65
                     hover:bg-white/[0.04]
                     hover:text-white
                   `
@@ -90,20 +141,15 @@ function DesktopMenu({ activeSection }) {
           >
             <span>{item.name}</span>
 
-            {/* Active indicator */}
             <span
               className={`
                 absolute
                 bottom-1
                 left-1/2
                 -translate-x-1/2
-
                 h-[2px]
-
                 rounded-full
-
                 bg-cyan-400
-
                 transition-all
                 duration-300
 

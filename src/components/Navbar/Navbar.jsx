@@ -74,36 +74,37 @@ function Navbar() {
   // --------------------------------
   // 3. Active page for React Router
   // --------------------------------
-  const getActiveSection = () => {
-    if (location.pathname === "/") {
-      return activeSection;
-    }
+ const getActiveSection = () => {
+  if (location.pathname === "/") {
+    return activeSection;
+  }
 
-    if (location.pathname === "/about") {
-      return "about";
-    }
+  if (location.pathname === "/about") {
+    return "about";
+  }
 
-    if (location.pathname === "/services") {
-      return "services";
-    }
+  if (location.pathname === "/services") {
+    return "services";
+  }
 
-    if (location.pathname === "/program") {
-      return "program";
-    }
+  if (location.pathname === "/program") {
+    return "program";
+  }
 
-    if (location.pathname === "/faq") {
-      return "faq";
-    }
+  if (location.pathname === "/faq") {
+    return "faq";
+  }
 
-    if (location.pathname === "/contact") {
-      return "contact";
-    }
+  if (location.pathname === "/contact") {
+    return "contact";
+  }
 
-    return "";
-  };
+  return "";
+};
 
-  const currentActiveSection = getActiveSection();
+const currentActiveSection = getActiveSection();
 
+  
   return (
     <>
       {/* ================================

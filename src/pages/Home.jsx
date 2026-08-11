@@ -1,6 +1,7 @@
 import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
 import Services from "../components/Services/Services";
+import WhyChoose from '../components/WhyChooseUs/WhyChoose'
 import Program from "../components/Program";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact/Contact";
@@ -19,6 +20,11 @@ function Home() {
       <section id="services" className="scroll-mt-32">
         <Services />
       </section>
+
+      <section id="why-choose" className="scroll-mt-32">
+        <WhyChoose />
+      </section>
+
 
       <section id="program" className="scroll-mt-32">
         <Program />
