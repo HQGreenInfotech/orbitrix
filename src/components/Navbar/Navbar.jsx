@@ -273,6 +273,7 @@ function Navbar() {
 
               text-lg
               text-white
+              cursor-pointer
 
               transition-all
               duration-300
