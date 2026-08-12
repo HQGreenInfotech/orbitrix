@@ -13,24 +13,32 @@ function Navbar() {
 
   const location = useLocation();
 
-  // --------------------------------
-  // 1. Navbar background on scroll
-  // --------------------------------
+
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 60);
+      setScrolled(window.scrollY > 40);
     };
 
-    window.addEventListener("scroll", handleScroll);
+  
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // --------------------------------
-  // 2. Detect active section on HOME
-  // --------------------------------
+
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
+
+
+
   useEffect(() => {
     if (location.pathname !== "/") {
       return;
@@ -38,7 +46,9 @@ function Navbar() {
 
     const sections = document.querySelectorAll("section[id]");
 
-    if (!sections.length) return;
+    if (!sections.length) {
+      return;
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -57,8 +67,8 @@ function Navbar() {
       },
       {
         root: null,
-        rootMargin: "-120px 0px -45% 0px",
-        threshold: [0.1, 0.25, 0.5, 0.75],
+        rootMargin: "-100px 0px -50% 0px",
+        threshold: [0.1, 0.25, 0.5],
       }
     );
 
@@ -71,65 +81,46 @@ function Navbar() {
     };
   }, [location.pathname]);
 
-  // --------------------------------
-  // 3. Active page for React Router
-  // --------------------------------
- const getActiveSection = () => {
-  if (location.pathname === "/") {
-    return activeSection;
-  }
 
-  if (location.pathname === "/about") {
-    return "about";
-  }
+  const getActiveSection = () => {
+    if (location.pathname === "/") {
+      return activeSection;
+    }
 
-  if (location.pathname === "/services") {
-    return "services";
-  }
+    const routeMap = {
+      "/about": "about",
+      "/services": "services",
+      "/program": "program",
+      "/faq": "faq",
+      "/contact": "contact",
+    };
 
-  if (location.pathname === "/program") {
-    return "program";
-  }
+    return routeMap[location.pathname] || "";
+  };
 
-  if (location.pathname === "/faq") {
-    return "faq";
-  }
+  const currentActiveSection = getActiveSection();
 
-  if (location.pathname === "/contact") {
-    return "contact";
-  }
-
-  return "";
-};
-
-const currentActiveSection = getActiveSection();
-
-  
   return (
     <>
-      {/* ================================
-          NAVBAR
-      ================================= */}
+
       <nav
         className={`
           fixed
-          top-5
           left-1/2
-          -translate-x-1/2
+          top-4
           z-50
 
           w-[94%]
-          max-w-7xl
+          max-w-[1280px]
 
-          rounded-[28px]
+          -translate-x-1/2
+
+          rounded-[24px]
 
           border
           border-white/[0.10]
 
-          bg-[#081B4B]/50
           backdrop-blur-2xl
-
-          shadow-[0_15px_50px_rgba(0,0,0,0.25)]
 
           transition-all
           duration-500
@@ -137,121 +128,109 @@ const currentActiveSection = getActiveSection();
           ${
             scrolled
               ? `
-                bg-[#07183F]/75
-                shadow-[0_20px_65px_rgba(0,0,0,0.35)]
+                bg-[#071838]/90
+                shadow-[0_18px_55px_rgba(0,0,0,0.35)]
               `
               : `
-                bg-[#081B4B]/50
+                bg-[#071838]/65
+                shadow-[0_12px_40px_rgba(0,0,0,0.18)]
               `
           }
         `}
       >
-        {/* ================================
-            GLASS TOP REFLECTION
-        ================================= */}
+        
+
         <div
           className="
             pointer-events-none
             absolute
-            inset-x-8
+            left-8
+            right-8
             top-0
             h-px
-            bg-white/20
+            bg-white/[0.16]
           "
         />
 
-        {/* ================================
-            NAVBAR CONTENT
-        ================================= */}
+       
+
         <div
           className="
             relative
+
             flex
+            h-[68px]
             items-center
             justify-between
-            gap-6
-
-            h-[72px]
 
             px-4
             sm:px-6
             lg:px-7
           "
         >
-          {/* ================================
-              LOGO
-          ================================= */}
-          <div
+         
+
+          <Link
+            to="/"
+            aria-label="Orbitix Technology home"
             className="
-              relative
               flex
+              h-12
+              w-[88px]
               items-center
               justify-center
 
-              w-[92px]
-              h-[52px]
-
-              rounded-2xl
-
-              bg-white/[0.025]
-
-              border
-              border-white/[0.06]
-
-              transition-all
+              transition-transform
               duration-300
 
-              hover:bg-white/[0.05]
-              hover:border-cyan-400/20
+              hover:scale-105
             "
           >
             <Logo />
-          </div>
+          </Link>
 
-          {/* ================================
-              DESKTOP MENU
-          ================================= */}
-          <div className="hidden lg:flex items-center">
+         
+
+          <div className="hidden lg:flex">
             <DesktopMenu
               activeSection={currentActiveSection}
             />
           </div>
 
-          {/* ================================
-              GET STARTED
-          ================================= */}
+  
+
           <Link
             to="/contact"
             className="
-              hidden
-              lg:flex
+              group
 
+              hidden
+              h-11
               items-center
               justify-center
               gap-2
-
-              h-11
-              px-7
 
               rounded-2xl
 
               bg-blue-400
 
-              text-[#06183F]
+              px-6
 
               font-semibold
+              text-[#06183F]
 
-              shadow-[0_8px_30px_rgba(34,211,238,0.20)]
+              shadow-[0_8px_30px_rgba(34,211,238,0.18)]
 
               transition-all
               duration-300
 
-              hover:bg-cyan-300
               hover:-translate-y-0.5
-
+              hover:bg-cyan-300
               hover:shadow-[0_12px_35px_rgba(34,211,238,0.30)]
 
               active:translate-y-0
+
+              lg:flex
             "
           >
             <span>Get Started</span>
@@ -259,8 +238,10 @@ const currentActiveSection = getActiveSection();
             <span
               className="
                 text-lg
+
                 transition-transform
                 duration-300
+
                 group-hover:translate-x-1
               "
             >
@@ -268,49 +249,41 @@ const currentActiveSection = getActiveSection();
             </span>
           </Link>
 
-          {/* ================================
-              MOBILE MENU BUTTON
-          ================================= */}
+
           <button
             type="button"
             aria-label={
               open ? "Close menu" : "Open menu"
             }
             aria-expanded={open}
-            onClick={() =>
-              setOpen((prev) => !prev)
-            }
+            onClick={() => setOpen((prev) => !prev)}
             className="
-              lg:hidden
-
               flex
+              h-11
+              w-11
               items-center
               justify-center
 
-              w-11
-              h-11
-
               rounded-2xl
-
-              bg-white/[0.05]
-              backdrop-blur-md
 
               border
               border-white/[0.10]
 
-              text-white
-              text-lg
+              bg-white/[0.04]
 
-              cursor-pointer
+              text-lg
+              text-white
 
               transition-all
               duration-300
 
-              hover:bg-cyan-400/10
               hover:border-cyan-400/30
+              hover:bg-cyan-400/[0.08]
               hover:text-cyan-300
 
               active:scale-95
+
+              lg:hidden
             "
           >
             {open ? <FaTimes /> : <FaBars />}
@@ -318,9 +291,8 @@ const currentActiveSection = getActiveSection();
         </div>
       </nav>
 
-      {/* ================================
-          MOBILE MENU
-      ================================= */}
+   
+
       <MobileMenu
         open={open}
         setOpen={setOpen}

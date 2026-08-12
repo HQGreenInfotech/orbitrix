@@ -1,58 +1,40 @@
 import {
-  FaCheckCircle,
-  FaCode,
-  FaRobot,
-  FaMobileAlt,
-  FaRocket,
-  FaHeadset,
-} from "react-icons/fa";
+  Sparkles,
+  Code2,
+  Zap,
+  ShieldCheck,
+} from "lucide-react";
 
 export const whyChoose = [
   {
     id: 1,
-    icon: FaCode,
-    title: "Modern Development",
+    title: "Creative Thinking",
     description:
-      "We build scalable, secure, and high-performance applications using React, Node.js, TypeScript, AI, and modern cloud technologies.",
+      "We turn ideas into clean, practical and engaging digital experiences.",
+    icon: Sparkles,
   },
 
   {
     id: 2,
-    icon: FaRobot,
-    title: "AI-Powered Solutions",
+    title: "Modern Development",
     description:
-      "From AI chatbots and workflow automation to intelligent business tools, we help businesses work smarter and faster.",
+      "We use modern technologies to create scalable and maintainable products.",
+    icon: Code2,
   },
 
   {
     id: 3,
-    icon: FaMobileAlt,
-    title: "Responsive Design",
+    title: "Performance First",
     description:
-      "Every website and application is optimized for mobile, tablet, and desktop to deliver a seamless user experience.",
+      "Fast loading, responsive interfaces and optimized user experiences.",
+    icon: Zap,
   },
 
   {
     id: 4,
-    icon: FaRocket,
-    title: "Fast Project Delivery",
+    title: "Reliable Solutions",
     description:
-      "Our agile development process ensures faster delivery without compromising quality, performance, or security.",
-  },
-
-  {
-    id: 5,
-    icon: FaHeadset,
-    title: "Dedicated Support",
-    description:
-      "We provide continuous technical support, maintenance, updates, and guidance to ensure long-term success.",
-  },
-
-  {
-    id: 6,
-    icon: FaCheckCircle,
-    title: "Quality Assurance",
-    description:
-      "Every project undergoes rigorous testing to ensure reliability, security, speed, and an exceptional user experience.",
+      "Secure architecture and dependable solutions designed for long-term growth.",
+    icon: ShieldCheck,
   },
 ];

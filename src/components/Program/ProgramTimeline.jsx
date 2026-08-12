@@ -5,7 +5,7 @@ import { roadmap } from "./programData";
 function ProgramTimeline() {
   return (
     <section>
-      {/* Heading */}
+      
       <motion.div
         initial={{
           opacity: 0,
@@ -68,7 +68,7 @@ function ProgramTimeline() {
         </p>
       </motion.div>
 
-      {/* Cards */}
+   
       <div
         className="
           relative
@@ -77,7 +77,7 @@ function ProgramTimeline() {
           lg:grid-cols-3
         "
       >
-        {/* Timeline */}
+      
         <div
           className="
             pointer-events-none
@@ -94,7 +94,7 @@ function ProgramTimeline() {
 
         {roadmap.map((item, index) => (
           <div key={item.month} className="relative">
-            {/* Timeline dot */}
+           
             <div
               className="
                 absolute

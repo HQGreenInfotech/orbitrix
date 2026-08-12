@@ -5,18 +5,15 @@ import ContactForm from "./ContactForm";
 function Contact() {
   return (
     <section className="relative overflow-hidden bg-[#061638] py-20 sm:py-24 lg:py-28">
-      {/* Background Glow */}
+      
       <div className="pointer-events-none absolute -left-40 top-20 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[160px]" />
 
       <div className="pointer-events-none absolute bottom-0 right-0 h-[32rem] w-[32rem] rounded-full bg-blue-600/10 blur-[160px]" />
 
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/5 blur-[150px]" />
 
-      {/* Container */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-        {/* =========================
-            HEADER
-        ========================== */}
+        
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,14 +66,12 @@ function Contact() {
           </p>
         </motion.div>
 
-        {/* =========================
-            CONTACT CONTENT
-        ========================== */}
+       
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-12">
-          {/* Contact Information */}
+        
           <ContactInfo />
 
-          {/* Contact Form */}
+         
           <ContactForm />
         </div>
       </div>

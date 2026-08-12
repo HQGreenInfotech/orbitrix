@@ -3,7 +3,7 @@ import { socials } from "./footerData";
 function FooterLogo() {
   return (
     <div className="relative">
-      {/* Subtle background glow */}
+     
       <div
         className="
           pointer-events-none
@@ -19,7 +19,7 @@ function FooterLogo() {
       />
 
       <div className="relative z-10">
-        {/* Logo */}
+      
         <img
           src="/orbitix.png"
           alt="Orbitix Technology"
@@ -31,7 +31,7 @@ function FooterLogo() {
           "
         />
 
-        {/* Description */}
+       
         <p
           className="
             mt-7
@@ -46,7 +46,7 @@ function FooterLogo() {
           digital marketing and career-oriented training.
         </p>
 
-        {/* Social Links */}
+     
         <div className="mt-8 flex flex-wrap gap-4">
           {socials.map((item) => {
             const Icon = item.icon;

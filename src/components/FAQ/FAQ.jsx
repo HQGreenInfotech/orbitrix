@@ -15,14 +15,10 @@ function FAQ() {
         lg:py-32
       "
     >
-      {/* =====================================
-          BACKGROUND
-      ====================================== */}
-
-      {/* Base Background */}
+      
       <div className="absolute inset-0 bg-[#081B4B]" />
 
-      {/* Grid Pattern */}
+     
       <div
         className="
           pointer-events-none
@@ -37,7 +33,7 @@ function FAQ() {
         }}
       />
 
-      {/* Gradient */}
+    
       <div
         className="
           pointer-events-none
@@ -50,7 +46,7 @@ function FAQ() {
         "
       />
 
-      {/* Left Glow */}
+     
       <div
         className="
           pointer-events-none
@@ -65,7 +61,7 @@ function FAQ() {
         "
       />
 
-      {/* Right Glow */}
+  
       <div
         className="
           pointer-events-none
@@ -80,7 +76,7 @@ function FAQ() {
         "
       />
 
-      {/* Bottom Glow */}
+    
       <div
         className="
           pointer-events-none
@@ -96,9 +92,7 @@ function FAQ() {
         "
       />
 
-      {/* =====================================
-          CONTENT
-      ====================================== */}
+      
 
       <Container>
         <SectionTitle
@@ -108,7 +102,7 @@ function FAQ() {
           center
         />
 
-        {/* FAQ Layout */}
+       
         <div
           className="
             mt-16
@@ -119,12 +113,12 @@ function FAQ() {
             lg:gap-12
           "
         >
-          {/* Left */}
+          
           <div className="lg:col-span-2">
             <FAQLeft />
           </div>
 
-          {/* Right */}
+       
           <div className="lg:col-span-3">
             <FAQRight />
           </div>

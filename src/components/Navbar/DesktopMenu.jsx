@@ -13,41 +13,6 @@ function DesktopMenu({ activeSection }) {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleClick = (id) => {
-  // Services should ALWAYS open the Services page
-  if (id === "services") {
-    navigate("/services");
-    return;
-  }
-
-  // ==============================
-  // HOME PAGE SECTIONS
-  // ==============================
-  if (location.pathname === "/") {
-    const section = document.getElementById(id);
-
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-
-      return;
-    }
-
-    if (id === "home") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-
-      return;
-    }
-  }
-
-  // ==============================
-  // SEPARATE PAGES
-  // ==============================
   const routes = {
     home: "/",
     about: "/about",
@@ -57,31 +22,60 @@ function DesktopMenu({ activeSection }) {
     contact: "/contact",
   };
 
-  navigate(routes[id]);
-};
+  const handleClick = (id) => {
+    if (id === "services") {
+      navigate("/services");
+      return;
+    }
 
-  // ==============================
-  // ACTIVE NAVBAR ITEM
-  // ==============================
-  // let currentActive;
+    if (location.pathname === "/") {
+      const section = document.getElementById(id);
 
-  // if (location.pathname === "/") {
-  //   // Home page → use section detection
-  //   currentActive = activeSection;
-  // } else {
-  //   // Other pages → use URL
-  //   currentActive = location.pathname.substring(1);
-  // }
-let currentActive;
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
 
-if (location.pathname === "/") {
-  currentActive = activeSection;
-} else {
-  currentActive = location.pathname.substring(1);
-}
+        return;
+      }
 
-console.log("Current pathname:", location.pathname);
-console.log("Current active:", currentActive);
+      if (id === "home") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+
+        return;
+      }
+    }
+
+    navigate(routes[id]);
+  };
+
+  const sectionMap = {
+    home: "home",
+    about: "about",
+
+    "why-choose": "about",
+
+    services: "services",
+
+    program: "program",
+
+    courses: "program",
+
+    faq: "faq",
+    contact: "contact",
+  };
+
+  let currentActiveSection;
+
+  if (location.pathname === "/") {
+    currentActiveSection = sectionMap[activeSection] || "home";
+  } else {
+    currentActiveSection = location.pathname.substring(1);
+  }
 
   return (
     <nav
@@ -97,7 +91,7 @@ console.log("Current active:", currentActive);
       "
     >
       {menuItems.map((item) => {
-        const isActive = currentActive === item.id;
+        const isActive = currentActiveSection === item.id;
 
         return (
           <button

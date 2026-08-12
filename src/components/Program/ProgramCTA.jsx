@@ -34,7 +34,7 @@ function ProgramCTA() {
         lg:p-14
       "
     >
-      {/* Reflection */}
+    
       <div
         className="
           pointer-events-none
@@ -47,7 +47,6 @@ function ProgramCTA() {
         "
       />
 
-      {/* Small atmosphere */}
       <div
         className="
           pointer-events-none
@@ -65,7 +64,7 @@ function ProgramCTA() {
       />
 
       <div className="relative z-10">
-        {/* Badge */}
+
         <span
           className="
             inline-flex
@@ -84,7 +83,7 @@ function ProgramCTA() {
           ADMISSIONS OPEN
         </span>
 
-        {/* Heading */}
+   
         <h2
           className="
             mt-7
@@ -102,7 +101,7 @@ function ProgramCTA() {
           </span>
         </h2>
 
-        {/* Description */}
+   
         <p
           className="
             mx-auto
@@ -117,7 +116,7 @@ function ProgramCTA() {
           in just 12 weeks.
         </p>
 
-        {/* Buttons */}
+      
         <div
           className="
             mt-9

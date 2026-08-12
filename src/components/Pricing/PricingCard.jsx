@@ -59,7 +59,6 @@ function PricingCard({ plan }) {
         hover:shadow-[0_25px_70px_rgba(34,211,238,0.10)]
       `}
     >
-      {/* Top reflection */}
       <div
         className="
           pointer-events-none
@@ -78,7 +77,6 @@ function PricingCard({ plan }) {
         "
       />
 
-      {/* Offer badge */}
       {plan.offer && (
         <span
           className="
@@ -105,7 +103,6 @@ function PricingCard({ plan }) {
         </span>
       )}
 
-      {/* Popular badge */}
       {plan.popular && !plan.offer && (
         <span
           className="
@@ -128,7 +125,6 @@ function PricingCard({ plan }) {
         </span>
       )}
 
-      {/* Icon */}
       <div
         className="
           relative
@@ -158,7 +154,6 @@ function PricingCard({ plan }) {
         />
       </div>
 
-      {/* Title */}
       <h3
         className="
           mt-6
@@ -173,14 +168,14 @@ function PricingCard({ plan }) {
         {plan.title}
       </h3>
 
-      {/* Subtitle */}
+   
       {plan.subtitle && (
         <p className="mt-2 text-sm text-slate-400">
           {plan.subtitle}
         </p>
       )}
 
-      {/* Price */}
+
       <div className="mt-6">
         {plan.oldPrice && (
           <p className="text-sm text-slate-500 line-through">
@@ -222,8 +217,6 @@ function PricingCard({ plan }) {
           </span>
         )}
       </div>
-
-      {/* Divider */}
       <div
         className="
           my-7
@@ -235,7 +228,6 @@ function PricingCard({ plan }) {
         "
       />
 
-      {/* Features */}
       <ul className="flex-1 space-y-4">
         {plan.features.map((feature, index) => (
           <li
@@ -263,7 +255,6 @@ function PricingCard({ plan }) {
         ))}
       </ul>
 
-      {/* Button */}
       <motion.button
         whileTap={{
           scale: 0.97,
@@ -305,8 +296,6 @@ function PricingCard({ plan }) {
           ↗
         </span>
       </motion.button>
-
-      {/* Very subtle bottom light */}
       <div
         className="
           pointer-events-none

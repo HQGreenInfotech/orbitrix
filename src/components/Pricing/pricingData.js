@@ -146,7 +146,6 @@ export const pricingPlans = [
     button: "Build App",
   },
 
-  // 8. AI Solutions
   {
     id: 8,
     title: "AI Solutions",

@@ -24,7 +24,7 @@ function WebsiteFeatures() {
         shadow-[0_30px_100px_rgba(0,0,0,0.25)]
       "
     >
-      {/* Top reflection */}
+    
       <div
         className="
           pointer-events-none
@@ -41,7 +41,7 @@ function WebsiteFeatures() {
       />
 
       <div className="relative z-10">
-        {/* Heading */}
+   
         <div className="max-w-2xl">
           <span
             className="
@@ -86,7 +86,6 @@ function WebsiteFeatures() {
           </p>
         </div>
 
-        {/* Features */}
         <div
           className="
             mt-12
@@ -148,7 +147,7 @@ function WebsiteFeatures() {
         hover:shadow-[0_8px_25px_rgba(34,211,238,0.08)]
       "
     >
-      {/* Icon */}
+   
       <div
         className="
           flex
@@ -185,7 +184,7 @@ function WebsiteFeatures() {
         />
       </div>
 
-      {/* Text */}
+     
       <span
         className="
           text-sm
@@ -202,7 +201,6 @@ function WebsiteFeatures() {
         {item.title}
       </span>
 
-      {/* Arrow */}
       <span
         className="
           ml-auto
@@ -224,7 +222,6 @@ function WebsiteFeatures() {
         </div>
       </div>
 
-      {/* Bottom reflection */}
       <div
         className="
           pointer-events-none

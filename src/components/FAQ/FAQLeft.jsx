@@ -56,7 +56,7 @@ function FAQLeft() {
         lg:p-10
       "
     >
-      {/* Glow */}
+     
       <div
         className="
           pointer-events-none
@@ -86,7 +86,7 @@ function FAQLeft() {
       />
 
       <div className="relative z-10">
-        {/* Badge */}
+      
         <span
           className="
             inline-flex
@@ -105,7 +105,7 @@ function FAQLeft() {
           Need Help?
         </span>
 
-        {/* Heading */}
+       
         <h2
           className="
             mt-6
@@ -132,7 +132,7 @@ function FAQLeft() {
           </span>
         </h2>
 
-        {/* Description */}
+      
         <p
           className="
             mt-6
@@ -145,7 +145,7 @@ function FAQLeft() {
           robotics, digital marketing, and coding programs.
         </p>
 
-        {/* Contact Cards */}
+       
         <div className="mt-10 space-y-4">
           {contactItems.map((item) => {
             const Icon = item.icon;
@@ -169,7 +169,7 @@ function FAQLeft() {
                   hover:bg-white/[0.08]
                 "
               >
-                {/* Icon */}
+                
                 <div
                   className="
                     flex
@@ -191,7 +191,7 @@ function FAQLeft() {
                   <Icon />
                 </div>
 
-                {/* Text */}
+              
                 <div className="min-w-0">
                   <h4 className="font-semibold text-white">
                     {item.title}
@@ -206,7 +206,7 @@ function FAQLeft() {
           })}
         </div>
 
-        {/* CTA */}
+      
         <Link
           to="/contact"
           className="

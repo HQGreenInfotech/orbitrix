@@ -1,5 +1,6 @@
 import HeroContent from "./HeroContent";
 import HeroImage from "./HeroImage";
+import HeroStats from "./HeroStats";
 
 function Hero() {
   return (
@@ -9,42 +10,72 @@ function Hero() {
         relative
         min-h-screen
         overflow-hidden
+        bg-[#071838]
         pt-28
+        pb-16
         sm:pt-32
         lg:pt-36
       "
     >
-      {/* Background Glow */}
+    
 
       <div
         className="
           pointer-events-none
           absolute
-          -left-40
-          top-[25%]
-          h-[380px]
-          w-[380px]
-          rounded-full
-          bg-cyan-400/[0.045]
-          blur-[130px]
+          inset-0
+          overflow-hidden
         "
-      />
+      >
+      
 
-      <div
-        className="
-          pointer-events-none
-          absolute
-          -right-40
-          top-[20%]
-          h-[420px]
-          w-[420px]
-          rounded-full
-          bg-blue-500/[0.04]
-          blur-[140px]
-        "
-      />
+        <div
+          className="
+            absolute
+            -left-40
+            top-[35%]
+            h-[420px]
+            w-[420px]
+            rounded-full
+            bg-cyan-400/[0.055]
+            blur-[140px]
+          "
+        />
 
-      {/* Main Container */}
+       
+
+        <div
+          className="
+            absolute
+            -right-40
+            top-[40%]
+            h-[420px]
+            w-[420px]
+            rounded-full
+            bg-blue-500/[0.045]
+            blur-[140px]
+          "
+        />
+
+       
+
+        <div
+          className="
+            absolute
+            left-1/2
+            top-[50%]
+            h-[400px]
+            w-[700px]
+            -translate-x-1/2
+            -translate-y-1/2
+            rounded-full
+            bg-cyan-400/[0.018]
+            blur-[120px]
+          "
+        />
+      </div>
+
+     
 
       <div
         className="
@@ -52,191 +83,52 @@ function Hero() {
           z-10
           mx-auto
           w-full
-          max-w-[1280px]
-          px-4
+          max-w-[1200px]
+          px-5
           sm:px-6
           lg:px-8
-          xl:px-10
-          pb-20
         "
       >
+       
+
+        <div className="mx-auto max-w-5xl text-center">
+          <HeroContent />
+        </div>
+
+     
+
         <div
           className="
-            grid
+            mx-auto
+            mt-14
             w-full
-            items-center
-            gap-8
-            lg:grid-cols-2
-            lg:gap-10
-            xl:gap-12
+            max-w-[720px]
+            sm:mt-16
+            lg:mt-20
           "
         >
-          {/* LEFT PANEL */}
+          <HeroImage />
+        </div>
 
-          <div
-            className="
-              group
-              relative
-              w-full
-              overflow-hidden
+       
 
-              rounded-[32px]
-
-              border
-              border-white/[0.09]
-
-              bg-white/[0.025]
-
-              p-6
-              sm:p-8
-              lg:p-9
-              xl:p-10
-
-              backdrop-blur-2xl
-
-              shadow-[0_30px_90px_rgba(0,0,0,0.25)]
-
-              transition-all
-              duration-500
-
-              hover:border-cyan-300/[0.15]
-            "
-          >
-            {/* Top reflection */}
-
-            <div
-              className="
-                pointer-events-none
-                absolute
-                inset-x-8
-                top-0
-                h-px
-                bg-gradient-to-r
-                from-transparent
-                via-white/30
-                to-transparent
-              "
-            />
-
-            {/* Internal glow */}
-
-            <div
-              className="
-                pointer-events-none
-                absolute
-                -left-28
-                top-1/3
-
-                h-64
-                w-64
-
-                rounded-full
-
-                bg-cyan-400/[0.035]
-
-                blur-[100px]
-
-                transition-transform
-                duration-700
-
-                group-hover:scale-125
-              "
-            />
-
-            <div className="relative z-10">
-              <HeroContent />
-            </div>
-          </div>
-
-          {/* RIGHT PANEL */}
-
-          <div
-            className="
-              group
-              relative
-              flex
-              w-full
-              min-w-0
-
-              items-center
-              justify-center
-
-              overflow-hidden
-
-              rounded-[36px]
-
-              border
-              border-white/[0.09]
-
-              bg-white/[0.018]
-
-              p-4
-              sm:p-5
-              lg:p-6
-
-              backdrop-blur-2xl
-
-              shadow-[0_35px_100px_rgba(0,0,0,0.28)]
-
-              transition-all
-              duration-500
-
-              hover:border-cyan-300/[0.14]
-            "
-          >
-            {/* Top reflection */}
-
-            <div
-              className="
-                pointer-events-none
-                absolute
-                left-8
-                right-8
-                top-0
-                h-px
-                bg-gradient-to-r
-                from-transparent
-                via-white/25
-                to-transparent
-              "
-            />
-
-            {/* Center glow */}
-
-            <div
-              className="
-                pointer-events-none
-                absolute
-                left-1/2
-                top-1/2
-
-                h-[260px]
-                w-[260px]
-
-                -translate-x-1/2
-                -translate-y-1/2
-
-                rounded-full
-
-                bg-cyan-400/[0.035]
-
-                blur-[100px]
-
-                transition-all
-                duration-700
-
-                group-hover:scale-125
-              "
-            />
-
-            <div className="relative z-10 w-full min-w-0">
-              <HeroImage />
-            </div>
-          </div>
+        <div
+          className="
+            mx-auto
+            mt-14
+            max-w-5xl
+            border-t
+            border-white/[0.08]
+            pt-10
+            sm:mt-16
+            sm:pt-12
+          "
+        >
+          <HeroStats />
         </div>
       </div>
 
-      {/* Bottom Fade */}
+    
 
       <div
         className="
@@ -245,7 +137,7 @@ function Hero() {
           bottom-0
           left-0
           right-0
-          h-24
+          h-28
           bg-gradient-to-t
           from-[#071838]
           to-transparent

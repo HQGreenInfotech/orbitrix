@@ -53,7 +53,7 @@ function PricingCard({ plan, index }) {
         }
       `}
     >
-      {/* Reflection */}
+
       <div
         className="
           pointer-events-none
@@ -65,8 +65,6 @@ function PricingCard({ plan, index }) {
           bg-white/20
         "
       />
-
-      {/* Popular badge */}
       {popular && (
         <div
           className="
@@ -88,7 +86,7 @@ function PricingCard({ plan, index }) {
         </div>
       )}
 
-      {/* Title */}
+   
       <p
         className="
           text-xs
@@ -100,7 +98,7 @@ function PricingCard({ plan, index }) {
         {plan.title}
       </p>
 
-      {/* Subtitle */}
+
       <h3
         className="
           mt-4
@@ -113,7 +111,7 @@ function PricingCard({ plan, index }) {
         {plan.subtitle}
       </h3>
 
-      {/* Price */}
+
       <div className="mt-8">
         <span
           className="
@@ -131,10 +129,10 @@ function PricingCard({ plan, index }) {
         </p>
       </div>
 
-      {/* Divider */}
+
       <div className="my-8 h-px bg-white/[0.08]" />
 
-      {/* Features */}
+    
       <ul className="flex-1 space-y-4">
         {plan.features.map((feature, i) => (
           <li
@@ -163,7 +161,6 @@ function PricingCard({ plan, index }) {
         ))}
       </ul>
 
-      {/* Button */}
       <button
         className="
           group/button

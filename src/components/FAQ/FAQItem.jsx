@@ -20,7 +20,7 @@ function FAQItem({ faq, isOpen, onClick }) {
         hover:bg-white/[0.07]
       "
     >
-      {/* Question */}
+     
       <button
         type="button"
         onClick={onClick}
@@ -48,7 +48,7 @@ function FAQItem({ faq, isOpen, onClick }) {
           {faq.question}
         </h3>
 
-        {/* Icon */}
+       
         <motion.div
           animate={{
             rotate: isOpen ? 180 : 0,
@@ -79,7 +79,7 @@ function FAQItem({ faq, isOpen, onClick }) {
         </motion.div>
       </button>
 
-      {/* Answer */}
+     
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div

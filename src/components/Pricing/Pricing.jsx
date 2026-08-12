@@ -8,10 +8,6 @@ import PricingCard from "./PricingCard";
 function Pricing() {
   return (
     <div className="relative">
-      {/* =========================
-          HEADER
-      ========================== */}
-
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -72,9 +68,6 @@ function Pricing() {
         </p>
       </motion.div>
 
-      {/* =========================
-          PRICING CARDS
-      ========================== */}
 
       <div
         className="
@@ -93,10 +86,6 @@ function Pricing() {
           />
         ))}
       </div>
-
-      {/* =========================
-          CUSTOM CTA
-      ========================== */}
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -117,8 +106,6 @@ function Pricing() {
           lg:p-12
         "
       >
-        {/* Reflection */}
-
         <div
           className="
             pointer-events-none

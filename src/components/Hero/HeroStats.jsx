@@ -1,65 +1,112 @@
-import CountUpModule from "react-countup";
+import { useEffect, useState } from "react";
 
-const CountUp = CountUpModule.default;
+function AnimatedNumber({ end, duration = 2000 }) {
+  const [value, setValue] = useState(0);
 
+  useEffect(() => {
+    let startTime = null;
+    let animationFrame;
+
+    const animate = (currentTime) => {
+      if (!startTime) {
+        startTime = currentTime;
+      }
+
+      const progress = Math.min(
+        (currentTime - startTime) / duration,
+        1
+      );
+
+    
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+
+      setValue(Math.floor(easeOut * end));
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      } else {
+        setValue(end);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+    };
+  }, [end, duration]);
+
+  return value;
+}
 
 function HeroStats() {
   const stats = [
     {
-      end: 100,
+      end: 500,
       suffix: "+",
-      label: "Projects",
+      label: "Students Trained",
     },
     {
-      end: 50,
-      suffix: "+",
-      label: "Clients",
+      end: 3,
+      suffix: " Months",
+      label: "Hands-on Program",
     },
     {
-      end: 99,
+      end: 30,
+      suffix: "+",
+      label: "Hiring Partners",
+    },
+    {
+      end: 92,
       suffix: "%",
-      label: "Success Rate",
+      label: "Placement Rate",
     },
   ];
 
   return (
-    <div className="flex flex-wrap items-center gap-8 sm:gap-12">
+    <div
+      className="
+        grid
+        grid-cols-2
+        gap-y-10
+        sm:grid-cols-4
+        sm:gap-8
+      "
+    >
       {stats.map((item) => (
-        <div key={item.label} className="group">
+        <div
+          key={item.label}
+          className="
+            text-center
+          "
+        >
+         
+
           <div
             className="
-              flex
-              items-baseline
               text-3xl
-              sm:text-4xl
               font-black
+              tracking-tight
               text-white
-              transition-all
-              duration-300
-              group-hover:text-cyan-400
+              sm:text-4xl
+              lg:text-5xl
             "
           >
-            <CountUp
-              end={item.end}
-              duration={2.5}
-              enableScrollSpy
-              scrollSpyOnce
-            />
+            <AnimatedNumber end={item.end} />
 
             <span className="text-cyan-400">
               {item.suffix}
             </span>
           </div>
 
+         
+
           <p
             className="
               mt-2
               text-sm
-              sm:text-base
               text-slate-400
-              transition-colors
-              duration-300
-              group-hover:text-slate-300
+              sm:text-base
             "
           >
             {item.label}

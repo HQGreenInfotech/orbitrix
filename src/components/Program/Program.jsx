@@ -16,7 +16,6 @@ function Program() {
         lg:py-32
       "
     >
-      {/* Subtle background light */}
       <div
         className="
           pointer-events-none
@@ -44,8 +43,6 @@ function Program() {
           blur-[150px]
         "
       />
-
-      {/* Very subtle grid */}
       <div
         className="
           pointer-events-none
@@ -56,8 +53,6 @@ function Program() {
           bg-[size:80px_80px]
         "
       />
-
-      {/* Content */}
       <div
         className="
           relative

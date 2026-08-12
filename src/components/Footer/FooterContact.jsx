@@ -13,7 +13,7 @@ function FooterContact() {
 
       <div className="space-y-5">
 
-        {/* Phone */}
+     
         <div className="flex items-start gap-4">
           <FaPhone
             className="
@@ -32,7 +32,7 @@ function FooterContact() {
           </a>
         </div>
 
-        {/* Manager Email */}
+    
         <div className="flex items-start gap-4">
           <FaEnvelope
             className="
@@ -57,7 +57,7 @@ function FooterContact() {
           </a>
         </div>
 
-        {/* Admin Email */}
+        
         <div className="flex items-start gap-4">
           <FaEnvelope
             className="
@@ -82,7 +82,7 @@ function FooterContact() {
           </a>
         </div>
 
-        {/* Location */}
+    
         <div className="flex items-start gap-4">
           <FaLocationDot
             className="

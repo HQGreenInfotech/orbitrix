@@ -60,7 +60,7 @@ function ContactForm() {
         lg:p-10
       "
     >
-      {/* Heading */}
+      
 
       <h2 className="text-3xl font-black text-white">
         Send Us a Message
@@ -70,7 +70,7 @@ function ContactForm() {
         Fill out the form below and we'll get back to you shortly.
       </p>
 
-      {/* Success Message */}
+     
 
       {submitted && (
         <motion.div
@@ -92,7 +92,7 @@ function ContactForm() {
         </motion.div>
       )}
 
-      {/* Form Fields */}
+     
 
       <div className="mt-8 space-y-5">
         <input

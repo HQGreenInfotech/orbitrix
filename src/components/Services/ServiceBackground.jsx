@@ -1,7 +1,6 @@
 function ServiceBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {/* Very subtle top-left atmosphere */}
       <div
         className="
           absolute
@@ -15,7 +14,6 @@ function ServiceBackground() {
         "
       />
 
-      {/* Very subtle bottom-right atmosphere */}
       <div
         className="
           absolute
@@ -29,7 +27,6 @@ function ServiceBackground() {
         "
       />
 
-      {/* Thin horizontal reflection */}
       <div
         className="
           absolute
@@ -45,7 +42,6 @@ function ServiceBackground() {
         "
       />
 
-      {/* Very subtle grid */}
       <div
         className="
           absolute

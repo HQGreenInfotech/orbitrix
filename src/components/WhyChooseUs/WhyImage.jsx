@@ -4,150 +4,178 @@ import { FolderKanban, Users } from "lucide-react";
 function WhyImage() {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -80 }}
+      initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="relative flex justify-center"
+      className="relative"
     >
-      {/* Cyan Glow */}
+     
+
       <div
         className="
+          pointer-events-none
           absolute
-          -z-10
-          w-[520px]
-          h-[520px]
+          -left-20
+          top-1/2
+          h-72
+          w-72
+          -translate-y-1/2
           rounded-full
-          bg-cyan-500/20
-          blur-[160px]
+          bg-violet-500/[0.10]
+          blur-[120px]
         "
       />
 
-      {/* Main Image */}
-      <motion.img
-        src="/team.png"
-        alt="Orbitix Technology Team"
-        loading="lazy"
-        animate={{ y: [0, -12, 0] }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+    
+
+      <div
         className="
-          w-full
-          max-w-xl
-          h-[420px]
-          sm:h-[500px]
-          lg:h-[600px]
-          object-cover
-          rounded-3xl
+          relative
+          overflow-hidden
+          rounded-[28px]
           border
-          border-white/10
-          shadow-[0_30px_80px_rgba(0,0,0,.45)]
+          border-white/[0.10]
+          bg-[#0A1020]
+          p-2
+          shadow-[0_30px_80px_rgba(0,0,0,0.45)]
         "
-      />
+      >
+        <motion.img
+          src="/team.png"
+          alt="Orbitix Technology Team"
+          loading="lazy"
+          animate={{ y: [0, -6, 0] }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            h-[360px]
+            w-full
+            rounded-[22px]
+            object-cover
+            sm:h-[450px]
+            lg:h-[500px]
+          "
+        />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-[#081B4B]/60 via-transparent to-transparent" />
+  
 
-      {/* Projects Card */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            inset-2
+            rounded-[22px]
+            bg-gradient-to-t
+            from-[#050A16]/70
+            via-transparent
+            to-transparent
+          "
+        />
+      </div>
+
+  
+
       <motion.div
-        whileHover={{
-          scale: 1.05,
-          y: -6,
-        }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        viewport={{ once: true }}
+        whileHover={{ y: -5 }}
         className="
           absolute
-          left-6
-          bottom-6
+          -bottom-6
+          left-5
           flex
           items-center
-          gap-4
+          gap-3
           rounded-2xl
           border
-          border-white/10
-          bg-white/5
+          border-white/[0.10]
+          bg-[#101629]/90
+          px-4
+          py-3
+          shadow-[0_20px_50px_rgba(0,0,0,0.4)]
           backdrop-blur-xl
-          px-6
-          py-5
-          shadow-xl
+          sm:left-8
         "
       >
         <div
           className="
             flex
-            h-14
-            w-14
+            h-11
+            w-11
             items-center
             justify-center
             rounded-xl
-            bg-cyan-500/20
+            bg-violet-400/[0.12]
+            text-violet-300
           "
         >
-          <FolderKanban
-            size={26}
-            className="text-cyan-400"
-          />
+          <FolderKanban size={21} />
         </div>
 
         <div>
-          <h2 className="text-3xl font-black text-white">
+          <p className="text-xl font-black text-white">
             100+
-          </h2>
+          </p>
 
-          <p className="text-slate-300">
+          <p className="text-xs text-slate-500">
             Projects Delivered
           </p>
         </div>
       </motion.div>
 
-      {/* Clients Card */}
+  
+
       <motion.div
-        whileHover={{
-          scale: 1.05,
-          y: -6,
-        }}
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+        viewport={{ once: true }}
+        whileHover={{ y: -5 }}
         className="
           absolute
-          right-6
+          -right-3
           top-6
           flex
           items-center
-          gap-4
+          gap-3
           rounded-2xl
           border
-          border-white/10
-          bg-white/5
+          border-white/[0.10]
+          bg-[#101629]/90
+          px-4
+          py-3
+          shadow-[0_20px_50px_rgba(0,0,0,0.4)]
           backdrop-blur-xl
-          px-6
-          py-5
-          shadow-xl
+          sm:right-5
         "
       >
         <div
           className="
             flex
-            h-14
-            w-14
+            h-11
+            w-11
             items-center
             justify-center
             rounded-xl
-            bg-blue-500/20
+            bg-emerald-400/[0.12]
+            text-emerald-300
           "
         >
-          <Users
-            size={26}
-            className="text-cyan-400"
-          />
+          <Users size={21} />
         </div>
 
         <div>
-          <h2 className="text-3xl font-black text-white">
+          <p className="text-xl font-black text-white">
             50+
-          </h2>
+          </p>
 
-          <p className="text-slate-300">
+          <p className="text-xs text-slate-500">
             Happy Clients
           </p>
         </div>

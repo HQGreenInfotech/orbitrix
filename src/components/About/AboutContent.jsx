@@ -21,7 +21,7 @@ function AboutContent() {
         ease: "easeOut",
       }}
     >
-      {/* Small Label */}
+      
 
       <div
         className="
@@ -66,7 +66,7 @@ function AboutContent() {
         </span>
       </div>
 
-      {/* Heading */}
+    
 
       <h2
         className="
@@ -107,7 +107,7 @@ function AboutContent() {
         Solutions
       </h2>
 
-      {/* Description */}
+     
 
       <p
         className="
@@ -129,7 +129,7 @@ function AboutContent() {
         under one roof.
       </p>
 
-      {/* Button */}
+     
 
       <Link
         to="/about-more"
@@ -175,7 +175,7 @@ function AboutContent() {
           active:scale-95
         "
       >
-        {/* Shine */}
+        
 
         <span
           className="

@@ -30,7 +30,6 @@ function AboutMore() {
         bg-[#081B4B]
       "
     >
-      {/* Subtle liquid light */}
       <div
         className="
           absolute
@@ -59,7 +58,6 @@ function AboutMore() {
         "
       />
 
-      {/* Small center light */}
       <div
         className="
           absolute
@@ -78,15 +76,12 @@ function AboutMore() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-
-          {/* ================= LEFT ================= */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            {/* Section label */}
             <div className="flex items-center gap-4">
               <span className="h-8 w-[3px] rounded-full bg-gradient-to-b from-cyan-400 to-blue-500" />
 
@@ -103,7 +98,6 @@ function AboutMore() {
               </p>
             </div>
 
-            {/* Heading */}
             <h2
               className="
                 mt-7
@@ -133,7 +127,6 @@ function AboutMore() {
               through Technology
             </h2>
 
-            {/* Description */}
             <p
               className="
                 mt-8
@@ -163,13 +156,12 @@ function AboutMore() {
                 max-w-[600px]
               "
             >
-              Our mission is to bridge the gap between education and industry
-              by combining creativity, innovation and real-world project
+              Our mission is to bridge the gap between education and industry by
+              combining creativity, innovation and real-world project
               experience, enabling individuals and organizations to grow with
               confidence in the digital era.
             </p>
 
-            {/* Stats */}
             <div
               className="
                 mt-12
@@ -186,55 +178,45 @@ function AboutMore() {
                 <h3 className="text-3xl lg:text-4xl font-black text-white">
                   2025
                 </h3>
-                <p className="mt-2 text-sm text-slate-400">
-                  Founded
-                </p>
+                <p className="mt-2 text-sm text-slate-400">Founded</p>
               </div>
 
               <div>
                 <h3 className="text-3xl lg:text-4xl font-black text-white">
                   100+
                 </h3>
-                <p className="mt-2 text-sm text-slate-400">
-                  Projects
-                </p>
+                <p className="mt-2 text-sm text-slate-400">Projects</p>
               </div>
 
               <div>
                 <h3 className="text-3xl lg:text-4xl font-black text-white">
                   500+
                 </h3>
-                <p className="mt-2 text-sm text-slate-400">
-                  Students
-                </p>
+                <p className="mt-2 text-sm text-slate-400">Students</p>
               </div>
 
               <div>
                 <h3 className="text-3xl lg:text-4xl font-black text-white">
                   50+
                 </h3>
-                <p className="mt-2 text-sm text-slate-400">
-                  Happy Clients
-                </p>
+                <p className="mt-2 text-sm text-slate-400">Happy Clients</p>
               </div>
             </div>
           </motion.div>
 
-          {/* ================= RIGHT ================= */}
           <motion.div
-  initial={{ opacity: 0, x: 40 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{
-    duration: 0.7,
-    ease: "easeOut",
-    delay: 0.1,
-  }}
-  viewport={{ once: true, amount: 0.2 }}
-  className="relative"
->
-  {/* Soft vertical liquid line */}
-  <div
-    className="
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 0.7,
+              ease: "easeOut",
+              delay: 0.1,
+            }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative"
+          >
+            <div
+              className="
       absolute
       left-0
       top-5
@@ -245,43 +227,43 @@ function AboutMore() {
       via-cyan-400/20
       to-transparent
     "
-  />
+            />
 
-  <div className="relative space-y-5 pl-4">
-    {cards.map((card, index) => {
-      const Icon = card.icon;
+            <div className="relative space-y-5 pl-4">
+              {cards.map((card, index) => {
+                const Icon = card.icon;
 
-      return (
-        <motion.div
-          key={card.title}
-          initial={{
-            opacity: 0,
-            x: 30,
-            y: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.6,
-            delay: 0.2 + index * 0.15,
-            ease: "easeOut",
-          }}
-          viewport={{
-            once: true,
-            amount: 0.2,
-          }}
-          whileHover={{
-            x: 8,
-            scale: 1.015,
-            transition: {
-              duration: 0.3,
-              ease: "easeOut",
-            },
-          }}
-          className={`
+                return (
+                  <motion.div
+                    key={card.title}
+                    initial={{
+                      opacity: 0,
+                      x: 30,
+                      y: 20,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0,
+                      y: 0,
+                    }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.2 + index * 0.15,
+                      ease: "easeOut",
+                    }}
+                    viewport={{
+                      once: true,
+                      amount: 0.2,
+                    }}
+                    whileHover={{
+                      x: 8,
+                      scale: 1.015,
+                      transition: {
+                        duration: 0.3,
+                        ease: "easeOut",
+                      },
+                    }}
+                    className={`
             group
             relative
             overflow-hidden
@@ -306,22 +288,21 @@ function AboutMore() {
             hover:border-cyan-400/25
             hover:shadow-[0_15px_50px_rgba(0,0,0,0.18)]
           `}
-        >
-          {/* Moving liquid light */}
-          <motion.div
-            initial={{
-              x: "-120%",
-              opacity: 0,
-            }}
-            whileHover={{
-              x: "120%",
-              opacity: 1,
-            }}
-            transition={{
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="
+                  >
+                    <motion.div
+                      initial={{
+                        x: "-120%",
+                        opacity: 0,
+                      }}
+                      whileHover={{
+                        x: "120%",
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.8,
+                        ease: "easeInOut",
+                      }}
+                      className="
               absolute
               top-0
               bottom-0
@@ -334,11 +315,10 @@ function AboutMore() {
               to-transparent
               skew-x-[-20deg]
             "
-          />
+                    />
 
-          {/* Top liquid highlight */}
-          <div
-            className="
+                    <div
+                      className="
               absolute
               top-0
               left-10
@@ -349,21 +329,20 @@ function AboutMore() {
               via-cyan-300/20
               to-transparent
             "
-          />
+                    />
 
-          {/* Small floating glow */}
-          <motion.div
-            animate={{
-              y: [0, -5, 0],
-              opacity: [0.2, 0.4, 0.2],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: index * 0.5,
-            }}
-            className="
+                    <motion.div
+                      animate={{
+                        y: [0, -5, 0],
+                        opacity: [0.2, 0.4, 0.2],
+                      }}
+                      transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: index * 0.5,
+                      }}
+                      className="
               absolute
               -right-8
               -top-8
@@ -374,19 +353,18 @@ function AboutMore() {
               blur-2xl
               pointer-events-none
             "
-          />
+                    />
 
-          {/* Icon */}
-          <motion.div
-            whileHover={{
-              scale: 1.1,
-              rotate: 5,
-            }}
-            transition={{
-              duration: 0.3,
-              ease: "easeOut",
-            }}
-            className="
+                    <motion.div
+                      whileHover={{
+                        scale: 1.1,
+                        rotate: 5,
+                      }}
+                      transition={{
+                        duration: 0.3,
+                        ease: "easeOut",
+                      }}
+                      className="
               relative
               z-10
               flex
@@ -413,14 +391,13 @@ function AboutMore() {
               group-hover:border-cyan-300/30
               group-hover:text-cyan-200
             "
-          >
-            <Icon />
-          </motion.div>
+                    >
+                      <Icon />
+                    </motion.div>
 
-          {/* Content */}
-          <div className="relative z-10">
-            <h3
-              className="
+                    <div className="relative z-10">
+                      <h3
+                        className="
                 text-xl
                 lg:text-2xl
                 font-bold
@@ -429,12 +406,12 @@ function AboutMore() {
                 duration-300
                 group-hover:text-cyan-50
               "
-            >
-              {card.title}
-            </h3>
+                      >
+                        {card.title}
+                      </h3>
 
-            <p
-              className="
+                      <p
+                        className="
                 mt-2
                 text-sm
                 lg:text-base
@@ -444,15 +421,15 @@ function AboutMore() {
                 duration-300
                 group-hover:text-slate-300
               "
-            >
-              {card.desc}
-            </p>
-          </div>
-        </motion.div>
-      );
-    })}
-  </div>
-</motion.div>
+                      >
+                        {card.desc}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -21,10 +21,9 @@ function Services() {
         lg:py-32
       "
     >
-      {/* Background */}
+     
       <ServiceBackground />
 
-      {/* Main container */}
       <div
         className="
           relative
@@ -37,9 +36,7 @@ function Services() {
           xl:px-12
         "
       >
-        {/* ================================
-            HEADING
-        ================================= */}
+       
 
         <motion.div
           initial={{
@@ -58,7 +55,7 @@ function Services() {
           }}
           className="max-w-3xl"
         >
-          {/* Label */}
+      
           <div
             className="
               inline-flex
@@ -95,7 +92,6 @@ function Services() {
             </span>
           </div>
 
-          {/* Heading */}
           <h2
             className="
               mt-7
@@ -116,7 +112,7 @@ function Services() {
             </span>
           </h2>
 
-          {/* Description */}
+  
           <p
             className="
               mt-7
@@ -134,9 +130,6 @@ function Services() {
           </p>
         </motion.div>
 
-        {/* ================================
-            SERVICE CARDS
-        ================================= */}
 
         <div
           className="
@@ -157,25 +150,17 @@ function Services() {
           ))}
         </div>
 
-        {/* ================================
-            WEBSITE PACKAGE
-        ================================= */}
 
         <div className="mt-24 lg:mt-32">
           <WebsiteFeatures />
         </div>
 
-        {/* ================================
-            PRICING / SPECIAL OFFERS
-        ================================= */}
+        
 
         <div className="mt-24 lg:mt-32">
           <Pricing />
         </div>
 
-        {/* ================================
-            PROJECT CTA
-        ================================= */}
 
         <ServicesCTA />
       </div>

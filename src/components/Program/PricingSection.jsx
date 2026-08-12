@@ -5,7 +5,6 @@ import { pricing } from "./programData";
 function PricingSection() {
   return (
     <section>
-      {/* Heading */}
       <motion.div
         initial={{
           opacity: 0,
@@ -79,7 +78,7 @@ function PricingSection() {
         </p>
       </motion.div>
 
-      {/* Cards */}
+   
       <div
         className="
           mt-14

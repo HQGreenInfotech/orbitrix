@@ -30,7 +30,7 @@ function Footer() {
         text-white
       "
     >
-      {/* Background glow */}
+     
 
       <div
         className="
@@ -74,7 +74,7 @@ function Footer() {
           xl:px-12
         "
       >
-        {/* Main Footer Card */}
+        
 
         <div
           className="
@@ -91,7 +91,7 @@ function Footer() {
             lg:p-12
           "
         >
-          {/* Top reflection */}
+        
 
           <div
             className="
@@ -108,7 +108,7 @@ function Footer() {
             "
           />
 
-          {/* Footer content */}
+         
 
           <div
             className="
@@ -120,15 +120,11 @@ function Footer() {
               lg:gap-10
             "
           >
-            {/* =========================
-                LOGO
-            ========================== */}
+           
 
             <FooterLogo />
 
-            {/* =========================
-                QUICK LINKS
-            ========================== */}
+          
 
             <div>
               <h3 className="text-lg font-bold text-white">Quick Links</h3>
@@ -154,9 +150,7 @@ function Footer() {
               </div>
             </div>
 
-            {/* =========================
-                SERVICES
-            ========================== */}
+      
 
             <div>
               <h3 className="text-lg font-bold text-white">Services</h3>
@@ -182,15 +176,13 @@ function Footer() {
               </div>
             </div>
 
-            {/* =========================
-                CONTACT
-            ========================== */}
+          
 
             <div className="min-w-0">
               <h3 className="text-lg font-bold text-white">Contact</h3>
 
               <div className="mt-7 space-y-6">
-                {/* Phone */}
+              
 
                 <a
                   href="tel:+918078611491"
@@ -221,7 +213,7 @@ function Footer() {
                   </span>
                 </a>
 
-                {/* Manager Email */}
+              
 
                 <a
                   href="mailto:manager.orbitixtechnologies@gmail.com"
@@ -256,7 +248,7 @@ function Footer() {
                   </span>
                 </a>
 
-                {/* Admin Email */}
+                
 
                 <a
                   href="mailto:admin.orbitixtechnologies@gmail.com"
@@ -291,7 +283,7 @@ function Footer() {
                   </span>
                 </a>
 
-                {/* Location */}
+               
 
                 <div className="flex items-start gap-4">
                   <FaMapMarkerAlt
@@ -311,7 +303,6 @@ function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
 
         <div
           className="

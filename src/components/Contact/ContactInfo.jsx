@@ -22,14 +22,14 @@ function ContactInfo() {
         lg:p-10
       "
     >
-      {/* Background Glow */}
+      
 
       <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-cyan-500/10 blur-[120px]" />
 
       <div className="pointer-events-none absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-blue-600/10 blur-[140px]" />
 
       <div className="relative z-10">
-        {/* Badge */}
+       
 
         <span
           className="
@@ -51,7 +51,7 @@ function ContactInfo() {
           Contact Us
         </span>
 
-        {/* Heading */}
+       
 
         <h2 className="mt-6 text-4xl font-black leading-tight text-white lg:text-5xl">
           Let's Build
@@ -61,7 +61,7 @@ function ContactInfo() {
           </span>
         </h2>
 
-        {/* Description */}
+      
 
         <p className="mt-6 leading-8 text-slate-300">
           Whether you're looking for website development, software solutions,
@@ -69,7 +69,7 @@ function ContactInfo() {
           help you transform your ideas into reality.
         </p>
 
-        {/* Contact Cards */}
+        
 
         <div className="mt-10 space-y-5">
           {contactInfo.map((item) => {
@@ -94,7 +94,7 @@ function ContactInfo() {
                   hover:-translate-y-1
                 "
               >
-                {/* Icon */}
+                
 
                 <div
                   className="
@@ -118,7 +118,7 @@ function ContactInfo() {
                   <Icon />
                 </div>
 
-                {/* Content */}
+              
 
                 <div className="min-w-0">
                   <h4 className="font-bold text-white">
@@ -168,8 +168,7 @@ function ContactInfo() {
           })}
         </div>
 
-        {/* Social Links */}
-
+        
         <div className="mt-10">
           <SocialLinks />
         </div>

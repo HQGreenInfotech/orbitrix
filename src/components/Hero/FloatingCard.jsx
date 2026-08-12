@@ -59,7 +59,7 @@ function FloatingCard({
         hover:shadow-[0_20px_60px_rgba(34,211,238,0.15)]
       `}
     >
-      {/* Glass reflection */}
+  
       <span
         className="
           pointer-events-none
@@ -76,7 +76,7 @@ function FloatingCard({
         "
       />
 
-      {/* Moving glass shine */}
+  
       <span
         className="
           pointer-events-none
@@ -99,7 +99,7 @@ function FloatingCard({
         "
       />
 
-      {/* Bottom glow */}
+    
       <span
         className="
           pointer-events-none
@@ -126,7 +126,7 @@ function FloatingCard({
         "
       />
 
-      {/* Icon */}
+     
       <div
         className={`
           relative
@@ -172,7 +172,7 @@ function FloatingCard({
           `}
         />
 
-        {/* Icon glow */}
+   
         <span
           className="
             pointer-events-none
@@ -194,7 +194,7 @@ function FloatingCard({
         />
       </div>
 
-      {/* Text */}
+   
       <div className="relative z-10 min-w-0">
         <h4
           className="
@@ -240,7 +240,7 @@ function FloatingCard({
         </p>
       </div>
 
-      {/* Bottom reflection */}
+     
       <span
         className="
           pointer-events-none

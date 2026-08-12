@@ -9,7 +9,7 @@ function ProgramHeader() {
       viewport={{ once: true }}
       className="mx-auto max-w-4xl text-center"
     >
-      {/* Label */}
+  
       <div
         className="
           inline-flex
@@ -45,7 +45,6 @@ function ProgramHeader() {
         </span>
       </div>
 
-      {/* Heading */}
       <h1
         className="
           mt-8
@@ -70,7 +69,6 @@ function ProgramHeader() {
         From Beginner to Builder.
       </h1>
 
-      {/* Description */}
       <p
         className="
           mx-auto
@@ -91,7 +89,7 @@ function ProgramHeader() {
         prepare for technical interviews.
       </p>
 
-      {/* Small info */}
+    
       <div
         className="
           mt-8

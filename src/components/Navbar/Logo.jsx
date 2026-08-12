@@ -19,7 +19,6 @@ function Logo() {
         overflow-visible
       "
     >
-      {/* Very subtle glow */}
       <span
         className="
           pointer-events-none
@@ -45,7 +44,6 @@ function Logo() {
         "
       />
 
-      {/* Logo */}
       <img
         src="/orbitix1.png"
         alt="Orbitix Technologies"

@@ -5,104 +5,288 @@ import { whyChoose } from "./whyData";
 
 function WhyChoose() {
   return (
-    <section className="relative overflow-hidden py-28">
+    <section
+      id="why-choose"
+      className="
+        relative
+        overflow-hidden
+        bg-[#050A16]
+        py-24
+        sm:py-28
+        lg:py-32
+      "
+    >
+     
 
-      {/* Background */}
-      <div className="absolute inset-0 -z-20 bg-[#081B4B]" />
+      <div className="pointer-events-none absolute inset-0">
+        <div
+          className="
+            absolute
+            left-[-180px]
+            top-[25%]
+            h-[420px]
+            w-[420px]
+            rounded-full
+            bg-violet-500/[0.08]
+            blur-[150px]
+          "
+        />
 
-      {/* Grid Pattern */}
-      <div
-        className="absolute inset-0 -z-10 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px, rgba(255,255,255,.6) 1px, transparent 0)",
-          backgroundSize: "32px 32px",
-        }}
-      />
+        <div
+          className="
+            absolute
+            right-[-180px]
+            bottom-[10%]
+            h-[420px]
+            w-[420px]
+            rounded-full
+            bg-emerald-400/[0.06]
+            blur-[150px]
+          "
+        />
+      </div>
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#081B4B]/95 via-[#102B72]/90 to-[#081B4B]/95" />
+   
 
-      {/* Left Glow */}
       <div
         className="
-          absolute
-          -left-64
-          top-20
-          w-[650px]
-          h-[650px]
-          rounded-full
-          bg-cyan-500/15
-          blur-[180px]
+          relative
+          z-10
+          mx-auto
+          w-full
+          max-w-7xl
+          px-5
+          sm:px-6
+          lg:px-8
         "
-      />
+      >
+       
 
-      {/* Right Glow */}
-      <div
-        className="
-          absolute
-          -right-56
-          bottom-10
-          w-[500px]
-          h-[500px]
-          rounded-full
-          bg-blue-500/15
-          blur-[180px]
-        "
-      />
-
-      <div className="relative container mx-auto px-6">
-
-        {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto mb-20 text-center"
+          className="mx-auto max-w-3xl text-center"
         >
           <span
             className="
-              inline-block
+              inline-flex
+              items-center
+              gap-2
               rounded-full
               border
-              border-cyan-400/20
-              bg-cyan-500/10
-              px-6
-              py-3
-              text-sm
+              border-violet-400/20
+              bg-violet-400/[0.08]
+              px-5
+              py-2
+              text-[11px]
               font-semibold
               uppercase
-              tracking-widest
-              text-cyan-400
+              tracking-[3px]
+              text-violet-300
             "
           >
-            Why Orbitix
+            <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+            Why Choose Us
           </span>
 
-          <h2 className="mt-8 text-5xl lg:text-6xl font-black leading-tight text-white">
-            Why Choose
-
+          <h2
+            className="
+              mt-7
+              text-4xl
+              font-black
+              leading-[1.05]
+              tracking-[-1.5px]
+              text-white
+              sm:text-5xl
+              lg:text-6xl
+            "
+          >
+            Technology With
             <br />
 
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent">
-              Orbitix Technologies
+            <span
+              className="
+                bg-gradient-to-r
+                from-violet-400
+                via-fuchsia-400
+                to-emerald-300
+                bg-clip-text
+                text-transparent
+              "
+            >
+              Purpose & Impact
             </span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-slate-300">
-            We combine innovation, creativity and modern technologies to
-            deliver fast, secure and scalable digital solutions that help
-            startups and businesses grow in today's competitive world.
+          <p
+            className="
+              mx-auto
+              mt-6
+              max-w-2xl
+              text-base
+              leading-7
+              text-slate-400
+              sm:text-lg
+              sm:leading-8
+            "
+          >
+            We combine technology, creativity and practical thinking to
+            build digital solutions that are reliable, scalable and designed
+            around real business needs.
           </p>
         </motion.div>
 
-        {/* Content */}
-        <div className="grid items-center gap-20 lg:grid-cols-2">
+     
+
+        <div
+          className="
+            mt-16
+            grid
+            items-center
+            gap-12
+            lg:grid-cols-[1.05fr_0.95fr]
+            lg:gap-20
+          "
+        >
+         
 
           <WhyImage />
 
-          <div className="space-y-6">
+       
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <span
+              className="
+                text-xs
+                font-semibold
+                uppercase
+                tracking-[3px]
+                text-emerald-400
+              "
+            >
+              Built For Growth
+            </span>
+
+            <h3
+              className="
+                mt-4
+                max-w-xl
+                text-3xl
+                font-black
+                leading-tight
+                text-white
+                sm:text-4xl
+              "
+            >
+              More than development.
+              <span className="text-slate-500">
+                {" "}
+                We build digital experiences that move businesses forward.
+              </span>
+            </h3>
+
+            <p
+              className="
+                mt-6
+                max-w-xl
+                text-base
+                leading-8
+                text-slate-400
+              "
+            >
+              From modern websites and applications to AI-powered tools,
+              educational platforms and custom software, our approach
+              focuses on performance, usability and long-term value.
+            </p>
+
+         
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div
+                className="
+                  rounded-2xl
+                  border
+                  border-white/[0.07]
+                  bg-white/[0.025]
+                  p-4
+                "
+              >
+                <p className="text-sm font-semibold text-white">
+                  Business First
+                </p>
+
+                <p className="mt-1 text-sm leading-6 text-slate-500">
+                  Technology aligned with your actual goals.
+                </p>
+              </div>
+
+              <div
+                className="
+                  rounded-2xl
+                  border
+                  border-white/[0.07]
+                  bg-white/[0.025]
+                  p-4
+                "
+              >
+                <p className="text-sm font-semibold text-white">
+                  Modern Stack
+                </p>
+
+                <p className="mt-1 text-sm leading-6 text-slate-500">
+                  Reliable tools built for modern products.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+      
+
+        <div className="mt-20">
+          <div className="mb-8 flex items-end justify-between">
+            <div>
+              <p
+                className="
+                  text-xs
+                  font-semibold
+                  uppercase
+                  tracking-[3px]
+                  text-slate-500
+                "
+              >
+                Our Difference
+              </p>
+
+              <h3
+                className="
+                  mt-2
+                  text-2xl
+                  font-bold
+                  text-white
+                  sm:text-3xl
+                "
+              >
+                Why businesses choose Orbitix
+              </h3>
+            </div>
+          </div>
+
+          <div
+            className="
+              grid
+              gap-4
+              sm:grid-cols-2
+              lg:grid-cols-4
+            "
+          >
             {whyChoose.map((item, index) => (
               <WhyCard
                 key={item.id}
@@ -111,9 +295,7 @@ function WhyChoose() {
               />
             ))}
           </div>
-
         </div>
-
       </div>
     </section>
   );

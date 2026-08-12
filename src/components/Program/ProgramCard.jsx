@@ -37,7 +37,6 @@ function ProgramCard({ item, index }) {
         hover:bg-white/[0.05]
       "
     >
-      {/* Top reflection */}
       <div
         className="
           pointer-events-none
@@ -50,7 +49,6 @@ function ProgramCard({ item, index }) {
         "
       />
 
-      {/* Month */}
       <div
         className="
           inline-flex
@@ -70,7 +68,6 @@ function ProgramCard({ item, index }) {
         {item.month}
       </div>
 
-      {/* Number */}
       <div
         className="
           absolute
@@ -83,8 +80,6 @@ function ProgramCard({ item, index }) {
       >
         0{index + 1}
       </div>
-
-      {/* Title */}
       <h3
         className="
           relative
@@ -102,7 +97,6 @@ function ProgramCard({ item, index }) {
         {item.title}
       </h3>
 
-      {/* Divider */}
       <div
         className="
           my-7
@@ -111,8 +105,6 @@ function ProgramCard({ item, index }) {
           bg-white/[0.07]
         "
       />
-
-      {/* Topics */}
       <ul className="space-y-4">
         {item.topics.map((topic, i) => (
           <li
@@ -145,7 +137,6 @@ function ProgramCard({ item, index }) {
         ))}
       </ul>
 
-      {/* Bottom accent */}
       <div
         className="
           pointer-events-none

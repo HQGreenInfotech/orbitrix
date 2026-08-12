@@ -53,7 +53,6 @@ function ServiceCard({ service, index }) {
         hover:shadow-[0_25px_80px_rgba(0,0,0,0.32)]
       "
     >
-      {/* Top reflection */}
       <div
         className="
           pointer-events-none
@@ -69,7 +68,6 @@ function ServiceCard({ service, index }) {
         "
       />
 
-      {/* Small corner accent */}
       <div
         className="
           pointer-events-none
@@ -85,7 +83,6 @@ function ServiceCard({ service, index }) {
         "
       />
 
-      {/* Icon */}
       <motion.div
         whileHover={{
           scale: 1.08,
@@ -132,7 +129,6 @@ function ServiceCard({ service, index }) {
         />
       </motion.div>
 
-      {/* Service number */}
       <span
         className="
           absolute
@@ -154,7 +150,6 @@ function ServiceCard({ service, index }) {
         {String(index + 1).padStart(2, "0")}
       </span>
 
-      {/* Content */}
       <div className="relative z-10 mt-8">
         <h3
           className="
@@ -208,7 +203,6 @@ function ServiceCard({ service, index }) {
         </p>
       </div>
 
-      {/* Bottom action */}
       <div
         className="
           absolute
@@ -266,7 +260,6 @@ function ServiceCard({ service, index }) {
         </span>
       </div>
 
-      {/* Bottom cyan reflection */}
       <div
         className="
           pointer-events-none

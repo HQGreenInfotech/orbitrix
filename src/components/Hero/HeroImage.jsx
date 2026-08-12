@@ -1,109 +1,137 @@
 import { motion } from "framer-motion";
 import CodeEditor from "./CodeEditor";
-import FloatingCard from "./FloatingCard";
-import { heroCards } from "./heroData";
 
 export default function HeroImage() {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      initial={{
+        opacity: 0,
+        y: 35,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.9,
+        ease: "easeOut",
+      }}
       className="
         relative
         flex
+        min-h-[380px]
         w-full
-        max-w-full
         items-center
         justify-center
-
-        min-h-[420px]
-        sm:min-h-[500px]
-        lg:min-h-[540px]
-
-        mt-6
-        lg:mt-0
-
-        overflow-visible
+        sm:min-h-[420px]
+        lg:min-h-[450px]
       "
     >
-      {/* Background glow */}
+   
+
       <div
         className="
           pointer-events-none
           absolute
           left-1/2
           top-1/2
-
-          h-[260px]
-          w-[260px]
-
-          sm:h-[360px]
-          sm:w-[360px]
-
-          lg:h-[420px]
-          lg:w-[420px]
-
+          h-[280px]
+          w-[280px]
           -translate-x-1/2
           -translate-y-1/2
-
           rounded-full
-
-          bg-cyan-400/[0.07]
-
-          blur-[100px]
-
-          transition-transform
-          duration-700
+          bg-cyan-400/[0.05]
+          blur-[110px]
+          sm:h-[360px]
+          sm:w-[360px]
         "
       />
 
-      {/* Secondary blue glow */}
-      <div
-        className="
-          pointer-events-none
-          absolute
-          right-[5%]
-          top-[10%]
+     
 
-          h-32
-          w-32
-
-          rounded-full
-
-          bg-blue-500/[0.06]
-
-          blur-[80px]
-        "
-      />
-
-      {/* Code editor */}
-      <div
-        className="
-          relative
-          z-10
-
-          flex
-          w-full
-          max-w-[620px]
-
-          items-center
-          justify-center
-
-          px-2
-          sm:px-4
-        "
-      >
+      <div className="relative z-10 w-full">
         <CodeEditor />
       </div>
 
-      {/* Floating cards */}
-      {heroCards.map((card) => (
-        <FloatingCard
-          key={card.id}
-          {...card}
-        />
-      ))}
+     
+
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: 25,
+          y: 15,
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          y: [0, -7, 0],
+        }}
+        transition={{
+          opacity: {
+            duration: 0.7,
+            delay: 0.5,
+          },
+          x: {
+            duration: 0.7,
+            delay: 0.5,
+          },
+          y: {
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          },
+        }}
+        className="
+          absolute
+          right-[-8px]
+          top-[58%]
+          z-20
+
+          w-[190px]
+
+          rounded-[18px]
+
+          bg-cyan-300
+
+          px-5
+          py-4
+
+          shadow-[0_18px_50px_rgba(34,211,238,0.18)]
+
+          sm:right-[-12px]
+          sm:w-[210px]
+          sm:px-6
+          sm:py-5
+        "
+      >
+        <div
+          className="
+            text-3xl
+            font-black
+            leading-none
+            tracking-tight
+            text-[#071838]
+            sm:text-4xl
+          "
+        >
+          100+
+        </div>
+
+        <p
+          className="
+            mt-2
+            text-xs
+            font-bold
+            leading-5
+            text-[#071838]/90
+            sm:text-sm
+          "
+        >
+          Live Projects Built
+          <br />
+          By Our Students
+        </p>
+      </motion.div>
     </motion.div>
   );
 }

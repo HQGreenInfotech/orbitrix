@@ -23,9 +23,6 @@ function MobileMenu({ open, setOpen }) {
     <AnimatePresence>
       {open && (
         <>
-          {/* =========================
-              BACKDROP
-          ========================== */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -43,10 +40,6 @@ function MobileMenu({ open, setOpen }) {
               lg:hidden
             "
           />
-
-          {/* =========================
-              MOBILE GLASS MENU
-          ========================== */}
           <motion.div
             initial={{
               opacity: 0,
@@ -92,7 +85,7 @@ function MobileMenu({ open, setOpen }) {
               overflow-hidden
             "
           >
-            {/* Top glass reflection */}
+           
             <div
               className="
                 pointer-events-none
@@ -104,8 +97,6 @@ function MobileMenu({ open, setOpen }) {
                 bg-white/20
               "
             />
-
-            {/* Subtle cyan glow */}
             <div
               className="
                 pointer-events-none
@@ -122,10 +113,6 @@ function MobileMenu({ open, setOpen }) {
                 blur-[90px]
               "
             />
-
-            {/* =========================
-                MENU ITEMS
-            ========================== */}
             <div className="relative z-10 p-3">
               {menuItems.map((item, index) => (
                 <motion.div
@@ -209,10 +196,6 @@ function MobileMenu({ open, setOpen }) {
                   </NavLink>
                 </motion.div>
               ))}
-
-              {/* =========================
-                  CTA
-              ========================== */}
               <div className="mt-4 px-1 pb-1">
                 <button
                   type="button"

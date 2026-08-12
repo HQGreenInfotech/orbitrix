@@ -57,12 +57,12 @@ function EnrollCTA() {
       to-cyan-900
     "
     >
-      {/* Background Effects */}
+      
       <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-cyan-500/20 blur-[150px]" />
       <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-blue-500/20 blur-[150px]" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        {/* Heading */}
+      
         <motion.div
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,14 +90,14 @@ function EnrollCTA() {
           </p>
         </motion.div>
 
-        {/* Features */}
+       
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <FeatureCard key={feature.title} {...feature} />
           ))}
         </div>
 
-        {/* Statistics */}
+    
         <div className="mt-16 grid grid-cols-2 gap-6 text-center text-white md:grid-cols-4">
           <div>
             <FaStar className="mx-auto mb-2 text-2xl text-yellow-400" />
@@ -120,7 +120,7 @@ function EnrollCTA() {
           </div>
         </div>
 
-        {/* Buttons */}
+        
         <div className="mt-16 flex flex-col items-center justify-center gap-5 sm:flex-row">
           <button
             onClick={() => navigate("/contact")}
