@@ -59,7 +59,7 @@ export const pricingPlans = [
   {
     id: 3,
     title: "Digital Marketing",
-    price: "₹500 / Month",
+    price: "₹1000 / Month",
     icon: FaBullhorn,
 
     features: [
