@@ -10,7 +10,7 @@ function WhyChoose() {
       className="
         relative
         overflow-hidden
-        bg-[#050A16]
+        bg-[#071838]
         py-24
         sm:py-28
         lg:py-32

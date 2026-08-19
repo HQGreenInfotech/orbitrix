@@ -9,14 +9,14 @@ function FAQ() {
       className="
         relative
         overflow-hidden
-        bg-[#081B4B]
+        bg-[#071838]
         py-24
         sm:py-28
         lg:py-32
       "
     >
       
-      <div className="absolute inset-0 bg-[#081B4B]" />
+      <div className="absolute inset-0 bg-[#071838]" />
 
      
       <div
@@ -40,9 +40,6 @@ function FAQ() {
           absolute
           inset-0
           bg-gradient-to-r
-          from-[#081B4B]/95
-          via-[#102B72]/90
-          to-[#081B4B]/95
         "
       />
 
