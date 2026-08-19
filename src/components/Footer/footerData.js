@@ -64,7 +64,7 @@ export const socials = [
   },
   {
     icon: FaInstagram,
-    url: "https://www.instagram.com/manager.orbitixtechnologies",
+    url: "https://www.instagram.com/orbitix_technology?igsh=Zmc1eDZwdmNwbzF5&igsi=Zmc1eDZwdmNwbzF5&utm_source=ig_contact_invite",
   },
   {
     icon: FaLinkedinIn,
