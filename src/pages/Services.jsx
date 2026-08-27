@@ -5,7 +5,7 @@ function ServicesPage() {
   return (
     <>
       <Services />
-      <Pricing />
+      {/* <Pricing /> */}
     </>
   );
 }
