@@ -14,7 +14,8 @@ function AboutImage() {
         className="rounded-3xl shadow-2xl"
       />
 
-      <div className="absolute
+      <div
+        className="absolute
 bottom-8
 left-8
 bg-white/10
@@ -23,8 +24,9 @@ border
 border-white/20
 rounded-2xl
 p-6
-shadow-2xl">
-        <h2 className="text-4xl font-bold text-gray-900"> 
+shadow-2xl"
+      >
+        <h2 className="text-4xl font-bold text-gray-900">
           {/*  text-cyan-400 */}
           5+
         </h2>

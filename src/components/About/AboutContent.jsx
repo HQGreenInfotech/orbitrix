@@ -21,8 +21,6 @@ function AboutContent() {
         ease: "easeOut",
       }}
     >
-      
-
       <div
         className="
           inline-flex
@@ -66,8 +64,6 @@ function AboutContent() {
         </span>
       </div>
 
-    
-
       <h2
         className="
           mt-6
@@ -84,9 +80,7 @@ function AboutContent() {
         "
       >
         We Build
-
         <br />
-
         <span
           className="
             bg-gradient-to-r
@@ -101,13 +95,9 @@ function AboutContent() {
         >
           Modern Digital
         </span>
-
         <br />
-
         Solutions
       </h2>
-
-     
 
       <p
         className="
@@ -123,13 +113,10 @@ function AboutContent() {
           sm:text-lg
         "
       >
-        Orbitix Technologies provides Website Development,
-        Software Development, AI Solutions, Robotics,
-        Educational Coding, Mobile Apps and Digital Marketing
-        under one roof.
+        Orbitix Technologies provides Website Development, Software Development,
+        AI Solutions, Robotics, Educational Coding, Mobile Apps and Digital
+        Marketing under one roof.
       </p>
-
-     
 
       <Link
         to="/about-more"
@@ -175,8 +162,6 @@ function AboutContent() {
           active:scale-95
         "
       >
-        
-
         <span
           className="
             pointer-events-none
@@ -199,9 +184,7 @@ function AboutContent() {
           "
         />
 
-        <span className="relative z-10">
-          Explore More
-        </span>
+        <span className="relative z-10">Explore More</span>
 
         <span
           className="
