@@ -38,12 +38,12 @@ export const socialLinks = [
   {
     name: "Facebook",
     icon: FaFacebook,
-    url: "https://www.facebook.com/share/19C3phpsCn/",
+    url: "https://www.facebook.com/share/1JhFYqrY5Z/",
   },
   {
     name: "Instagram",
     icon: FaInstagram,
-    url: "https://www.instagram.com/orbitix_technology?igsh=Zmc1eDZwdmNwbzF5&igsi=Zmc1eDZwdmNwbzF5&utm_source=ig_contact_invite",
+    url: "https://www.instagram.com/orbitixtech?stkn=MTVmb3l6Z2cybmdzdw==",
   },
   {
     name: "LinkedIn",
